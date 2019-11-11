@@ -1,0 +1,2 @@
+class InternationalClient < ApplicationRecord
+end
