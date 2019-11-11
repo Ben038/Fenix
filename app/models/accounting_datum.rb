@@ -1,0 +1,2 @@
+class AccountingDatum < ApplicationRecord
+end
