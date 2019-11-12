@@ -51,12 +51,12 @@ ActiveRecord::Schema.define(version: 2019_11_12_152007) do
 
   create_table "file_uploads", force: :cascade do |t|
     t.string "reinsurance_network"
-    t.string "quarter"
     t.string "file_name"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "balance_year"
+    t.integer "quarter"
     t.index ["user_id"], name: "index_file_uploads_on_user_id"
   end
 
