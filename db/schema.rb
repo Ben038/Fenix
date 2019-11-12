@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_11_161715) do
+ActiveRecord::Schema.define(version: 2019_11_12_094326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,17 +30,17 @@ ActiveRecord::Schema.define(version: 2019_11_11_161715) do
     t.string "benefit"
     t.date "effective_date"
     t.date "cancellation_date"
-    t.integer "premium"
-    t.integer "earned_premium"
-    t.integer "premium_and_reserves_change"
-    t.integer "claim_paid"
-    t.integer "claim_paid_and_reserves_change"
-    t.integer "reinsurance_comm"
+    t.float "premium"
+    t.float "earned_premium"
+    t.float "premium_and_reserves_change"
+    t.float "claim_paid"
+    t.float "claim_paid_and_reserves_change"
+    t.float "reinsurance_comm"
     t.integer "broker_comm"
-    t.integer "profit_sharing"
-    t.integer "taxes"
-    t.integer "interests"
-    t.integer "balance"
+    t.float "profit_sharing"
+    t.float "taxes"
+    t.float "interests"
+    t.float "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
