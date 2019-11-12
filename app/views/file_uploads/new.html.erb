@@ -5,10 +5,13 @@
     <%= f.input :balance_year, collection: FileUpload::YEARS %>
     <%= f.input :quarter, collection: FileUpload::QUARTERS %>
     <%= f.input :file_name %>
-    <%= f.button :submit, class: "btn btn-flat" %>
+    <%= f.button :submit, class: "btn-yellow" %>
   <% end %>
 
- <p><%= link_to "back to dashboard", pages_path, class: "btn btn-flat" %></p>
+<p><%= link_to "back to dashboard", pages_path, class: "btn-yellow" %></p>
 
-<br>
-<%= image_tag "Data_new.png" %>
+<h2>Latest uploads</h2>
+
+  <% FileUpload.last(3).each do |file_upload| %>
+    <p><%= file_upload.balance_year %> - Q <%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></p>
+  <% end %>

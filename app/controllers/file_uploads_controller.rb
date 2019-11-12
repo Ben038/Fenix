@@ -4,7 +4,7 @@ class FileUploadsController < ApplicationController
     @file_upload = FileUpload.new(file_upload_params)
     @file_upload.user = current_user
     if @file_upload.save
-      redirect_to new_file_upload_path, alert: "#{@file_upload.file_name} has been uploaded!"
+      redirect_to new_file_upload_path
     else
       render :new
     end
@@ -15,6 +15,7 @@ class FileUploadsController < ApplicationController
   end
 
   def index
+    @file_uploads = FileUpload.all
   end
 
   def destroy
