@@ -1,12 +1,30 @@
-.navbar-lewagon {
+.navbar-fenix {
   justify-content: space-between;
   background: white;
+  color: $white;
+  padding: 10px 50px;
+  display: flex;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-light .navbar-nav .nav-link  {
+  align-items: center;
+  color: $white;
+  }
+
+.navbar-finconsult .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-fenix .navbar-brand img {
+  width: 60px;
+  object-fit: cover;
 }
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item li {
+  display: inline-block;
+}
+
