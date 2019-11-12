@@ -3,6 +3,7 @@ class FileUploadsController < ApplicationController
   end
 
   def new
+    @file_upload = FileUpload.new
   end
 
   def index
