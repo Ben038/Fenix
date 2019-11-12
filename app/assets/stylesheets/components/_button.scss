@@ -1,1 +1,52 @@
+
 _button.scss
+.btn-flat {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $yellow;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.btn-flat:hover {
+  color: $white;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+.btn-support {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $turquoised;
+  text-shadow: 1px 0 0 currentColor;
+  transition: background 0.3s ease;
+  opacity: 1;
+  margin-bottom: 30px;
+}
+
+.btn-support:hover {
+  color: $white;
+  opacity: 0.8;
+  text-shadow: 1px 0 0 currentColor;
+  text-decoration: none;
+}
+
+.btn-flat-search {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $turquoised;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.btn-flat-search:hover {
+  color: $white;
+  opacity: 0.8;
+  text-decoration: none;
+}
