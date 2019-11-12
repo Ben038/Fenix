@@ -1,7 +1,8 @@
-<h2>Log in</h2>
+<div class='container'>
 
 <%= simple_form_for(User.new, url: session_path(User.new)) do |f| %>
   <div class="form-inputs">
+<h2 class='logintext'>Log in</h2>
     <%= f.input :email,
                 required: false,
                 autofocus: true,
@@ -9,12 +10,12 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean  %>
+    <!-- <%= f.input :remember_me, as: :boolean  %> -->
   </div>
 
-  <div class="form-actions">
+  <div class="btn-login">
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
+</div>
 <%#= render "devise/shared/links" %>
