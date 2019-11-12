@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_094326) do
+ActiveRecord::Schema.define(version: 2019_11_12_095830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounting_data", force: :cascade do |t|
     t.integer "balance_year"
-    t.integer "quanter"
     t.string "local_insurer"
     t.string "geo_area"
     t.string "country"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_094326) do
     t.bigint "user_id"
     t.bigint "file_upload_id"
     t.bigint "international_client_id"
+    t.integer "quarter"
     t.index ["file_upload_id"], name: "index_accounting_data_on_file_upload_id"
     t.index ["international_client_id"], name: "index_accounting_data_on_international_client_id"
     t.index ["user_id"], name: "index_accounting_data_on_user_id"
