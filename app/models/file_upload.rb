@@ -1,7 +1,7 @@
 class FileUpload < ApplicationRecord
   NETWORKS = ["Network 1", "Network 2", "Network 3", "Network 4"]
   YEARS = [Time.now.year - 3, Time.now.year - 2, Time.now.year - 1, Time.now.year]
-  QUARTERS = ["Q1", "Q2", "Q3", "Q4"]
+  QUARTERS = [1, 2, 3, 4]
 
   belongs_to :user
   has_many :accounting_data
