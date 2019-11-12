@@ -1,5 +1,5 @@
 
-.btn-flat {
+.btn-yellow {
   color: $white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -9,32 +9,13 @@
   margin-bottom: 10px;
 }
 
-.btn-flat:hover {
+.btn-yellow:hover {
   color: $white;
   opacity: 0.8;
   text-decoration: none;
 }
 
-
-.btn-support {
-  color: $white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: $turquoised;
-  text-shadow: 1px 0 0 currentColor;
-  transition: background 0.3s ease;
-  opacity: 1;
-  margin-bottom: 30px;
-}
-
-.btn-support:hover {
-  color: $white;
-  opacity: 0.8;
-  text-shadow: 1px 0 0 currentColor;
-  text-decoration: none;
-}
-
-.btn-flat-search {
+.btn-blue {
   color: $white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -44,7 +25,7 @@
   margin-bottom: 10px;
 }
 
-.btn-flat-search:hover {
+.btn-bleu:hover {
   color: $white;
   opacity: 0.8;
   text-decoration: none;

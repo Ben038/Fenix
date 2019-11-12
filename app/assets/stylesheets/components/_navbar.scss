@@ -1,17 +1,25 @@
 .navbar-fenix {
   justify-content: space-between;
   background: white;
-  color: $white;
+  color: $darkblue;
   padding: 10px 50px;
   display: flex;
+  align-items: center;
+}
+
+.navbar-fenix .welcome-user {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: O;
 }
 
 .navbar-light .navbar-nav .nav-link  {
   align-items: center;
-  color: $white;
+  color: $darkblue;
   }
 
-.navbar-finconsult .navbar-collapse {
+.navbar-fenix .navbar-collapse {
   flex-grow: 0;
 }
 
@@ -23,7 +31,6 @@
 .nav-item {
   display: inline-block;
 }
-
 .nav-item li {
   display: inline-block;
 }
