@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_international_client #, only: [:destroy]
+  before_action :find_international_client
 
 # this is a B2B approach and the user buy the product shall not be creating
 # its own access to the platform. A platform admin will create the credentials for each user to
