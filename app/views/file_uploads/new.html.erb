@@ -1,6 +1,14 @@
-<h1>FileUploads#new</h1>
-<p>Find me in app/views/file_uploads/new.html.erb</p>
+<h1>Data Uploader</h1>
 
-<%= link_to "back to dashboard", pages_path %>
+  <%= simple_form_for (@file_upload) do |f| %>
+    <%= f.input :reinsurance_network, collection: FileUpload::NETWORKS %>
+    <%= f.input :balance_year, collection: FileUpload::YEARS %>
+    <%= f.input :quarter, collection: FileUpload::QUARTERS %>
+    <%= f.input :file_name %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
+
+ <p><%= link_to "back to dashboard", pages_path, class: "btn btn-flat" %></p>
+
 <br>
 <%= image_tag "Data_new.png" %>
