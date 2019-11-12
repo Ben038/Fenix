@@ -3,6 +3,7 @@ class InternationalClientsController < ApplicationController
   end
 
   def new
+    @international_client = InternationalClient.new
   end
 
   def index

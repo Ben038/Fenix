@@ -3,6 +3,7 @@ class AccountingDataController < ApplicationController
   end
 
   def new
+    @accounting_data = AccountingData.new
   end
 
   def index
