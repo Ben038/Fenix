@@ -47,8 +47,6 @@ ActiveRecord::Schema.define(version: 2019_11_12_095830) do
     t.bigint "international_client_id"
     t.integer "quarter"
     t.index ["file_upload_id"], name: "index_accounting_data_on_file_upload_id"
-    # t.index ["international_client_id"], name: "index_accounting_data_on_international_client_id"
-    # t.index ["user_id"], name: "index_accounting_data_on_user_id"
   end
 
   create_table "file_uploads", force: :cascade do |t|
