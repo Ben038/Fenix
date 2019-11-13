@@ -7,12 +7,14 @@
   height: 100%;
   position: fixed;
   bottom: 100px;
+  // height: calc(100vh - 106px - 100px);
+  height: 100vh;
   top: 98px;
   left: 0;
   background-color: $darkblue;
   overflow-x: hidden;
-  border: 3px solid black;
   padding: 15px;
+  z-index: 1;
 }
 .sidebar-item {
   display: inline-block;
