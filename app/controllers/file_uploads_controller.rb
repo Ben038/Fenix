@@ -3,6 +3,8 @@ class FileUploadsController < ApplicationController
   def create
     @file_upload = FileUpload.new(file_upload_params)
     @file_upload.user = current_user
+    authorize @file_upload
+
     if @file_upload.save
       redirect_to new_file_upload_path
     else

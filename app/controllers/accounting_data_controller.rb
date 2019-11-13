@@ -1,5 +1,6 @@
 class AccountingDataController < ApplicationController
   def create
+    authorize @accounting_data
   end
 
   def new
