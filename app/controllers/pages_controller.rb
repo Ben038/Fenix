@@ -1,7 +1,13 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!
 
-  def home
+  def index
+    filter_data
+    @commission_ratio = AccountingDatum.kpi_ratio_commissions(@data_rows)
+    @balance_ratio = AccountingDatum.kpi_ratio_tech_bal(@data_rows)
+    @claim_ratio = AccountingDatum.kpi_ratio_claims(@data_rows)
+    @broker_comm_ratio = AccountingDatum.broker_ratio_commissions(@data_rows)
+    @reins_comm_ratio = AccountingDatum.reins_comm_ratio(@data_rows)
   end
 
   def filter_data
