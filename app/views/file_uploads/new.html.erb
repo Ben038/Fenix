@@ -4,14 +4,24 @@
     <%= f.input :reinsurance_network, collection: FileUpload::NETWORKS %>
     <%= f.input :balance_year, collection: FileUpload::YEARS %>
     <%= f.input :quarter, collection: FileUpload::QUARTERS %>
-    <%= f.input :file_name %>
+    <%= f.input :file_name, placeholder: "" %>
     <%= f.button :submit, class: "btn-yellow" %>
   <% end %>
 
-<p><%= link_to "back to dashboard", pages_path, class: "btn-yellow" %></p>
+<div>
+  <h4>Import data!</h4>
+    <%= form_tag import_accounting_data_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV", class: "btn-yellow" %>
+    <% end %>
+</div>
+
+<p><%= link_to "View ALL uploaded data", accounting_data_path, class: "btn-yellow" %></p>
+
+<p><%= link_to "Back to dashboard", pages_path, class: "btn-yellow" %></p>
 
 <h2>Latest uploads</h2>
 
-  <% FileUpload.last(3).each do |file_upload| %>
-    <p><%= file_upload.balance_year %> - Q <%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></p>
+  <% FileUpload.last(5).reverse.each do |file_upload| %>
+    <p><%= file_upload.created_at %>  ---  <%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></p>
   <% end %>

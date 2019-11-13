@@ -1,11 +1,17 @@
-<h1>AccountingData#index</h1>
-<p>Find me in app/views/accounting_data/index.html.erb</p>
+
 
 <table>
   <tbody>
+    The last upload has been done at <strong><%= @accounting_data.last.created_at %></strong>
+    <br>
+    <br>
+    ALL THE STORED DATA (the first 5 rows only) :
+    <br>
+    <br>
     <% @accounting_data.each do |data|  %>
       <tr>
         <td><%= data.balance_year %></td>
+        <td><%= data.quarter %></td>
         <td><%= data.local_insurer %></td>
         <td><%= data.geo_area %></td>
         <td><%= data.country %></td>
@@ -13,11 +19,6 @@
     <% end %>
   </tbody>
 </table>
+<br>
 
-<div>
-  <h4>Import data!</h4>
-    <%= form_tag import_accounting_data_path, multipart: true do %>
-      <%= file_field_tag :file %>
-      <%= submit_tag "Import CSV" %>
-    <% end %>
-</div>
+<p><%= link_to "Back to File Upload", new_file_upload_path, class: "btn-yellow" %></p>
