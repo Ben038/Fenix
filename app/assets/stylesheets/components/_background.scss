@@ -39,10 +39,10 @@ html, body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-
+}
 body {
   background: $white;
 }
 main {
- min-height: calc(100vh - 98px - 100px)
+ min-height: calc(100vh - 98px - 100px);
 }
