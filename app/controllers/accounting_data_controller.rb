@@ -4,10 +4,16 @@ class AccountingDataController < ApplicationController
   end
 
   def new
-    @accounting_data = AccountingData.new
+    @accounting_datum = AccountingDatum.new
   end
 
   def index
+    @accounting_data = AccountingDatum.all
+  end
+
+  def import
+    AccountingDatum.import(params[:file])
+    redirect_to accounting_data_path
   end
 
   def destroy

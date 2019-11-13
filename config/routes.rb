@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
 
 devise_for :users
-# as :user do
-#   get 'signin', to: 'devise/sessions#new', as: :new_user_session
-#   post 'signin', to: 'devise/sessions#create', as: :user_session
-#   delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
-# end
 
   root to: 'pages#index'
 
@@ -13,7 +8,9 @@ devise_for :users
   resources :pages, only: [:index, :show]
 
   # resources :users, only: [:new, :create, :destroy]
-  resources :accounting_data, only: [:new, :create, :destroy]
+  resources :accounting_data, only: [:new, :create, :index, :destroy] do
+    collection {post :import}
+  end
   resources :file_uploads, only: [:index, :new, :create, :destroy]
   resources :international_clients, only: [:new, :create, :destroy]
 
