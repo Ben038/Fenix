@@ -16,7 +16,7 @@ class AccountingDatum < ApplicationRecord
       AccountingDatum.create!(row.to_hash)
     end
   end
-=======
+
 # VISUALIZATION OVERVIEW #
 
 # sum of claim & claim reserves / sum of premiums & prm reserves
