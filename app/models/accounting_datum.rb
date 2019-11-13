@@ -9,8 +9,11 @@ class AccountingDatum < ApplicationRecord
     csv_options = { col_sep: ';', headers: true, header_converters: :symbol }
 
     CSV.foreach(file.path, csv_options) do |row|
-      # row[:balance_year] = row[:balance_year].to_i
+      # row[:balance_year] = row[:balance_year].to_i   ===   MIGHT BE USEFUL
+      row['file_upload_id'] = FileUpload.last.id
       AccountingDatum.create!(row.to_hash)
     end
   end
 end
+
+# FileUpload.last.id
