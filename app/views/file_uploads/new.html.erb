@@ -21,7 +21,14 @@
 <p><%= link_to "Back to dashboard", pages_path, class: "btn-yellow" %></p>
 
 <h2>Latest uploads</h2>
-
+<table>
+  <tbody>
   <% FileUpload.last(5).reverse.each do |file_upload| %>
-    <p><%= file_upload.created_at %>  ---  <%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></p>
+  <tr>
+    <td><%= file_upload.created_at %></td>
+    <td>   --   <%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
+    <td>   -----   <%= "REMOVE (still to do)" %></td>
+  </tr>
   <% end %>
+  </tbody>
+</table>
