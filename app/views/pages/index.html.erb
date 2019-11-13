@@ -1,23 +1,65 @@
 
-<%= link_to "UPLOAD DATA", new_file_upload_path %>
-<br>
-<%= link_to "DIVE INTO...", "#" %>
-<br>
-
-<div class="container-dashboard">
   <div class="sidebar">
     Sidebar
   </div>
-  <div class="card-kpi">
-    KPI card
+
+<div class="container-dashboard">
+
+  <div class="container-top">
+
+    <div class="container-left">
+      <% 4.times do %>
+        <div class="card-kpi">
+          <p>KPI card</p>
+          <p>00</p>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="container-right">
+
+      <div class="card-table">
+        <table>
+          <tbody>
+            <tr>
+              <td>Table</td>
+              <td>card</td>
+              <td>info</td>
+              <td>info</td>
+            </tr>
+            <tr>
+              <td>00</td>
+              <td>00</td>
+              <td>00</td>
+              <td>00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-chart">
+        <% 2.times do %>
+          <div class="card-chart">
+        <div class="card-chart-img">
+        </div>
+        <div class="card-chart-text">
+        Chart card
+        </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+
   </div>
-  <div class="card-table">
-    Table card
-  </div>
-  <div class="card-chart">
-    Chart card
-  </div>
-  <div class="card-news">
-    News card
+
+  <div class="container-bottom">
+    <h5>News</h5>
+    <div class="card-news">
+      News card
+    </div>
   </div>
 </div>
+
+<p> <%= link_to "UPLOAD DATA", new_file_upload_path, class: "btn-yellow" %> </p>
+<p> <%= link_to "DIVE INTO...", "#", class: "btn-yellow" %> </p>
