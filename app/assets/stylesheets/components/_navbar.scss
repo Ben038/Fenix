@@ -6,6 +6,11 @@
   display: flex;
   align-items: center;
 }
+.navbar {
+ position: fixed;
+ top: 0;
+ width: 100vw;
+}
 
 .navbar-fenix p {
   margin: 0 10px 0 0;
@@ -30,4 +35,7 @@
 }
 .nav-item li {
   display: inline-block;
+}
+header {
+  height: 98px;
 }
