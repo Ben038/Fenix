@@ -1,9 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  before_action :authenticate_user!
 
   def home
   end
-
 
   def filter_data
     @data_rows = current_user.international_client.accounting_data

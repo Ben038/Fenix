@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar-main {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: $darkblue;
+  overflow-x: hidden;
+  border: 3px solid black;
+  padding: 15px;
+}
+.sidebar-item {
+  display: inline-block;
+}
+.sidebar-item li {
+  display: inline-block;
+}
+.sidebar-item {
+  color: $white;
+}
