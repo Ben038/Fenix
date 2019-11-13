@@ -1,0 +1,17 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidebar-item {
+  display: inline-block;
+}
+.sidebar-item li {
+  display: inline-block;
+}
+
