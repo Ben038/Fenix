@@ -1,2 +1,23 @@
 <h1>AccountingData#index</h1>
 <p>Find me in app/views/accounting_data/index.html.erb</p>
+
+<table>
+  <tbody>
+    <% @accounting_data.each do |data|  %>
+      <tr>
+        <td><%= data.balance_year %></td>
+        <td><%= data.local_insurer %></td>
+        <td><%= data.geo_area %></td>
+        <td><%= data.country %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div>
+  <h4>Import data!</h4>
+    <%= form_tag import_accounting_data_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
+</div>
