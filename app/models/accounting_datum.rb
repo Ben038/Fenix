@@ -28,7 +28,7 @@ class AccountingDatum < ApplicationRecord
       num += row.claim_paid_and_reserves_change
       den += row.premium_and_reserves_change
     end
-    (num / den) * 100
+    ((num / den) * 100).round(2)
   end
 
 # sum of reinsurance and broker commissions / sum of premiums & prm reserves
@@ -40,7 +40,7 @@ class AccountingDatum < ApplicationRecord
       num += (row.reinsurance_comm + row.broker_comm)
       den += row.premium_and_reserves_change
     end
-    (num / den) * 100
+    ((num / den) * 100).round(2)
   end
 
 # sum of balance / sum of premiums & prm reserves
@@ -52,7 +52,7 @@ class AccountingDatum < ApplicationRecord
       num += row.balance
       den += row.premium_and_reserves_change
     end
-    (num / den) * 100
+    ((num / den) * 100).round(2)
   end
 
 # # VISUALIZATION COMMISSIONS #
@@ -65,7 +65,7 @@ class AccountingDatum < ApplicationRecord
       num += row.broker_comm
       den += row.premium
     end
-    (num / den) * 100
+    ((num / den) * 100).round(2)
   end
 
   def self.reins_comm_ratio(data_rows)
@@ -76,7 +76,7 @@ class AccountingDatum < ApplicationRecord
       num += row.reinsurance_comm
       den += row.premium
     end
-    (num / den) * 100
+    ((num / den) * 100).round(2)
   end
 
 # # VISUALIZATION ACCOUNTING DATA #
@@ -86,7 +86,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.premium
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_earned_premium(data_rows)
@@ -94,7 +94,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.earned_premium
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_claim_paid(data_rows)
@@ -102,7 +102,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.claim_paid
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_claim_paid_and_reserves_change(data_rows)
@@ -110,7 +110,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.claim_paid_and_reserves_change
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_premium_and_reserves_change(data_rows)
@@ -118,7 +118,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.premium_and_reserves_change
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_reinsurance_comm(data_rows)
@@ -126,7 +126,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.reinsurance_comm
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_broker_comm(data_rows)
@@ -134,7 +134,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.broker_comm
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_profit_sharing(data_rows)
@@ -142,7 +142,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.profit_sharing
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_taxes(data_rows)
@@ -150,7 +150,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.taxes
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_interests(data_rows)
@@ -158,7 +158,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.interests
     end
-    tot
+    tot.round(2)
   end
 
   def self.calc_balance(data_rows)
@@ -166,7 +166,7 @@ class AccountingDatum < ApplicationRecord
     data_rows.each do |row|
       tot += row.balance
     end
-    tot
+    tot.round(2)
   end
 end
 
