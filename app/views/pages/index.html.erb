@@ -8,12 +8,19 @@
   <div class="container-top">
 
     <div class="container-left">
-      <% 4.times do %>
-        <div class="card-kpi">
-          <p>KPI card</p>
-          <p>00</p>
-        </div>
-      <% end %>
+      <h1>KPI</h1>
+      <div class="card-kpi">
+        <h1>Commissions Ratio</h1>
+        <h2><%= @commission_ratio %></h2>
+      </div>
+      <div class="card-kpi">
+        <h1>Claims Ratio</h1>
+        <h2><%= @claim_ratio %></h2>
+      </div>
+      <div class="card-kpi">
+        <h1>Balance Ratio</h1>
+        <h2><%= @balance_ratio%></h2>
+      </div>
     </div>
 
     <div class="container-right">
@@ -50,6 +57,7 @@
       </div>
 
     </div>
+
 
   </div>
 
