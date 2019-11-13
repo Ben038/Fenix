@@ -1,20 +1,18 @@
-.dashboard-content {
- margin-left: 200px;
-}
-
-.sidebar {
-  background: blue;
-  width: 20%;
-}
-
 .card-kpi {
-  background: red;
+  background: white;
   overflow: hidden;
   opacity: 1;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-kpi h3 {
+font-size: 1.5em;
 }
 
 .card-kpi + .card-kpi {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .card-kpi:hover {
@@ -23,6 +21,7 @@
 
 .card-chart {
   background: green;
+  min-height: 200px;
 }
 
 .card-chart-image {
@@ -38,7 +37,7 @@
   background: yellow;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   padding: 10px;
-  min-height: 500px;
+  min-height: 300px;
 }
 
 .card-table:hover {
