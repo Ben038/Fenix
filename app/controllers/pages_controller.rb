@@ -8,6 +8,17 @@ class PagesController < ApplicationController
     @claim_ratio = AccountingDatum.kpi_ratio_claims(@data_rows)
     @broker_comm_ratio = AccountingDatum.broker_ratio_commissions(@data_rows)
     @reins_comm_ratio = AccountingDatum.reins_comm_ratio(@data_rows)
+    @premium = AccountingDatum.calc_premium(@data_rows)
+    @earned_premium = AccountingDatum.calc_earned_premium(@data_rows)
+    @claim_paid = AccountingDatum.calc_claim_paid(@data_rows)
+    @claim_paid_and_reserves_change = AccountingDatum.calc_claim_paid_and_reserves_change(@data_rows)
+    @premium_and_reserves_change = AccountingDatum.calc_premium_and_reserves_change(@data_rows)
+    @reinsurance_comm = AccountingDatum.calc_reinsurance_comm(@data_rows)
+    @broker_comm = AccountingDatum.calc_broker_comm(@data_rows)
+    @profit_sharing = AccountingDatum.calc_profit_sharing(@data_rows)
+    @taxes = AccountingDatum.calc_taxes(@data_rows)
+    @interests = AccountingDatum.calc_interests(@data_rows)
+    @balance = AccountingDatum.calc_balance(@data_rows)
   end
 
   def filter_data
@@ -23,4 +34,3 @@ class PagesController < ApplicationController
     @data_rows = @data_rows.where quarter: params[:quarter] if params[:quarter].present?
   end
 end
-

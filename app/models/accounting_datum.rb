@@ -56,8 +56,7 @@ class AccountingDatum < ApplicationRecord
   end
 
 # # VISUALIZATION COMMISSIONS #
-#   def commissions_rates
-#   end
+
   def self.broker_ratio_commissions(data_rows)
     num = 0
     den = 0
@@ -80,11 +79,95 @@ class AccountingDatum < ApplicationRecord
     (num / den) * 100
   end
 
-# # VISUALIZATION CLAIMS #
-#   def
-#   end
+# # VISUALIZATION ACCOUNTING DATA #
 
+  def self.calc_premium(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.premium
+    end
+    tot
+  end
 
+  def self.calc_earned_premium(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.earned_premium
+    end
+    tot
+  end
+
+  def self.calc_claim_paid(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.claim_paid
+    end
+    tot
+  end
+
+  def self.calc_claim_paid_and_reserves_change(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.claim_paid_and_reserves_change
+    end
+    tot
+  end
+
+  def self.calc_premium_and_reserves_change(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.premium_and_reserves_change
+    end
+    tot
+  end
+
+  def self.calc_reinsurance_comm(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.reinsurance_comm
+    end
+    tot
+  end
+
+  def self.calc_broker_comm(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.broker_comm
+    end
+    tot
+  end
+
+  def self.calc_profit_sharing(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.profit_sharing
+    end
+    tot
+  end
+
+  def self.calc_taxes(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.taxes
+    end
+    tot
+  end
+
+  def self.calc_interests(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.interests
+    end
+    tot
+  end
+
+  def self.calc_balance(data_rows)
+    tot = 0
+    data_rows.each do |row|
+      tot += row.balance
+    end
+    tot
+  end
 end
 
 # FileUpload.last.id
