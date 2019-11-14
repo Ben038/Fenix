@@ -35,28 +35,70 @@
           <table>
             <tbody>
               <tr>
-                <th>Premium</th>
-                <td>Premium & Res Var</th>
-                <th>Claims Paid</th>
-                <th>Paid Claims & Res Var</th>
-                <th>Reinsurance Comm</th>
-                <th>Broker Comm</th>
-                <th>Profit Sharing</th>
-                <th>Taxes</th>
-                <th>Interests</th>
-                <th>Technical Balance</th>
+                <th scope="col" >Accounting Item</th>
+                <th scope="col" class='BY'>2016</th>
+                <th scope="col" class='BY'>2017</th>
+                <th scope="col" class='BY'>2018</th>
               </tr>
               <tr>
+                <th scope="row">Premium</th>
                 <td><%= @premium %></td>
+                <td><%= @premium %></td>
+                <td><%= @premium %></td>
+              </tr>
+              <tr>
+                <th scope="row">Premium & Res Var</th>
                 <td><%= @premium_and_reserves_change %></td>
+                <td><%= @premium_and_reserves_change %></td>
+                <td><%= @premium_and_reserves_change %></td>
+              </tr>
+              <tr>
+                <th scope="row">Claims Paid</th>
                 <td><%= @claim_paid %></td>
+                <td><%= @claim_paid %></td>
+                <td><%= @claim_paid %></td>
+              </tr>
+              <tr>
+                <th scope="row">Paid Claims & Res Var</th>
                 <td><%= @claim_paid_and_reserves_change %></td>
+                <td><%= @claim_paid_and_reserves_change %></td>
+                <td><%= @claim_paid_and_reserves_change %></td>
+              </tr>
+              <tr>
+                <th scope="row">Reinsurance Comm</th>
                 <td><%= @reinsurance_comm %></td>
+                <td><%= @reinsurance_comm %></td>
+                <td><%= @reinsurance_comm %></td>
+              </tr>
+              <tr>
+                <th scope="row">Broker Comm</th>
                 <td><%= @broker_comm %></td>
+                <td><%= @broker_comm %></td>
+                <td><%= @broker_comm %></td>
+              </tr>
+              <tr>
+                <th scope="row">Profit Sharing</th>
                 <td><%= @profit_sharing %></td>
+                <td><%= @profit_sharing %></td>
+                <td><%= @profit_sharing %></td>
+              </tr>
+              <tr>
+                <th scope="row">Taxes</th>
                 <td><%= @taxes %></td>
+                <td><%= @taxes %></td>
+                <td><%= @taxes %></td>
+              </tr>
+              <tr>
+                <th scope="row">Interests</th>
                 <td><%= @interests %></td>
-                <td><%= @balance %></td>
+                <td><%= @interests %></td>
+                <td><%= @interests %></td>
+              </tr>
+              <tr>
+                <th scope="row">Technical Balance</th>
+                <td class='last-row'><%= @balance %></td>
+                <td class='last-row'><%= @balance %></td>
+                <td class='last-row'><%= @balance %></td>
               </tr>
             </tbody>
           </table>
