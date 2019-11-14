@@ -1,15 +1,59 @@
 <div class="wrapper">
   <div class="sidebar-main">
-    <li class="sidebar-item" aria-labelledby="navbarDropdown">
-      <ul class="cat-dropdown">Categories</ul>
-      <ul class="year-dropdown">Year</ul>
-        <%= link_to 2017, '#' %>
-        <%= link_to 2018, '#' %>
-        <%= link_to 2019, '#' %>
-        <%= link_to "UPLOAD DATA", new_file_upload_path %>
-<br>
-<%= link_to "DIVE INTO...", "#" %>
-<br>
-    </li>
+    <ul>Balance Year
+      <% @select_years.each do |year| %>
+        <li><%= check_box_tag "year[#{year}]", year %>
+          <%= label_tag year %></li>
+      <% end %>
+    </ul>
+    <ul>Countries
+      <% @select_countries.each do |country| %>
+        <li><%= check_box_tag "country[#{country}]", country %>
+          <%= label_tag country %></li>
+      <% end %>
+    </ul>
+    <ul>Networks
+      <% @select_networks.each do |network| %>
+        <li><%= check_box_tag "network[#{network}]", network %>
+          <%= label_tag network %></li>
+      <% end %>
+    </ul>
+        <ul>Risks
+      <% @select_risks.each do |risk| %>
+        <li><%= check_box_tag "risk[#{risk}]", risk %>
+          <%= label_tag risk %></li>
+      <% end %>
+    </ul>
+    <ul>Local Insurers
+      <% @select_local_insurers.each do |li| %>
+        <li><%= check_box_tag "li[#{li}]", li %>
+          <%= label_tag li %></li>
+      <% end %>
+    </ul>
+    <ul>Geo Area
+      <% @select_geo_area.each do |ga| %>
+        <li><%= check_box_tag "ga[#{ga}]", ga %>
+          <%= label_tag ga %></li>
+      <% end %>
+    </ul>
+    <ul>Business Div
+      <% @select_business_div.each do |bd| %>
+        <li><%= check_box_tag "bd[#{bd}]", bd %>
+          <%= label_tag bd %></li>
+      <% end %>
+    </ul>
+    <ul>Local Client
+      <% @select_local_clients.each do |lc| %>
+        <li><%= check_box_tag "lc[#{lc}]", lc %>
+          <%= label_tag lc %></li>
+      <% end %>
+    </ul>
+    <ul>Quarter
+      <% @select_quarter.each do |q| %>
+        <li><%= check_box_tag "q[#{q}]", q %>
+          <%= label_tag q %></li>
+      <% end %>
+    </ul>
+
   </div>
 </div>
