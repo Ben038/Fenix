@@ -35,20 +35,20 @@ user3.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc99
 # user3.save
 
 
-# # sample of file upload list:
-# puts "creating files"
+# sample of file upload list:
+puts "creating files"
 
-# file_upload1 = FileUpload.create!(reinsurance_network: "Network 2" , balance_year: 2018, quarter: 1, file_name: "Q1_2018", user: User.all.sample)
+file_upload1 = FileUpload.create!(reinsurance_network: "Network 2" , balance_year: 2018, quarter: 1, file_name: "Q1_2018", user: User.all.sample)
 # file_upload2 = FileUpload.create!(reinsurance_network: "Network 2" , balance_year: 2018, quarter: 2, file_name: "Q2_2018", user: User.all.sample)
 # file_upload3 = FileUpload.create!(reinsurance_network: "Network 1" , balance_year: 2016, quarter: 3, file_name: "Q3_2016", user: User.all.sample)
 # file_upload4 = FileUpload.create!(reinsurance_network: "Network 1" , balance_year: 2016, quarter: 4, file_name: "Q4_2016", user: User.all.sample)
 # file_upload5 = FileUpload.create!(reinsurance_network: "Network 1" , balance_year: 2017, quarter: 1, file_name: "Q1_2017", user: User.all.sample)
 # file_upload6 = FileUpload.create!(reinsurance_network: "Network 3" , balance_year: 2017, quarter: 2, file_name: "Q2_2017", user: User.all.sample)
 
-# # # sample of xls database:
-# puts "creating data_inputs"
+# sample of xls database:
+puts "creating data_inputs"
 
-# accounting_data1 = AccountingDatum.create!(balance_year: 2018, quarter: 1, local_insurer: "Local Insurer 6", geo_area: "Western Europe", country: "Italy", product: "Captive", business_division: "Manufacturing", local_client: "Local Entity 3", reinsurance_network: "Network 2", risk: "Life", policy_number: "81", benefit: "GL", premium: 24822.26, earned_premium: 24822.26, premium_and_reserves_change: 24822.26, claim_paid: -6404.92, claim_paid_and_reserves_change: 769.61, reinsurance_comm: -2503.04, broker_comm: 0, profit_sharing: 0, taxes: -650.1, interests: 734.01, balance: 23172.74, file_upload: FileUpload.all.sample)
+accounting_data1 = AccountingDatum.create!(balance_year: 2018, quarter: 1, local_insurer: "Local Insurer 6", geo_area: "Western Europe", country: "Italy", product: "Captive", business_division: "Manufacturing", local_client: "Local Entity 3", reinsurance_network: "Network 2", risk: "Life", policy_number: "81", benefit: "GL", premium: 24822.26, earned_premium: 24822.26, premium_and_reserves_change: 24822.26, claim_paid: -6404.92, claim_paid_and_reserves_change: 769.61, reinsurance_comm: -2503.04, broker_comm: 0, profit_sharing: 0, taxes: -650.1, interests: 734.01, balance: 23172.74, file_upload: FileUpload.all.sample)
 # accounting_data2 = AccountingDatum.create!(balance_year: 2018, quarter: 1, local_insurer: "Local Insurer 6", geo_area: "Western Europe", country: "Italy", product: "Captive", business_division: "Manufacturing", local_client: "Local Entity 3", reinsurance_network: "Network 2", risk: "Disability", policy_number: "81", benefit: "DP", premium: 220242.75, earned_premium: 220242.75, premium_and_reserves_change: 220242.75, claim_paid: -109494.01, claim_paid_and_reserves_change: 106512.35, reinsurance_comm: -22214.18, broker_comm: 0, profit_sharing: 0, taxes: -5770.19, interests: 11621.09, balance: 310391.82, file_upload: FileUpload.all.sample)
 # accounting_data3 = AccountingDatum.create!(balance_year: 2018, quarter: 2, local_insurer: "Local Insurer 6", geo_area: "Western Europe", country: "Italy", product: "Captive", business_division: "Manufacturing", local_client: "Local Entity 3", reinsurance_network: "Network 2", risk: "Disability", policy_number: "81", benefit: "DP", premium: 243083.97, earned_premium: 243083.97, premium_and_reserves_change: 243083.97, claim_paid: -214649.33, claim_paid_and_reserves_change: -453933.05, reinsurance_comm: -24331.64, broker_comm: 0, profit_sharing: 0, taxes: -6368.41, interests: 9798.24, balance: -231750.88, file_upload: FileUpload.all.sample)
 # accounting_data4 = AccountingDatum.create!(balance_year: 2017, quarter: 1, local_insurer: "Local Insurer 6", geo_area: "Western Europe", country: "Italy", product: "Captive", business_division: "Manufacturing", local_client: "Local Entity 3", reinsurance_network: "Network 2", risk: "Life", policy_number: "81", benefit: "GL", premium: 23836.49, earned_premium: 23836.49, premium_and_reserves_change: 23836.49, claim_paid: -96377.53, claim_paid_and_reserves_change: -71864.12, reinsurance_comm: -2444.67, broker_comm: 0, profit_sharing: 0, taxes: -624.79, interests: 929.87, balance: -50167.21, file_upload: FileUpload.all.sample)
