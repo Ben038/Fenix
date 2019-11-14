@@ -21,6 +21,11 @@ class FileUploadsController < ApplicationController
   end
 
   def destroy
+    # @user = current_user
+    # authorize @user
+    @file_upload = FileUpload.find(params[:id])
+    @file_upload.destroy
+    redirect_to new_file_upload_path
   end
 
   private
@@ -29,5 +34,3 @@ class FileUploadsController < ApplicationController
     params.require(:file_upload).permit(:reinsurance_network, :balance_year, :quarter, :file_name)
   end
 end
-
-

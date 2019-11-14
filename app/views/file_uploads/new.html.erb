@@ -26,9 +26,16 @@
   <% FileUpload.last(5).reverse.each do |file_upload| %>
   <tr>
     <td><%= file_upload.created_at %></td>
-    <td>   --   <%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
-    <td>   -----   <%= "REMOVE (still to do)" %></td>
+    <td>  --  <%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
+    <td>  -----  <% if current_user.id = file_upload.user_id %>
+                  <%= link_to file_upload_path(file_upload.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash"></i>
+                <% end %>
+                <% end %>
+              </td>
   </tr>
   <% end %>
   </tbody>
 </table>
+
+
