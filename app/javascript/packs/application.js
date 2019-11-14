@@ -1,3 +1,3 @@
 import "bootstrap";
-import "../components/d3functions";
+import "../components/chartfunctions";
 
