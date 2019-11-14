@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
 }
+
 .navbar {
  position: fixed;
  top: 0;
@@ -13,12 +14,15 @@
 }
 
 .navbar-fenix p {
-  margin: 0 10px 0 0;
+  margin: 0 0 0 0;
+  color: $yellow;
 }
 
 .navbar-light .navbar-nav .nav-link  {
-  align-items: center;
   color: $darkblue;
+  margin-right: 50px;
+  font-family: "Roboto";
+  font-size: 1.5em;
   }
 
 .navbar-fenix .navbar-collapse {
@@ -36,6 +40,12 @@
 .nav-item li {
   display: inline-block;
 }
+
+.navbar h4 {
+  text-family: "Roboto";
+  text-size: 12px;
+}
+
 header {
   height: 98px;
 }
