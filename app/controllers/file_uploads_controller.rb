@@ -29,5 +29,3 @@ class FileUploadsController < ApplicationController
     params.require(:file_upload).permit(:reinsurance_network, :balance_year, :quarter, :file_name)
   end
 end
-
-
