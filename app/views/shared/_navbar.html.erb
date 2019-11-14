@@ -9,13 +9,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active d-flex align-items-center">
-          <a class="nav-link" href="#">Claims</a>
-      </li>
-      <li class="nav-item d-flex align-items-center">
-        <a class="nav-link" href="#">Commissions</a>
-      </li>
       <% if user_signed_in? %>
+        <li class="nav-item active d-flex align-items-center">
+          <a class="nav-link" href="#">Claims</a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <a class="nav-link" href="#">Commissions</a>
+        </li>
           <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
           <% if !current_user.profile_picture %>
