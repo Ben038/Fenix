@@ -4,7 +4,7 @@ class FileUpload < ApplicationRecord
   QUARTERS = [1, 2, 3, 4]
 
   belongs_to :user
-  has_many :accounting_data
+  has_many :accounting_data, dependent: :destroy
 
   validates :reinsurance_network, presence: true, inclusion: { in: NETWORKS }
   validates :balance_year, presence: true, inclusion: { in: YEARS }
