@@ -1,7 +1,29 @@
 
-<div class="container-all">
+<!-- <div class="container-all"> -->
 
   <div class="container-dashboard">
+
+<div class="wrapper">
+  <div class="sidebar-main">
+    <p>Balance Year</p>
+    <input type="checkbox" name="BY"><% @select_years.each do |year| %>
+      <li><%= check_box_tag "year[#{year}]", year %>
+      <%= label_tag year %></li>
+    <% end %>
+    <p>Countries</p>
+      <input type="checkbox" name="country"><% @select_countries.each do |country| %>
+        <li><%= check_box_tag "country[#{country}]", country %>
+        <%= label_tag country %></li>
+      <% end %>
+    <p>Networks</p>
+      <input type="checkbox" name="network"><% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
+      <% end %>
+
+    <p><input type="submit" value="Submit"></p>
+    </form>
+  </div>
+</div>
+
 
     <div class="container-top">
 
@@ -135,5 +157,5 @@
     </div>
 
   </div>
-
-</div>
+<!--
+</div> -->
