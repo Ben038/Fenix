@@ -1,0 +1,25 @@
+th {
+  background-color: $mediumblue;
+  color: white;
+  height: 15px;
+}
+
+th.BY {
+  text-align: center;
+}
+
+tr:nth-child(odd) {background-color: $backgroundblue;}
+
+tr:hover {background-color: $lightblue;}
+
+table {
+  width: 100%;
+}
+
+tr td{
+  text-align: right;
+}
+
+td.last-row {
+  font-weight: bold;
+}
