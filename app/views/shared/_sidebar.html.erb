@@ -1,24 +1,23 @@
 <div class="wrapper">
   <div class="sidebar-main">
-    <ul>Balance Year
-      <% @select_years.each do |year| %>
-        <li><%= check_box_tag "year[#{year}]", year %>
-          <%= label_tag year %></li>
-      <% end %>
-    </ul>
-    <ul>Countries
-      <% @select_countries.each do |country| %>
+    <p>Balance Year</p>
+    <input type="checkbox" name="BY"><% @select_years.each do |year| %>
+      <li><%= check_box_tag "year[#{year}]", year %>
+      <%= label_tag year %></li>
+    <% end %>
+    <p>Countries</p>
+      <input type="checkbox" name="country"><% @select_countries.each do |country| %>
         <li><%= check_box_tag "country[#{country}]", country %>
-          <%= label_tag country %></li>
+        <%= label_tag country %></li>
       <% end %>
-    </ul>
-    <ul>Networks
-      <% @select_networks.each do |network| %>
-        <li><%= check_box_tag "network[#{network}]", network %>
-          <%= label_tag network %></li>
+    <p>Networks</p>
+      <input type="checkbox" name="network"><% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
       <% end %>
-    </ul>
-        <ul>Risks
+
+    <p><input type="submit" value="Submit"></p>
+    </form>
+
+<!--         <ul>Risks
       <% @select_risks.each do |risk| %>
         <li><%= check_box_tag "risk[#{risk}]", risk %>
           <%= label_tag risk %></li>
@@ -52,8 +51,8 @@
       <% @select_quarter.each do |q| %>
         <li><%= check_box_tag "q[#{q}]", q %>
           <%= label_tag q %></li>
-      <% end %>
-    </ul>
+      <% end %> -->
+ <!--    </ul> -->
 
   </div>
 </div>
