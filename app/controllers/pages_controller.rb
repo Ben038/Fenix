@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     ungrouped_set
 
     group_data
-
+    # binding.pry
     if @grouped
       ungrouped_set
       @data_process = []
@@ -81,10 +81,12 @@ class PagesController < ApplicationController
       #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
     returning_array = []
     concerned_params.each do |element|
-      returning_array << element.keys.first if element.values.first == "1"
+      returning_array << element.first
     end
     # [" Italy"]
+    raise
     returning_array
+
   end
 
   def premium_bar_chart
