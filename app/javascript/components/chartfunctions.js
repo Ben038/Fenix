@@ -60,7 +60,7 @@ var premiumChart = new Chart(ctx, {
     }
 });
 
-var balance = document.getElementById('balanceChart').getContext('2d');
+var balance = document.getElementById('balanceChart');
 var balanceChart = new Chart(balance, {
     type: 'bar',
     data: {
