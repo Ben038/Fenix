@@ -21,6 +21,7 @@ class PagesController < ApplicationController
 
   def group_data
     @data_rows = @data_rows.group_by :balance_year && @grouped = true if params[:group_by].present?
+    @data_rows = @data_rows.group_by :reinsurance_network && @grouped = true if params[:group_by].present?
   end
 
   def filter_data
@@ -56,7 +57,7 @@ class PagesController < ApplicationController
   end
 
   def create_grouped_hash(hash)
-    {hash.keys.first =>  {
+    {hash.keys =>  {
       commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
       balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
       claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
@@ -72,7 +73,7 @@ class PagesController < ApplicationController
       profit_sharing => AccountingDatum.calc_profit_sharing(hash.values.first),
       taxes => AccountingDatum.calc_taxes(hash.values.first),
       interests => AccountingDatum.calc_interests(hash.values.first),
-      balance => AccountingDatum.calc_balance(hash.values.first),
+      balance => AccountingDatum.calc_balance(hash.values.first)
     }
   }
   end
@@ -82,9 +83,9 @@ class PagesController < ApplicationController
     returning_array = []
     concerned_params.each do |element|
       returning_array << element.first
+
     end
     # [" Italy"]
-    raise
     returning_array
 
   end
