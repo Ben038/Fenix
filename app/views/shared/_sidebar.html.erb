@@ -2,21 +2,23 @@
   <div class="sidebar-main">
     <form>
       <p>Balance Year</p>
-      <input type="checkbox" name="BY"><% @select_years.each do |year| %>
+      <% @select_years.each do |year| %>
         <li><%= check_box_tag "balance_year[#{year}]", year %>
         <%= label_tag year %></li>
       <% end %>
       <p>Countries</p>
-        <input type="checkbox" name="country"><% @select_countries.each do |country| %>
+        <% @select_countries.each do |country| %>
           <li><%= check_box_tag "country[#{country}]", country %>
           <%= label_tag country %></li>
         <% end %>
       <p>Networks</p>
-        <input type="checkbox" name="network"><% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
+        <% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
         <% end %>
 
       <p><input type="submit" value="Submit"></p>
     </form>
+
+    <%= @data_rows_empty %>
 
 <!--         <ul>Risks
       <% @select_risks.each do |risk| %>

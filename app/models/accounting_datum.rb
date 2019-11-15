@@ -22,7 +22,7 @@ class AccountingDatum < ApplicationRecord
 # sum of claim & claim reserves / sum of premiums & prm reserves
   def self.kpi_ratio_claims(data_rows)
     num = 0
-    den = 0
+    den = 1
 
     data_rows.each do |row|
       num += row.claim_paid_and_reserves_change
@@ -34,7 +34,7 @@ class AccountingDatum < ApplicationRecord
 # sum of reinsurance and broker commissions / sum of premiums & prm reserves
   def self.kpi_ratio_commissions(data_rows)
     num = 0
-    den = 0
+    den = 1
 
     data_rows.each do |row|
       num += (row.reinsurance_comm + row.broker_comm)
@@ -46,7 +46,7 @@ class AccountingDatum < ApplicationRecord
 # sum of balance / sum of premiums & prm reserves
   def self.kpi_ratio_tech_bal(data_rows)
     num = 0
-    den = 0
+    den = 1
 
     data_rows.each do |row|
       num += row.balance
@@ -59,7 +59,7 @@ class AccountingDatum < ApplicationRecord
 
   def self.broker_ratio_commissions(data_rows)
     num = 0
-    den = 0
+    den = 1
 
     data_rows.each do |row|
       num += row.broker_comm
@@ -70,7 +70,7 @@ class AccountingDatum < ApplicationRecord
 
   def self.reins_comm_ratio(data_rows)
     num = 0
-    den = 0
+    den = 1
 
     data_rows.each do |row|
       num += row.reinsurance_comm
