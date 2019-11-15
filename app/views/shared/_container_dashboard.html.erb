@@ -74,7 +74,7 @@
             </div>
             <div class="card-chart-text">
               Balance / Year
-              <canvas id="balanceChart"></canvas>
+              <canvas id="balanceChart" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance] }.to_json %>"></canvas>
             </div>
           </div>
         </div>

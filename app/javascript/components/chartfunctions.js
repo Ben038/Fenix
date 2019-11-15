@@ -25,8 +25,8 @@ var kpiCommissions = new Chart(kpi1, {
 });
 
 
-var ctx = document.getElementById('premiumChart').getContext('2d');
-var premiumChart = new Chart(ctx)
+// var ctx = document.getElementById('premiumChart').getContext('2d');
+// var premiumChart = new Chart(ctx)
 
 var ctx = document.getElementById('premiumChart');
 var premiumChart = new Chart(ctx, {
@@ -60,14 +60,14 @@ var premiumChart = new Chart(ctx, {
     }
 });
 
-var balance = document.getElementById('balanceChart');
+var balance = document.getElementById('balanceChart').getContext('2d');
 var balanceChart = new Chart(balance, {
     type: 'bar',
     data: {
-        labels: ['2017', '2018', '2019'],
+        labels: JSON.parse(ctx.dataset.years),
         datasets: [{
             label: 'Balance',
-            data: [120, 110, 100],
+            data: JSON.parse(balance.dataset.processJson),
             backgroundColor: [
                 'rgba(180, 96, 76, 0.5)',
                 'rgba(41, 52, 98, 0.5)',

@@ -172,17 +172,18 @@ class AccountingDatum < ApplicationRecord
 
 
   def self.attributes_keys
-    [   :earned_premium ,
-         :claim_paid ,
-        :claim_paid_and_reserves_hange,
-        :premium_and_reserves_chage,
-          :reinsurance_comm ,
-          :broker_comm ,
-          :profit_sharing ,
-          :taxes ,
-        :interests ,
-         :balance
-         ]
+    [ :premium,
+      :earned_premium,
+      :claim_paid,
+      :claim_paid_and_reserves_change,
+      :premium_and_reserves_change,
+      :reinsurance_comm,
+      :broker_comm,
+      :profit_sharing,
+      :taxes,
+      :interests,
+      :balance
+      ]
   end
 end
 

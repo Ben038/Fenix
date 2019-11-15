@@ -21,7 +21,12 @@ class PagesController < ApplicationController
   end
   end
 
-  # @data_process[0].premium
+
+  def order_by_balance_year
+    @params = params[:balance_year].values.sort
+  end
+
+
 
   private
 
@@ -102,18 +107,18 @@ end
 
 def parse_array_params(concerned_params)
       #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
-      returning_array = []
-      concerned_params.each do |element|
-        returning_array << element.first
-      end
+    returning_array = []
+    concerned_params.each do |element|
+      returning_array << element.first
+    end
     # [" Italy"]
     returning_array
   end
 
-  def premium_bar_chart
-    filter_data
-    @premium
-    AccountingDatum.balance_year
-    @data_rows = @data_rows.where balance_year: params[:balance_year] if params[:balance_year].present?
-  end
+  # def premium_bar_chart
+  #   filter_data
+  #   @premium
+  #   AccountingDatum.balance_year
+  #   @data_rows = @data_rows.where balance_year: params[:balance_year] if params[:balance_year].present?
+  # end
 end
