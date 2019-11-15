@@ -1,3 +1,4 @@
+
 <div class="wrapper">
   <div class="sidebar-main">
     <form>
@@ -7,16 +8,17 @@
         <%= label_tag year %></li>
       <% end %>
       <p>Countries</p>
-        <% @select_countries.each do |country| %>
+      <% @select_countries.each do |country| %>
           <li><%= check_box_tag "country[#{country}]", country %>
           <%= label_tag country %></li>
         <% end %>
       <p>Networks</p>
-        <% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
+      <% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
         <% end %>
 
       <p><input type="submit" value="Submit"></p>
     </form>
+
 
     <%= @data_rows_empty %>
 

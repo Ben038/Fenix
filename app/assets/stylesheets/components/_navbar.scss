@@ -24,7 +24,11 @@
   margin-right: 50px;
   font-family: "Roboto";
   font-size: 1.5em;
-  }
+}
+
+.navbar-light .navbar-nav .nav-link:hover  {
+    color: $blue;
+}
 
 .navbar-fenix .navbar-collapse {
   flex-grow: 0;
