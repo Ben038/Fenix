@@ -84,7 +84,6 @@ class PagesController < ApplicationController
       returning_array << element.first
     end
     # [" Italy"]
-    binding.pry
     returning_array
 
   end
