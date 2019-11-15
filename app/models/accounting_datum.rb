@@ -169,6 +169,21 @@ class AccountingDatum < ApplicationRecord
     end
     tot.round(2)
   end
+
+
+  def self.attributes_keys
+    [   :earned_premium ,
+         :claim_paid ,
+        :claim_paid_and_reserves_hange,
+        :premium_and_reserves_chage,
+          :reinsurance_comm ,
+          :broker_comm ,
+          :profit_sharing ,
+          :taxes ,
+        :interests ,
+         :balance
+         ]
+  end
 end
 
 # FileUpload.last.id
