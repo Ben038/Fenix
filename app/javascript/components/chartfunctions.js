@@ -1,6 +1,7 @@
 import './chartfunctions/create_bar_chart'
 
 
+
 var kpi1 = document.getElementById('kpiCommissions');
 var kpiCommissions = new Chart(kpi1, {
     type: 'line',
@@ -22,6 +23,7 @@ var kpiCommissions = new Chart(kpi1, {
         }
     }
 });
+
 
 var ctx = document.getElementById('premiumChart').getContext('2d');
 var premiumChart = new Chart(ctx)

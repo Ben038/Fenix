@@ -47,6 +47,11 @@ class PagesController < ApplicationController
     @data_rows = @data_rows.where reinsurance_network: parse_array_params(params[:reinsurance_network]) if params[:reinsurance_network].present?
     @data_rows = @data_rows.where risk: parse_array_params(params[:risk]) if params[:risk].present?
     @data_rows = @data_rows.where quarter: parse_array_params(params[:quarter]) if params[:quarter].present?
+    if @data_rows == []
+      @data_rows_empty = "NO DATA FOUND"
+    else
+      @data_rows_empty = "data found"
+    end
   end
 
   def ungrouped_set

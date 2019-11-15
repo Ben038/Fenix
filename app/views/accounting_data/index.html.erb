@@ -1,11 +1,11 @@
-
+<div class="container container-upload">
 
 <table>
   <tbody>
     The last upload has been done at <strong><%= @accounting_data.last.created_at %></strong>
     <br>
     <br>
-    ALL THE STORED DATA (the first 5 rows only) :
+    ALL THE STORED DATA (the first columns only) :
     <br>
     <br>
     <% @accounting_data.each do |data|  %>
@@ -15,6 +15,11 @@
         <td><%= data.local_insurer %></td>
         <td><%= data.geo_area %></td>
         <td><%= data.country %></td>
+        <td><%= data.product %></td>
+        <td><%= data.business_division %></td>
+        <td><%= data.local_client %></td>
+        <td><%= data.reinsurance_network %></td>
+        <td><%= data.risk %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,3 +27,4 @@
 <br>
 
 <p><%= link_to "Back to File Upload", new_file_upload_path, class: "btn-yellow" %></p>
+</div>
