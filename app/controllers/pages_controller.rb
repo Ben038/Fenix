@@ -32,8 +32,6 @@ class PagesController < ApplicationController
     # (eg, 2016, 2017 is selected, it will show total for 2016 and total for 2017)
     @data_rows = @data_rows.group_by :balance_year && @grouped = true if params[:group_by].present?
 
-    raise
-
     @data_rows = @data_rows.group_by :reinsurance_network && @grouped = true if params[:group_by].present?
 
   end
