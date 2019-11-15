@@ -40,13 +40,13 @@
             <tbody>
               <tr>
                 <th scope="col" >  Accounting Item</th>
-                <th scope="col" class='BY'>2016</th>
-                <th scope="col" class='BY'>2017</th>
-                <th scope="col" class='BY'>2018</th>
+                <th scope="col" class='BY'><%= @params[0] %></th>
+                <th scope="col" class='BY'>@params[1]</th>
+                <th scope="col" class='BY'>@params[2]</th>
               </tr>
               <tr>
                 <th scope="row">  Premium</th>
-                <td><%= @premium %></td>
+                <td><%= @premium%></td>
                 <td><%= @premium %></td>
                 <td><%= @premium %></td>
               </tr>

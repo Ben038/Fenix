@@ -17,6 +17,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def order_by_balance_year
+    @params = params[:balance_year].values.sort
+  end
+
   private
 
   def group_data
@@ -57,7 +61,7 @@ class PagesController < ApplicationController
   end
 
   def create_grouped_hash(hash)
-    {hash.keys =>  {
+    {hash.keys.first =>  {
       commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
       balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
       claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
@@ -83,11 +87,10 @@ class PagesController < ApplicationController
     returning_array = []
     concerned_params.each do |element|
       returning_array << element.first
-
     end
     # [" Italy"]
     returning_array
-
+    #params = {"balance_year"=>{"2018"=>"2018", "2016"=>"2016"}, "country"=>{"Australia"=>"Australia", "Brasil"=>"Brasil", "France"=>"France"}, "network"=>{"Network 3"=>"Network 3"}}
   end
 
   def premium_bar_chart
