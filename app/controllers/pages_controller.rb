@@ -115,10 +115,10 @@ def parse_array_params(concerned_params)
     returning_array
   end
 
-  def premium_bar_chart
-    filter_data
-    @premium
-    AccountingDatum.balance_year
-    @data_rows = @data_rows.where balance_year: params[:balance_year] if params[:balance_year].present?
-  end
+  # def premium_bar_chart
+  #   filter_data
+  #   @premium
+  #   AccountingDatum.balance_year
+  #   @data_rows = @data_rows.where balance_year: params[:balance_year] if params[:balance_year].present?
+  # end
 end
