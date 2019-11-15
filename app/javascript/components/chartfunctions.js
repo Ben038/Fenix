@@ -32,10 +32,10 @@ var ctx = document.getElementById('premiumChart');
 var premiumChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['2017', '2018', '2019'],
+        labels: JSON.parse(ctx.dataset.years),
         datasets: [{
             label: 'Premium',
-            data: [14, 19, 17],
+            data: JSON.parse(ctx.dataset.processJson),
             backgroundColor: [
                 'rgba(180, 96, 76, 0.5)',
                 'rgba(41, 52, 98, 0.5)',
