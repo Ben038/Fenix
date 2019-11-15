@@ -2,7 +2,7 @@ import './chartfunctions/create_bar_chart'
 
 
 var kpi1 = document.getElementById('kpiCommissions');
-var myLineChart = new Chart(kpi1, {
+var kpiCommissions = new Chart(kpi1, {
     type: 'line',
     data: {
         labels: ["'16", "'17", "'18"],
