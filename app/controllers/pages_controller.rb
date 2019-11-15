@@ -77,14 +77,14 @@ class PagesController < ApplicationController
   }
   end
 
-  def parse_array_params(concerned_params)
+    def parse_array_params(concerned_params)
       #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
     returning_array = []
     concerned_params.each do |element|
       returning_array << element.first
     end
     # [" Italy"]
-    raise
+    binding.pry
     returning_array
 
   end

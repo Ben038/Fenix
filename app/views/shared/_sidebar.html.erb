@@ -1,4 +1,26 @@
+
 <div class="wrapper">
+  <div class="sidebar-main">
+    <form>
+      <p>Balance Year</p>
+      <% @select_years.each do |year| %>
+        <li><%= check_box_tag "balance_year[#{year}]", year %>
+        <%= label_tag year %></li>
+      <% end %>
+      <p>Countries</p>
+        <% @select_countries.each do |country| %>
+          <li><%= check_box_tag "country[#{country}]", country %>
+          <%= label_tag country %></li>
+        <% end %>
+      <p>Networks</p>
+        <% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
+        <% end %>
+
+      <p><input type="submit" value="Submit"></p>
+    </form>
+
+
+<!-- <div class="wrapper">
   <div class="sidebar-main">
     <form>
       <p>Balance Year</p>
@@ -17,7 +39,7 @@
 
       <p><input type="submit" value="Submit"></p>
     </form>
-
+ -->
 <!--         <ul>Risks
       <% @select_risks.each do |risk| %>
         <li><%= check_box_tag "risk[#{risk}]", risk %>
