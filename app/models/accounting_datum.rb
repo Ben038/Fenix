@@ -17,6 +17,7 @@ class AccountingDatum < ApplicationRecord
     end
   end
 
+
 # VISUALIZATION OVERVIEW #
 
 # sum of claim & claim reserves / sum of premiums & prm reserves
