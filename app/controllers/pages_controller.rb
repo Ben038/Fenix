@@ -31,7 +31,11 @@ class PagesController < ApplicationController
     # ref 3: runs in parrallel with step 2 ungrouped_set, it takes the data_rows from filter_data (full set) and calculates subset
     # (eg, 2016, 2017 is selected, it will show total for 2016 and total for 2017)
     @data_rows = @data_rows.group_by :balance_year && @grouped = true if params[:group_by].present?
+
+    raise
+
     @data_rows = @data_rows.group_by :reinsurance_network && @grouped = true if params[:group_by].present?
+
   end
 
   def filter_data
@@ -49,6 +53,11 @@ class PagesController < ApplicationController
     @data_rows = @data_rows.where reinsurance_network: parse_array_params(params[:reinsurance_network]) if params[:reinsurance_network].present?
     @data_rows = @data_rows.where risk: parse_array_params(params[:risk]) if params[:risk].present?
     @data_rows = @data_rows.where quarter: parse_array_params(params[:quarter]) if params[:quarter].present?
+    if @data_rows == []
+      @data_rows_empty = "NO DATA FOUND"
+    else
+      @data_rows_empty = "data found"
+    end
   end
 
   def ungrouped_set
