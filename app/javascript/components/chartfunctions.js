@@ -1,6 +1,28 @@
 import './chartfunctions/create_bar_chart'
 
 
+var kpi1 = document.getElementById('kpiCommissions');
+var myLineChart = new Chart(kpi1, {
+    type: 'line',
+    data: {
+        labels: ["'16", "'17", "'18"],
+        datasets: [{
+            label: '',
+            data: [-10, -15, -5],
+            showLines: true
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
 var ctx = document.getElementById('premiumChart').getContext('2d');
 var premiumChart = new Chart(ctx)
 
@@ -67,3 +89,4 @@ var balanceChart = new Chart(balance, {
         }
     }
 });
+
