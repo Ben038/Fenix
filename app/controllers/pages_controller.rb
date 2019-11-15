@@ -17,7 +17,7 @@ class PagesController < ApplicationController
         @data_rows_grouped_year.each do |year, values|
         # step 7: for each eg year, create a hash and push it in data_process array
 
-        @data_process[year] =  create_grouped_hash({year => values})
+        @data_process[year] = create_grouped_hash({year => values})
   end
   end
 
