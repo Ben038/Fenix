@@ -3,16 +3,21 @@
   overflow: hidden;
   opacity: 1;
   width: 80%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  position: relative;
 }
 
 .card-kpi h3 {
-font-size: 1.5em;
+font-size: 20px;
 }
 
 .card-kpi + .card-kpi {
-  margin-top: 30px;
+  margin-top: 15px;
+}
+
+#kpiCommissions{
+  display: center;
 }
 
 .card-kpi:hover {
