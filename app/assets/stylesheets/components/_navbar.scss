@@ -1,3 +1,18 @@
+
+
+
+.navbar {
+ position: fixed;
+ top: 0;
+ width: 100vw;
+}
+
+.navbar .solid {
+  background-color: $blue;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+    }
+
 .navbar-fenix {
   justify-content: space-between;
   background: rgba(255,255,255,0.1);
@@ -6,13 +21,7 @@
   display: flex;
   align-items: center;
   z-index: 3;
-  transition: all 0.2s;
-}
-
-.navbar {
- position: fixed;
- top: 0;
- width: 100vw;
+  transition: all 0.2s ease;
 }
 
 .navbar-fenix p {
