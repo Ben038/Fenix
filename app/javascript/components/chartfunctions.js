@@ -9,7 +9,7 @@ var kpiCommissions = new Chart(kpi1, {
         labels: ["2016", "2017", "2018"],
         datasets: [{
             label: '',
-            data: [-10, -15, -5],
+            data: [-15, -12, -13.6],
             showLines: true
         }]
     },
@@ -29,10 +29,10 @@ var kpi2 = document.getElementById('kpiClaims');
 var kpiClaims = new Chart(kpi2, {
     type: 'line',
     data: {
-        labels: ["'16", "'17", "'18"],
+        labels: ["2016", "2017", "2018"],
         datasets: [{
             label: '',
-            data: [-10, -15, -5],
+            data: [-70, -65, -64.51],
             showLines: true
         }]
     },
@@ -51,10 +51,10 @@ var kpi3 = document.getElementById('kpiBalance');
 var kpiBalance = new Chart(kpi3, {
     type: 'line',
     data: {
-        labels: ["'16", "'17", "'18"],
+        labels: ["2016", "2017", "2018"],
         datasets: [{
             label: '',
-            data: [-10, -15, -5],
+            data: [-30, -28, -26.1],
             showLines: true
         }]
     },
@@ -80,14 +80,14 @@ var premiumChart = new Chart(ctx, {
             label: 'Premium',
             data: JSON.parse(ctx.dataset.processJson),
             backgroundColor: [
-                'rgba(180, 96, 76, 0.5)',
-                'rgba(41, 52, 98, 0.5)',
-                'rgba(247, 190, 22, 0.5)',
+                'rgba(41, 52, 98, 1)',
+                'rgba(41, 52, 98, 1)',
+                'rgba(41, 52, 98, 1)',
             ],
             borderColor: [
-                'rgba(180, 96, 76, 1)',
+                 'rgba(41, 52, 98, 1)',
                 'rgba(41, 52, 98, 1)',
-                'rgba(247, 190, 22, 1)',
+                'rgba(41, 52, 98, 1)',
             ],
             borderWidth: 1
         }]
@@ -112,14 +112,14 @@ var balanceChart = new Chart(balance, {
             label: 'Balance',
             data: JSON.parse(balance.dataset.processJson),
             backgroundColor: [
-                'rgba(180, 96, 76, 0.5)',
-                'rgba(41, 52, 98, 0.5)',
-                'rgba(247, 190, 22, 0.5)',
+                 'rgba(41, 52, 98, 1)',
+                'rgba(41, 52, 98, 1)',
+                'rgba(41, 52, 98, 1)',
             ],
             borderColor: [
-                'rgba(180, 96, 76, 1)',
+                 'rgba(41, 52, 98, 1)',
                 'rgba(41, 52, 98, 1)',
-                'rgba(247, 190, 22, 1)',
+                'rgba(41, 52, 98, 1)',
             ],
             borderWidth: 1
         }]
