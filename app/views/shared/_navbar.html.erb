@@ -16,7 +16,7 @@
             <% all_team = User.all.where("id != ?", current_user.id) %>
             <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>
             <% team.each do |member| %>
-              <%= link_to member.first_name, "rails/mailers/user_mailer/welcome.html", class: "dropdown-item" %>
+              <%= link_to member.first_name, "rails/mailers/user_mailer/welcome", class: "dropdown-item" %>
             <% end %>
           </div>
         </li>
