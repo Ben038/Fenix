@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:home]
 
   def index
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)
