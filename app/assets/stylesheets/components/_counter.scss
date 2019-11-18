@@ -2,46 +2,33 @@
        CLIENT CSS
 ===========================*/
 
-.client-logo-area {
-  background: #e5e8f4;
+.counter-area {
+  background: $blue;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
-
-.container-clients {
+.container-counter {
   display: flex;
   justify-content: space-around;
 }
-
-// .client-logo-area .client-title .title {
-// // display: flex;
-// justify-content: center;
-//   font-size: 44px;
-//   line-height: 55px;
-//   color: #121212; }
-//   @media (max-width: 767px) {
-//     .client-logo-area .client-title .title {
-//       font-size: 28px;
-//       line-height: 35px; }
-// }
 
 .client-logo-area {
   padding-top: 50px;
   padding-bottom: 100px; }
 
-.single-client img {
-  height: 50px;
-  margin: 30px;
-  opacity: 1;
-}
-
-.single-client img:hover {
-  height: 50px;
-  margin: 30px;
-  opacity: 0.8;
-}
-
-.client-logo-area h2{
+.counter-area h2{
+  color: $white;
   font-size: 44px;
   line-height: 55px;
   margin-bottom: 20px;
 }
+
+.counter-area h3{
+  color: $white;
+  font-size: 50px;
+  }
+
+  .counter-area h4{
+  color: $white;
+  }
