@@ -1,0 +1,23 @@
+.service-area {
+  background: $backgroundblue;
+  margin-top: 0px;
+}
+
+.container-service {
+  display: flex;
+  align-items: center;
+}
+
+.service-image {
+  margin-right: 50px;
+  padding: 50px 0px;
+}
+
+.service-image img{
+  height: 300px;
+}
+
+.service-text sub-title {
+  color: $darkblue;
+  font-size: 40px;
+}
