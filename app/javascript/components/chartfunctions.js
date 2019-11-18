@@ -6,7 +6,7 @@ var kpi1 = document.getElementById('kpiCommissions');
 var kpiCommissions = new Chart(kpi1, {
     type: 'line',
     data: {
-        labels: ["'16", "'17", "'18"],
+        labels: ["2016", "2017", "2018"],
         datasets: [{
             label: '',
             data: [-10, -15, -5],
@@ -14,6 +14,7 @@ var kpiCommissions = new Chart(kpi1, {
         }]
     },
     options: {
+
         scales: {
             yAxes: [{
                 ticks: {
