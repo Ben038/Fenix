@@ -37,3 +37,8 @@ li {
   font-size: 14px;
   list-style-type: none;
 }
+
+a:active {
+  transform: rotate(180deg);
+  text-align: left;
+}
