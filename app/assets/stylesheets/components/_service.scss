@@ -17,7 +17,13 @@
   height: 300px;
 }
 
-.service-text sub-title {
+.service-text h5 {
   color: $darkblue;
-  font-size: 40px;
+  font-size: 28px;
+}
+
+.service-text h3 {
+  color: $darkblue;
+  font-size: 20px;
+  font-weight: bold;
 }
