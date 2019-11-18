@@ -24,6 +24,7 @@ international_client2 = InternationalClient.create!(name: "ChaiTea International
 # sample of user database (take seeds from FinConsult and integrate the HO information):
 puts "creating users"
 
+
 # user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "Liz@gmail.com", international_client: InternationalClient.all.sample)
 # user1.profile_picture = "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 # # user1.save
