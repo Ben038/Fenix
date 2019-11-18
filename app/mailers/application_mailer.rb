@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "info@fenix.com"
+  default from: "fenix.no.reply@gmail.com"
   layout 'mailer'
 end

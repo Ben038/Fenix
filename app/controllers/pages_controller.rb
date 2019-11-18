@@ -18,9 +18,8 @@ class PagesController < ApplicationController
         # step 7: for each eg year, create a hash and push it in data_process array
 
         @data_process[year] = create_grouped_hash({year => values})
-
-      end
-  end
+        end
+    end
 
 
   def order_by_balance_year

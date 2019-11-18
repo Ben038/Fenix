@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 group :development do
+  gem 'letter_opener'
   gem 'web-console', '>= 3.3.0'
 end
 
