@@ -24,7 +24,49 @@ var kpiCommissions = new Chart(kpi1, {
     }
 });
 
+var kpi2 = document.getElementById('kpiClaims');
+var kpiClaims = new Chart(kpi2, {
+    type: 'line',
+    data: {
+        labels: ["'16", "'17", "'18"],
+        datasets: [{
+            label: '',
+            data: [-10, -15, -5],
+            showLines: true
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
+var kpi3 = document.getElementById('kpiBalance');
+var kpiBalance = new Chart(kpi3, {
+    type: 'line',
+    data: {
+        labels: ["'16", "'17", "'18"],
+        datasets: [{
+            label: '',
+            data: [-10, -15, -5],
+            showLines: true
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 // var ctx = document.getElementById('premiumChart').getContext('2d');
 // var premiumChart = new Chart(ctx)
 

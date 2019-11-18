@@ -5,7 +5,8 @@ function openNav(query) {
   document.getElementById("id-container-all").style.marginLeft = "0";
   query.classList.add('open')
   const icon = document.getElementById("icon")
-  icon.classList.add('fa-rotate-180')
+  icon.classList.remove('fa-rotate-180')
+  document.getElementById("dashboard-area").style.marginLeft = "15vw";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
@@ -14,13 +15,16 @@ function closeNav(query) {
   document.getElementById("id-container-all").style.marginLeft = "0";
   query.classList.remove('open')
   const icon = document.getElementById("icon")
-  icon.classList.remove('fa-rotate-180')
+  icon.classList.add('fa-rotate-180')
+  document.getElementById("dashboard-area").style.marginLeft = "5vw";
 }
 
-const handleSidebarClick = () => {
+const handleSidebarClick = (e) => {
   const query = document.querySelector(".sidebar-main")
+  console.log(query.classList.contains('open'))
+
   if (query.classList.contains('open')) {
-  closeNav(query)
+    closeNav(query)
   } else {
     openNav(query)
   }

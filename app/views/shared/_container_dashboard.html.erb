@@ -1,26 +1,25 @@
 
 <!-- <div class="container-all"> -->
 
-  <div class="container-dashboard">
+  <div class="container-dashboard" id="dashboard-area">
 
     <div class="container-top">
 
     <div class="container-left">
       <div class="card-kpi">
         <p class="kpi-title">Commissions Ratio</p>
-        <h3 class="pki-amount"><%= number_to_percentage(@commission_ratio, precision: 2)   %></h3>
+        <h3 class="kpi-amount"><%= number_to_percentage(@commission_ratio, precision: 2)   %></h3>
         <canvas id="kpiCommissions"></canvas>
-<!--    <h3 class="pki-amount"> -10 </h3>
-        <h3 class="pki-amount"> -15 </h3>
-        <h3 class="pki-amount"> -5 </h3> -->
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Claims Ratio</p>
-        <h3 class="pki-amount"><%= number_to_percentage(@claim_ratio , precision: 2) %></h3>
+        <h3 class="kpi-amount"><%= number_to_percentage(@claim_ratio , precision: 2) %></h3>
+        <canvas id="kpiClaims"></canvas>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Balance Ratio</p>
-        <h3 class="pki-amount"><%= number_to_percentage(@balance_ratio, precision: 2) %></h3>
+        <h3 class="kpi-amount"><%= number_to_percentage(@balance_ratio, precision: 2) %></h3>
+        <canvas id="kpiBalance"></canvas>
       </div>
     </div>
 
@@ -57,7 +56,7 @@
             <div class="card-chart-img">
             </div>
             <div class="card-chart-text">
-              Premium / Year
+              Premium
               <canvas id="premiumChart"  data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:premium] }.to_json %>">    </canvas>
             </div>
           </div>
@@ -65,7 +64,7 @@
             <div class="card-chart-img">
             </div>
             <div class="card-chart-text">
-              Balance / Year
+              Balance
               <canvas id="balanceChart" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance] }.to_json %>"></canvas>
             </div>
           </div>
