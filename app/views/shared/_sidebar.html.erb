@@ -30,8 +30,9 @@
         <% all_team = User.all.where("id != ?", current_user.id) %>
         <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>
         <% team.each do |member| %>
-          <%= @url = request.original_url %>
-          <%= link_to member.first_name, action="rails/mailers/user_mailer/welcome?id=#{member.id}&url=#{@url}", class: "dropdown-item" %>
+          <% url = request.original_url %>
+          <%= link_to member.first_name, action="rails/mailers/user_mailer/welcome?id=#{member.id}&url=#{url}", class: "dropdown-item" %>
+          <%# raise  %>
         <% end %>
         <%#= link_to member.first_name, url_for(host: 'localhost:3000', controller: 'user_mailer', action: 'welcome'),  class: "dropdown-item" %>
       </div>
