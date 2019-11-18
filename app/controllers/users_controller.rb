@@ -13,8 +13,9 @@ class UsersController < ApplicationController
   # def create
   # end
 
-  # def index
-  # end
+  def index
+    @users = User.all
+  end
 
   # def destroy
   # end
