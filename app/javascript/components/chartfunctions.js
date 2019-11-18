@@ -54,7 +54,7 @@ var kpiBalance = new Chart(kpi3, {
         labels: ["2016", "2017", "2018"],
         datasets: [{
             label: '',
-            data: [-30, -28, -26.1],
+            data: [-4, -15, -26.1],
             showLines: true
         }]
     },
