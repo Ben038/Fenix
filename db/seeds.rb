@@ -37,7 +37,7 @@ user3.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc99
 user4 = User.create!(first_name: "Liza", last_name: "Lacroix", password: '123456', email: "Liza@gmail.com", international_client: InternationalClient.all.sample)
 user4.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 # user4.save
-user5 = User.create!(first_name: "Max", last_name: "Xam", password: '123456', email: "Max@gmail.com", international_client: InternationalClient.all.sample)
+user5 = User.create!(first_name: "Bill", last_name: "Clinton", password: '123456', email: "Bill@gmail.com", international_client: InternationalClient.all.sample)
 user5.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 # user5.save
 

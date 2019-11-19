@@ -15,9 +15,6 @@ devise_for :users
     end
   end
 
-  # post '/rails/mailers/user_mailer/welcome/:id', to: 'patients#show', as: 'patient'
-
-
   # resources :users, only: [:new, :create, :destroy]
   resources :accounting_data, only: [:new, :create, :index, :destroy] do
     collection {post :import}
