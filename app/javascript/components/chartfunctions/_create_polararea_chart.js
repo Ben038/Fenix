@@ -23,16 +23,15 @@
 //     }
 //   });
 
-
 var polarArea1= document.getElementById('reinsComm');
-console.log(polarArea1)
+
 // 1. parse the data-country
 
 //2. parse the data-process
 //3. transform into abs the values in data-process
 
 
-
+if (polarArea1) {
 var reinsComm = new Chart(polarArea1, {
 type: 'polarArea',
 data : {
@@ -67,3 +66,4 @@ data : {
 
   },
 });
+}
