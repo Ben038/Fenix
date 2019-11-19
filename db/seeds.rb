@@ -25,16 +25,21 @@ international_client2 = InternationalClient.create!(name: "ChaiTea International
 puts "creating users"
 
 
-# user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "Liz@gmail.com", international_client: InternationalClient.all.sample)
-# user1.profile_picture = "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-# # user1.save
-# user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', email: "John@gmail.com", international_client: InternationalClient.all.sample)
-# user2.profile_picture = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80"
-# # user2.save
+user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "Liz@gmail.com", international_client: InternationalClient.all.sample)
+user1.profile_picture = "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+# user1.save
+user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', email: "John@gmail.com", international_client: InternationalClient.all.sample)
+user2.profile_picture = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80"
+# user2.save
 user3 = User.create!(first_name: "Steve", last_name: "McMaony", password: '123456', email: "stevefromfenix@gmail.com", international_client: InternationalClient.all.sample)
 user3.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 # user3.save
-
+user4 = User.create!(first_name: "Liza", last_name: "Lacroix", password: '123456', email: "Liza@gmail.com", international_client: InternationalClient.all.sample)
+user4.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+# user4.save
+user5 = User.create!(first_name: "Max", last_name: "Xam", password: '123456', email: "Max@gmail.com", international_client: InternationalClient.all.sample)
+user5.profile_picture = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+# user5.save
 
 # sample of file upload list:
 puts "creating files"

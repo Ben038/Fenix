@@ -24,9 +24,16 @@
       <p><input type="submit" value="Submit"></p>
     </form>
 
-
-
-
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mail to your teammates</a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <% all_team = User.all.where("id != ?", current_user.id) %>
+        <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>
+        <% team.each do |member| %>
+          <%= button_to "#{member.first_name}", share_page_with_options_pages_path(user_id: member.id, shared_url: request.original_url, remote: true, method: :post) %>
+        <% end %>
+      </div>
+  </li>
 
 <!--         <ul>Risks
       <% @select_risks.each do |risk| %>

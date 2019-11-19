@@ -113,6 +113,145 @@ font-size: 20px;
 // }
 
 
+// Finconsult cards styling
+
+.container {
+ margin-top: 30px;
+}
+.container-fenix-service {
+  padding-bottom: 30px;
+  background: $white;
+}
+
+.card-fenix-service {
+ overflow: hidden;
+ // height: 120px;
+ width: 300px;
+ background: $white;
+ margin: 20px;
+ box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
+ // display: flex;
+}
+
+.card-fenix-service-hidden {
+ background: none;
+ margin: 10px;
+ width: 500px;
+}
+
+#services-overview {
+  margin-bottom: 40px;
+}
+
+
+.card-service-infos {
+  position: relative;
+  background: $white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin: 20px;
+  padding-top: 60px;
+  padding-left: 20px;
+ }
+
+.card-service-infos img {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  border: $yellow 3px solid;
+  object-fit: cover;
+}
+
+// .card-service img {
+//  height: 200px;
+//  width: 100%;
+//  object-fit: cover;
+// }
+
+
+.card-service-infos h2 {
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.card-service-infos h3 {
+ font-size: 22px;
+ font-weight: bold;
+ margin: 10px;
+}
+
+.card-service-infos p {
+ font-size: 18px;
+ font-weight: 300;
+ line-height: 1.4;
+ color: #52494C;
+ margin-bottom: 0;
+ margin-top: 8px;
+ // margin-left: 10px;
+}
+
+
+.card-service-infos .btn-flat {
+ width: 280px;
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+ margin-bottom: 15px;
+}
+
+.card-fenix-service {
+  // overflow: hidden;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px;
+  background: $white;
+  position: relative;
+}
+
+.card-fenix-service-info {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  padding: 0px;
+}
+
+.card-fenix-service-info p {
+  padding: 0;
+}
+
+.card-fenix-service:hover {
+  text-decoration: none;
+  background: rgba(33,101,131,0.1);
+}
+
+.card-fenix-service img {
+  width: 70%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.fenix-service-text {
+  padding-top: 30px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.fenix-service-hidden i {
+  padding: 30px;
+}
+
+
+
 
 
 
