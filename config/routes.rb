@@ -5,6 +5,10 @@ devise_for :users
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get "commissions", to: "pages#commissions"
+  get "claims", to: "pages#claims"
+
   resources :pages, only: [:index, :show, :home] do
     collection do
       post 'share_page_with_options'
@@ -12,7 +16,6 @@ devise_for :users
   end
 
   # post '/rails/mailers/user_mailer/welcome/:id', to: 'patients#show', as: 'patient'
-
 
 
   # resources :users, only: [:new, :create, :destroy]

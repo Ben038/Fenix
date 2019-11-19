@@ -9,17 +9,17 @@
       <div class="card-kpi">
         <p class="kpi-title">Commissions Ratio</p>
         <h3 class="kpi-amount"><%= number_to_percentage(@commission_ratio, precision: 2)   %></h3>
-        <canvas id="kpiCommissions"></canvas>
+        <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] }.to_json %>"></canvas>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Claims Ratio</p>
         <h3 class="kpi-amount"><%= number_to_percentage(@claim_ratio , precision: 2) %></h3>
-        <canvas id="kpiClaims"></canvas>
+        <canvas id="kpiClaims" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_ratio] }.to_json %>"></canvas>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Balance Ratio</p>
         <h3 class="kpi-amount"><%= number_to_percentage(@balance_ratio, precision: 2) %></h3>
-        <canvas id="kpiBalance"></canvas>
+        <canvas id="kpiBalance" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance_ratio] }.to_json %>"></canvas>
       </div>
     </div>
 

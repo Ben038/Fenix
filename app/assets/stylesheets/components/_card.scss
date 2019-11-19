@@ -48,6 +48,12 @@ font-size: 20px;
   opacity: 0.8;
 }
 
+.card-chart-text {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .card-table {
   position: relative;
   background: white;
@@ -80,6 +86,27 @@ font-size: 20px;
   color: $mediumbluehover;
 }
 
+
+.card-survey {
+  background: white;
+  height: 500px;
+  min-width: 420px;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.card-survey {
+  background: white;
+  height: 900px;
+  min-width: 420px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card-survey h3 {
+  font-size: 18px;
+}
 // h1 {
 //   margin-bottom: 5px;
 //   font-size: 12px;

@@ -12,10 +12,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active d-flex align-items-center">
-          <a class="nav-link" href="#">Claims</a>
+          <%= link_to "Claims", claims_path, class: "nav-link"  %>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <a class="nav-link" href="#">Commissions</a>
+          <%= link_to "Commissions", commissions_path, class: "nav-link"  %>
         </li>
           <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
