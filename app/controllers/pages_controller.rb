@@ -28,6 +28,7 @@ class PagesController < ApplicationController
   end
 
   def commissions #method applicable to the commissions visualization
+
     filter_data
     ungrouped_set
     subgroup_data
