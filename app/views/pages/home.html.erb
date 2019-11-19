@@ -2,6 +2,7 @@
 
 <header>
   <div class="overlay"></div>
+  <%= video_tag("header_video") %>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://gcs-vimeo.akamaized.net/exp=1574175116~acl=%2A%2F1004812475.mp4%2A~hmac=0b00df562b9110cf6c6c608d2ddd5684b35e8c3d3d1a0e14db4de6ca54ee902c/vimeo-prod-skyfire-std-us/01/4115/10/270577517/1004812475.mp4" type="video/mp4">
   </video>
@@ -74,32 +75,32 @@
     <h2 class="text-center">Why choose Fenix?</h2>
     <div class="container-why">
 
+      <div class="container-why-wrapper">
       <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "data.png" %>
-        </div>
+          <%= image_tag "data.png", class:"why-image"  %>
         <div class="why-text">
           <p>Data integration</p>
         </div>
       </div>
+      </div>
 
+      <div class="container-why-wrapper">
           <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "data_analytics.png" %>
-        </div>
+          <%= image_tag "data_analytics.png", class:"why-image" %>
         <div class="why-text">
           <p>Centralized overview</p>
         </div>
       </div>
+            </div>
 
+      <div class="container-why-wrapper">
           <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "share.png" %>
-        </div>
+          <%= image_tag "share.png", class:"why-image"  %>
         <div class="why-text">
           <p>Better decision making</p>
         </div>
       </div>
+            </div>
 
     </div>
   </div>
