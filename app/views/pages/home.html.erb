@@ -2,6 +2,7 @@
 
 <header>
   <div class="overlay"></div>
+  <%= video_tag("header_video") %>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://gcs-vimeo.akamaized.net/exp=1574175116~acl=%2A%2F1004812475.mp4%2A~hmac=0b00df562b9110cf6c6c608d2ddd5684b35e8c3d3d1a0e14db4de6ca54ee902c/vimeo-prod-skyfire-std-us/01/4115/10/270577517/1004812475.mp4" type="video/mp4">
   </video>
@@ -62,7 +63,7 @@
         <p class="light">— Geraldine Vanderkelen, CEO Fenix</p>
       </div>
       <div class="about-image">
-        <%= image_tag "claim_experience.png" %>
+        <%= image_tag "ceo.png" %>
       </div>
     </div>
   </div>
@@ -78,32 +79,32 @@
     <h2 class="text-center">Why choose Fenix?</h2>
     <div class="container-why">
 
+      <div class="container-why-wrapper">
       <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "data.png" %>
-        </div>
+          <%= image_tag "data.png", class:"why-image"  %>
         <div class="why-text">
-          <h3>Data integration</h3>
+          <p>Data integration</p>
         </div>
+      </div>
       </div>
 
+      <div class="container-why-wrapper">
           <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "share.png" %>
-        </div>
+          <%= image_tag "data_analytics.png", class:"why-image" %>
         <div class="why-text">
-          <h3>Centralized overview</h3>
+          <p>Centralized overview</p>
         </div>
       </div>
+            </div>
 
+      <div class="container-why-wrapper">
           <div class="container-why-usp">
-        <div class="why-image">
-          <%= image_tag "share.png" %>
-        </div>
+          <%= image_tag "share.png", class:"why-image"  %>
         <div class="why-text">
-          <h3>Better decision making</h3>
+          <p>Better decision making</p>
         </div>
       </div>
+            </div>
 
     </div>
   </div>
@@ -137,7 +138,18 @@
     <h2 class="text-center">How does it work?</h2>
     <div class="container-how">
 
-      <div class="container-how-usp">
+      <div class="container-how-usp center">
+        <div class="how-timeline center">
+          <%= image_tag "how.png" %>
+        </div>
+<!--         <div class="how-text">
+          <h3>Upload Data</h3>
+          <p>easy data upload and collaboration</p>
+        </div> -->
+      </div>
+
+
+   <!--    <div class="container-how-usp">
         <div class="how-image">
           <%= image_tag "data.png" %>
         </div>
@@ -175,7 +187,7 @@
           <h3>Make better decisions, reports, presentations</h3>
           <p>Intuitive and interactive</p>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -187,13 +199,13 @@
 
 <!--====== SERVICES ONE  START ======-->
 
-<div class="service-area">
+<!-- <div class="service-area">
   <div class="container">
     <div class="container-service">
       <div class="service-text">
-        <h2 class="sub-title">Upload Data</h2>
+        <h2 class="sub-title">Upload Data</h2> -->
 <!--         <h5 class="service-title">Optimized for remote team work</h5> -->
-        <p class="text">Upload your excel sheets with a click of a button.</p>
+<!--         <p class="text">Upload your excel sheets with a click of a button.</p>
         <p>Your data gets mapped to the existing data.</p>
       </div>
       <div class="service-image">
@@ -202,26 +214,26 @@
     </div>
   </div>
 </div>
-
+ -->
     <!--====== SERVICES ONE  ENDS ======-->
 
 <!--====== SERVICES TWO  START ======-->
 
-<div class="service-area">
+<!-- <div class="service-area">
   <div class="container">
     <div class="container-service">
       <div class="service-image">
         <%= image_tag "share.png" %>
       </div>
       <div class="service-text">
-        <h2 class="sub-title">Collaborate</h2>
+        <h2 class="sub-title">Collaborate</h2> -->
 <!--         <h5 class="service-title">Optimized for remote team work</h5> -->
-        <p class="text">Share your current dashboard with your team members, again with a click of a button.</p>
+<!--         <p class="text">Share your current dashboard with your team members, again with a click of a button.</p>
         <p>Add comments, interpret, and make better decisions together.</p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
     <!--====== SERVICES TWO  ENDS ======-->
 

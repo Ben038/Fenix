@@ -53,7 +53,6 @@ header .btn-yellow {
 margin-top: 50px;
 padding: 20px;
 font-size: 1.2rem;
-
 }
 
 .display-3 {
@@ -146,6 +145,9 @@ margin-left: 30px;
 }
 
 
+
+// WHY
+
 .why-area {
   background: white;
   padding: 50px 10px;
@@ -157,37 +159,77 @@ margin-left: 30px;
 //   grid-gap: 16px;
 // }
 
-.why-area h2 {
-  color: #12172b;
-    font-size: 44px;
-    line-height: 55px;
-    margin-bottom: 50px;
+.container-why {
+  display:flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
 }
 
-.why-image img {
-height: 100px;
+.why-area h2 {
+  color: #12172b;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 100px;
+}
+
+.why-area p {
+  margin-top: 20px;
+  font-size: 30px;
+  line-height: 55px;
+  margin-bottom: 100px;
+}
+
+.why-image {
+height: 150px;
 margin-bottom: 10px;
 }
 
+.container-why-usp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
 
+.container-why-wrapper {
+  width: 350px;
+
+}
+
+// .container-why-wrapper:first-child > * {
+//   margin-left: 0;
+//   margin-right: a
+// }
+
+
+
+
+// HOW
 
 .how-area {
   background: $backgroundbluelight;
   padding: 50px 10px;
 }
 
-.container-why {
-  display:flex;
-  justify-content: space-around;
-
-}
-
-
 .how-image img {
 height: 100px;
 margin-bottom: 10px;
 }
 
+
+.how-timeline img {
+  height: 1400px;
+}
+
+.how-area h2 {
+  color: #12172b;
+    font-size: 44px;
+    line-height: 55px;
+    margin-bottom: 50px;
+}
+
+
+// FEEDBACK
 
 .feedback-area {
   background: white;
@@ -198,6 +240,12 @@ margin-bottom: 10px;
   display: flex;
   align-items: space-around;
   justify-content: space-around;
+}
+
+.single-feedback {
+  padding: 30px;
+  margin: 10px;
+background: $white;
 }
 
 .single-feedback p {
