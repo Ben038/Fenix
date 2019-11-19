@@ -19,14 +19,19 @@ class PagesController < ApplicationController
 
         @data_process[year] = create_grouped_hash({year => values})
         end
-    end
-
+  end
 
   def order_by_balance_year
     @params = params[:balance_year].values.sort
   end
 
+  def share_page_with_options
+    shared_url = params[:shared_url]
+    receiver = User.find(params[:user_id])
+    sender = current_user
 
+    UserMailer.with(sender: sender, receiver: receiver, shared_url: shared_url).welcome.deliver_now
+  end
 
   private
 

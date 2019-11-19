@@ -6,7 +6,10 @@ class FileUploadsController < ApplicationController
     # authorize @file_upload
 
     if @file_upload.save
-      redirect_to new_file_upload_path
+      respond_to do |format|
+        # format.html { redirect_to new_file_upload_path }
+        format.js
+      end
     else
       render :new
     end

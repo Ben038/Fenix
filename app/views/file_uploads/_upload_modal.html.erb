@@ -1,0 +1,19 @@
+<div id="upload-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div>
+
+        <h4>and now import your file</h4>
+          <%= form_tag import_accounting_data_path, multipart: true do %>
+            <%= file_field_tag :file %>
+            <%= submit_tag "Import CSV", class: "btn-yellow" %>
+          <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
