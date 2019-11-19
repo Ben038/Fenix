@@ -5,7 +5,7 @@
 
     <div class="container-top">
 
-    <div class="container-left">
+    <div id="sortableKpi" class="container-left">
       <div class="card-kpi">
         <p class="kpi-title">Commissions Ratio</p>
         <h3 class="kpi-amount"><%= number_to_percentage(@commission_ratio, precision: 2)   %></h3>
@@ -51,7 +51,7 @@
           </table>
         </div>
 
-        <div class="container-chart">
+        <div id="sortableCharts" class="container-chart">
           <div class="card-chart">
             <div class="card-chart-img">
             </div>
