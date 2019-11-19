@@ -4,8 +4,9 @@ th {
   height: 15px;
 }
 
-th.BY {
-  text-align: center;
+th.by {
+  text-align: right;
+  padding-right: 10px;
 }
 
 tr:nth-child(odd) {background-color: $backgroundblue;}
@@ -18,6 +19,7 @@ table {
 
 tr td{
   text-align: right;
+  padding-right: 10px;
 }
 
 // td.last-row {
