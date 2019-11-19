@@ -1,5 +1,5 @@
 
-  <div class="navbar navbar-expand-sm navbar-light navbar-fenix" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="navbar solid navbar-expand-sm navbar-light navbar-fenix" data-spy="scroll" data-target=".navbar" data-offset="50">
   <%= link_to root_path, class: "navbar-brand" do %>
     <h2> fenix <%= image_tag "logo.png" %> </h2>
     <% end %>
@@ -30,9 +30,9 @@
           </div>
         </li>
       <% else %>
-        <!-- <ul class="nav-item">
-          <li> <%= link_to "Login", new_user_session_path, class: "nav-link" %>  </li>
-        </ul> -->
+        <ul class="nav-item">
+          <li> <%= link_to "Login", new_user_session_path, class: "btn btn-blue" %>  </li>
+        </ul>
       <% end %>
     </ul>
   </div>

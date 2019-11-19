@@ -1,7 +1,14 @@
-.service-area {
-  background: $backgroundblue;
-  margin-top: 0px;
+// .container-service-area {
+//   margin: 0px;
+// }
+
+.service-area .service-one {
+  background: $white;
 }
+
+// .service-area {
+//   margin-top: 0px;
+// }
 
 .container-service {
   display: flex;
@@ -10,6 +17,7 @@
 
 .service-image {
   margin-right: 50px;
+  margin-left: 50px;
   padding: 50px 0px;
 }
 
@@ -17,13 +25,13 @@
   height: 300px;
 }
 
-.service-text h5 {
+.service-text h2{
   color: $darkblue;
-  font-size: 28px;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
 }
 
-.service-text h3 {
-  color: $darkblue;
-  font-size: 20px;
-  font-weight: bold;
+.service-text .text {
+  margin-top: 20px;
 }
