@@ -7,17 +7,30 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 <% url = request.original_url  %>
-<!-- url["pages"] = "commissions -->
-<!-- url = ...right path -->
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active d-flex align-items-center">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mail to your teammates</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <% all_team = User.all.where("id != ?", current_user.id) %>
+            <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>
+            <% team.each do |member| %>
+              <%= link_to member.first_name, "rails/mailers/user_mailer/welcome.html", class: "dropdown-item" %>
+            <% end %>
+          </div>
+        </li>
 
-          <%= link_to "Claims", claims_path, class: "nav-link"  %>
+
+<!-- BE CAREFULL the url.gsub is a quick fix to move to other pages! make sure this is correct to always redirect to pages! -->
+
+
+        <li class="nav-item active d-flex align-items-center">
+          <%= link_to "Claims", url.gsub("pages", "claims"), class: "nav-link"  %>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <%= link_to "Commissions", commissions_path, class: "nav-link"  %>
+          <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link"  %>
         </li>
           <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
