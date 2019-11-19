@@ -18,14 +18,16 @@
           <%= label_tag country %></li>
         <% end %>
       <p>Networks</p>
-      <% @select_networks.each do |network| %><li><%= check_box_tag "network[#{network}]", network %><%= label_tag network %></li>
+      <% @select_networks.each do |network| %>
+        <li><%= check_box_tag "network[#{network}]", network %>
+        <%= label_tag network %></li>
         <% end %>
 
-      <p><input type="submit" value="Submit"></p>
+      <p><input type="submit" value="Filter" class="sidebar-btn-yellow"></p>
     </form>
 
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mail to your teammates</a>
+    <a class="nav-link dropdown-toggle sidebar-btn-yellow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mail to Team</a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <% all_team = User.all.where("id != ?", current_user.id) %>
         <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>

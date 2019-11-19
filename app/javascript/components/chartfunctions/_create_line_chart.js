@@ -22,6 +22,9 @@ if (kpi1){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
@@ -44,6 +47,9 @@ if (kpi1){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
@@ -66,6 +72,9 @@ if (kpi1){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
