@@ -229,30 +229,30 @@ margin-bottom: 10px;
 }
 
 
-// FEEDBACK
+// TESTIMONIAL
 
-.feedback-area {
+.testimonial-area {
   background: white;
   padding: 50px 10px;
 }
 
-.container-feedback {
+.container-testimonial {
   display: flex;
   align-items: space-around;
   justify-content: space-around;
 }
 
-.single-feedback {
-  padding: 30px;
-  margin: 10px;
-background: $white;
+.single-testimonial {
+  width: 500px;
+  padding: 40px;
+  background: $white;
 }
 
-.single-feedback p {
+.single-testimonial p {
   font-style: italic;
   }
 
-  .single-feedback .light {
+  .single-testimonial .light {
   font-style: normal;
   opacity: 0.8;
 }
