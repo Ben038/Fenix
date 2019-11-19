@@ -7,8 +7,8 @@ class FileUploadsController < ApplicationController
 
     if @file_upload.save
       respond_to do |format|
-        # format.html { redirect_to new_file_upload_path }
-        format.js
+        format.html { redirect_to new_file_upload_path }
+        # format.js
       end
     else
       render :new
