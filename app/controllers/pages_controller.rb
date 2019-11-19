@@ -41,7 +41,6 @@ class PagesController < ApplicationController
         # step 7: for each eg year, create a hash and push it in data_process array
 
         @data_process[country] = create_grouped_hash_by_country({country => values})
-
       end
   end
 

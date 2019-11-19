@@ -7,6 +7,7 @@ devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :pages, only: [:index, :show]
   get "commissions", to: "pages#commissions"
+  get "claims", to: "pages#claims"
 
   # resources :users, only: [:new, :create, :destroy]
   resources :accounting_data, only: [:new, :create, :index, :destroy] do
