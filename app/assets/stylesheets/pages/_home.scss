@@ -51,12 +51,12 @@ header .overlay {
 
 header .btn-yellow {
 margin-top: 50px;
+margin-left: 30%;
 padding: 20px;
 font-size: 1.2rem;
 }
 
 .display-3 {
-font-size: 3rem;
 color: $white;
 }
 
@@ -65,26 +65,29 @@ color: $white;
 
 header .verticalFlip{
   display: inline;
-  text-indent: 8px;
+  text-indent: 12px;
 }
+
 header .verticalFlip span{
-  animation: vertical 3.0s linear infinite 0s;
-  -ms-animation: vertical 3.0s linear infinite 0s;
-  -webkit-animation: vertical 3.0s linear infinite 0s;
-  color: $darkblue;
+  animation: vertical 9.0s linear infinite 0s;
+  -ms-animation: vertical 9.0s linear infinite 0s;
+  -webkit-animation: vertical 9.0s linear infinite 0s;
+  color: $yellow;
   opacity: 0;
   overflow: hidden;
   position: absolute;
 }
+
 header .verticalFlip span:nth-child(2){
-  animation-delay: 1.0s;
-  -ms-animation-delay: 1.0s;
-  -webkit-animation-delay: 1.0s;
+  animation-delay: 3.0s;
+  -ms-animation-delay: 3.0s;
+  -webkit-animation-delay: 3.0s;
 }
+
 header .verticalFlip span:nth-child(3){
-  animation-delay: 2.0s;
-  -ms-animation-delay: 2.0s;
-  -webkit-animation-delay: 2.0s;
+  animation-delay: 6.0s;
+  -ms-animation-delay: 6.0s;
+  -webkit-animation-delay: 6.0s;
 }
 
 @-moz-keyframes vertical{
@@ -117,9 +120,6 @@ header .verticalFlip span:nth-child(3){
 
 
 
-
-
-.about-area
 
 .container-about {
   display: flex;
