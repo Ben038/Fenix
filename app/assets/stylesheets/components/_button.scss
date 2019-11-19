@@ -7,9 +7,11 @@
   opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
 .btn-yellow:hover {
+  background: $yellow;
   color: $white;
   opacity: 0.8;
   text-decoration: none;
@@ -19,14 +21,16 @@
   color: $white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: $darkblue;
+  background: $blue;
   opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
 .btn-bleu:hover {
   color: $white;
   opacity: 0.8;
   text-decoration: none;
+
 }

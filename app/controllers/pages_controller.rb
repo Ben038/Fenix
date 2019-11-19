@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:home]
 
   def index
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)
@@ -16,16 +16,15 @@ class PagesController < ApplicationController
         # step 7: iterate over filtered data, eg 2017, 2018
         @data_rows_grouped_year.each do |year, values|
         # step 7: for each eg year, create a hash and push it in data_process array
-
         @data_process[year] = create_grouped_hash_by_year({year => values})
 
       end
   end
 
-
   def order_by_balance_year
     @params = params[:balance_year].values.sort
   end
+
 
   def commissions #method applicable to the commissions visualization
 
@@ -45,8 +44,12 @@ class PagesController < ApplicationController
       end
   end
 
-  def claims
+  def share_page_with_options
+    shared_url = params[:shared_url]
+    receiver = User.find(params[:user_id])
+    sender = current_user
 
+    UserMailer.with(sender: sender, receiver: receiver, shared_url: shared_url).welcome.deliver_now
   end
 
   private

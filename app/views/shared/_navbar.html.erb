@@ -1,4 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-fenix">
+
+  <div class="navbar solid navbar-expand-sm navbar-light navbar-fenix" data-spy="scroll" data-target=".navbar" data-offset="50">
   <%= link_to root_path, class: "navbar-brand" do %>
     <h2> fenix <%= image_tag "logo.png" %> </h2>
     <% end %>
@@ -20,6 +21,7 @@
             <% end %>
           </div>
         </li>
+
 
 <!-- BE CAREFULL the url.gsub is a quick fix to move to other pages! make sure this is correct to always redirect to pages! -->
 
@@ -43,10 +45,11 @@
           </div>
         </li>
       <% else %>
-        <!-- <ul class="nav-item">
-          <li> <%= link_to "Login", new_user_session_path, class: "nav-link" %>  </li>
-        </ul> -->
+        <ul class="nav-item">
+          <li> <%= link_to "Login", new_user_session_path, class: "btn btn-blue" %>  </li>
+        </ul>
       <% end %>
     </ul>
   </div>
 </div>
+

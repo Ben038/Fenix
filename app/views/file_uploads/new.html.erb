@@ -1,42 +1,61 @@
 <div class="container container-upload">
 <h1>Data Uploader</h1>
 
-  <%= simple_form_for (@file_upload) do |f| %>
+  <%= simple_form_for @file_upload, remote: true do |f| %>
     <%= f.input :reinsurance_network, collection: FileUpload::NETWORKS %>
     <%= f.input :balance_year, collection: FileUpload::YEARS %>
     <%= f.input :quarter, collection: FileUpload::QUARTERS %>
     <%= f.input :file_name, placeholder: "" %>
-    <%= f.button :submit, class: "btn-yellow" %>
+    <div data-toggle="modal" data-target="#exampleModal">
+      <%= f.button :submit, class: "btn-yellow" %>
+    </div>
   <% end %>
 
-<div>
-  <h4>and now import your file</h4>
-    <%= form_tag import_accounting_data_path, multipart: true do %>
-      <%= file_field_tag :file %>
-      <%= submit_tag "Import CSV", class: "btn-yellow" %>
-    <% end %>
-</div>
 
-<p><%= link_to "View ALL uploaded data", accounting_data_path, class: "btn-yellow" %></p>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Choose the file to import</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <%= form_tag import_accounting_data_path, multipart: true do %>
+              <%= file_field_tag :file %>
+              <%= submit_tag "Import CSV", class: "btn-yellow" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="modal-footer">
 
-<p><%= link_to "Back to dashboard", pages_path, class: "btn-yellow" %></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h2>Latest uploads</h2>
-<table>
-  <tbody>
-    <% FileUpload.last(5).reverse.each do |file_upload| %>
-      <tr>
-        <td><%= file_upload.created_at %></td>
-        <td><%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
-        <td><% if current_user.id == file_upload.user_id %>
-                <%= link_to file_upload_path(file_upload.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <i class="fa fa-trash"></i>
+  <p><%= link_to "View ALL uploaded data", accounting_data_path, class: "btn-yellow" %></p>
+
+  <p><%= link_to "Back to dashboard", pages_path, class: "btn-yellow" %></p>
+
+  <h2>Latest uploads</h2>
+  <table>
+    <tbody>
+      <% FileUpload.last(5).reverse.each do |file_upload| %>
+        <tr>
+          <td><%= file_upload.created_at %></td>
+          <td><%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
+          <td><% if current_user.id == file_upload.user_id %>
+                  <%= link_to file_upload_path(file_upload.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash"></i>
+                  <% end %>
                 <% end %>
-              <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 

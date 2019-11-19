@@ -1,0 +1,37 @@
+// .container-service-area {
+//   margin: 0px;
+// }
+
+.service-area .service-one {
+  background: $white;
+}
+
+// .service-area {
+//   margin-top: 0px;
+// }
+
+.container-service {
+  display: flex;
+  align-items: center;
+}
+
+.service-image {
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 50px 0px;
+}
+
+.service-image img{
+  height: 300px;
+}
+
+.service-text h2{
+  color: $darkblue;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+
+.service-text .text {
+  margin-top: 20px;
+}

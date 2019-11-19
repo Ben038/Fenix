@@ -2,12 +2,21 @@ Rails.application.routes.draw do
 
 devise_for :users
 
-  root to: 'pages#index'
+  root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :pages, only: [:index, :show]
+
   get "commissions", to: "pages#commissions"
   get "claims", to: "pages#claims"
+
+  resources :pages, only: [:index, :show, :home] do
+    collection do
+      post 'share_page_with_options'
+    end
+  end
+
+  # post '/rails/mailers/user_mailer/welcome/:id', to: 'patients#show', as: 'patient'
+
 
   # resources :users, only: [:new, :create, :destroy]
   resources :accounting_data, only: [:new, :create, :index, :destroy] do
