@@ -1,10 +1,18 @@
 
-<div class="container-dashboard" id="dashboard-area">
-  <div class="container-commissions-chart">
-    <!-- Create an element where the map will take place -->
-    <canvas id="reinsComm" width="400" height="400"></canvas>
-    <canvas id="brokerComm" width="400" height="400"></canvas>
-  </div>
+<div class="container-dashboard d-flex" id="dashboard-area">
 
+    <!-- Create an element where the map will take place -->
+  <div class="card-chart">
+    <div class="card-chart-text">
+      Reinsurance Commissions
+      <canvas id="reinsComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] * -1 }.to_json %>"></canvas>
+    </div>
+  </div>
+  <div class="card-chart">
+    <div class="card-chart-text">
+      Broker Commissions
+      <canvas id="brokerComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:broker_comm_ratio] * -1  }.to_json %>"></canvas>
+    </div>
+  </div>
 </div>
 
