@@ -32,6 +32,9 @@
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link"  %>
         </li>
+         <li class="nav-item d-flex align-items-center">
+          <%= link_to "Dashboard", pages_path, class: "nav-link"  %>
+        </li>
           <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
           <% if !current_user.profile_picture %>
