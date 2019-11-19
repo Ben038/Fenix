@@ -5,11 +5,11 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.welcome.subject
   #
   def welcome
-    @user = User.find(params[:user][:id])
-    @url = params[:url]
+    @shared_url = params[:shared_url]
+    @receiver = User.find(params[:receiver][:id])
+    @sender = User.find(params[:sender][:id])
 
-    # How to know the clicked user?
-    # How to have access to the current URL?
-    mail(to: @user.email, subject: 'Important message from Fenix')
+    mail(to: @receiver.email, subject: "Important message from #{@sender.first_name}")
+
   end
 end
