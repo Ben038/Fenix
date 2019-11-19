@@ -38,3 +38,10 @@ li {
   list-style-type: none;
 }
 
+.fa-star.checked {
+  color: $yellow;
+}
+
+.fa-star {
+  color: $lightblue;
+}

@@ -7,10 +7,10 @@ if (kpi1){
   var kpiCommissions = new Chart(kpi1, {
       type: 'line',
       data: {
-          labels: ["2016", "2017", "2018"],
+          labels: JSON.parse(kpi1.dataset.years),
           datasets: [{
               label: '',
-              data: [-15, -12, -13.6],
+              data: JSON.parse(kpi1.dataset.processJson),
               showLines: true
           }]
       },
@@ -30,10 +30,10 @@ if (kpi1){
   var kpiClaims = new Chart(kpi2, {
       type: 'line',
       data: {
-          labels: ["2016", "2017", "2018"],
+          labels: JSON.parse(kpi2.dataset.years),
           datasets: [{
               label: '',
-              data: [-70, -65, -64.51],
+              data: JSON.parse(kpi2.dataset.processJson),
               showLines: true
           }]
       },
@@ -52,10 +52,10 @@ if (kpi1){
   var kpiBalance = new Chart(kpi3, {
       type: 'line',
       data: {
-          labels: ["2016", "2017", "2018"],
+          labels: JSON.parse(kpi3.dataset.years),
           datasets: [{
               label: '',
-              data: [-4, -15, -26.1],
+              data: JSON.parse(kpi3.dataset.processJson),
               showLines: true
           }]
       },
