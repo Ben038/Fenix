@@ -2,7 +2,7 @@
 .btn-yellow {
   color: $white;
   text-align: center;
-  width: 130px;
+  padding: 8px 24px;
   border-radius: 4px;
   background: $yellow;
   opacity: 1;
@@ -11,8 +11,10 @@
   transition: background 0.3s ease;
   &:hover {
     opacity: 0.8;
+    color: $white;
   }
 }
+
 
 .sidebar .btn-yellow {
   height: 36px;
