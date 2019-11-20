@@ -1,6 +1,13 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, except: [:home]
 
+  def home
+    unless current_user.nil?
+      redirect_to pages_path
+    end
+  end
+
+
   def index
     checked_data #to keep the checkboxes checked after submit
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)
@@ -56,6 +63,7 @@ class PagesController < ApplicationController
 
     UserMailer.with(sender: sender, receiver: receiver, shared_url: shared_url).welcome.deliver_now
   end
+
 
   private
 
