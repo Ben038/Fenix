@@ -32,21 +32,17 @@
               <tr>
                 <th scope="col" >  Accounting Item</th>
                 <% @data_process.sort.each do |k, v| %>
-
-                <th class="by"> <%= k %> </th>
+                  <th class="by"> <%= k %> </th>
                 <% end %>
               </tr>
 
-                <% AccountingDatum.attributes_keys.each do |key| %>
-
-              <tr>
-                <th scope="row"> <%= key.to_s %></th>
-                 <% @data_process.each do |k, v| %>
-
-                     <td> <%= number_with_precision(v[key], precision: 2, separator: '.', delimiter: ',') %> </th>
-                <% end %>
-              </tr>
-
+              <% AccountingDatum.attributes_keys.each do |key| %>
+                <tr>
+                  <th scope="row"> <%= @data_process.first[0][key][:label].to_s %></th>
+                   <% @data_process.each do |k, v| %>
+                       <td> <%= number_with_precision(v[key][:value], precision: 2, separator: '.', delimiter: ',') %> </th>
+                  <% end %>
+                </tr>
               <% end  %>
 
             </tbody>

@@ -127,22 +127,22 @@ class PagesController < ApplicationController
 
     # ref 7: create a hash to be able to group by, eg 2017, does calculation for all data for that year which will be fed to subgroup_data
       {
-        :commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
-        :balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
-        :claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
-        :broker_comm_ratio => AccountingDatum.broker_ratio_commissions(hash.values.first),
-        :reins_comm_ratio => AccountingDatum.reins_comm_ratio(hash.values.first),
-        :premium => AccountingDatum.calc_premium(hash.values.first),
-        :earned_premium => AccountingDatum.calc_earned_premium(hash.values.first),
-        :claim_paid => AccountingDatum.calc_claim_paid(hash.values.first),
-        :claim_paid_and_reserves_change => AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first),
-        :premium_and_reserves_change => AccountingDatum.calc_premium_and_reserves_change(hash.values.first),
-        :reinsurance_comm => AccountingDatum.calc_reinsurance_comm(hash.values.first),
-        :broker_comm => AccountingDatum.calc_broker_comm(hash.values.first),
-        :profit_sharing => AccountingDatum.calc_profit_sharing(hash.values.first),
-        :taxes => AccountingDatum.calc_taxes(hash.values.first),
-        :interests => AccountingDatum.calc_interests(hash.values.first),
-        :balance => AccountingDatum.calc_balance(hash.values.first)
+        :commission_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_commissions(hash.values.first) },
+        :balance_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_tech_bal(hash.values.first) },
+        :claim_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_claims(hash.values.first) },
+        :broker_comm_ratio => { label: "le label", value: AccountingDatum.broker_ratio_commissions(hash.values.first) },
+        :reins_comm_ratio => { label: "le label", value: AccountingDatum.reins_comm_ratio(hash.values.first) },
+        :premium => { label: "le label", value: AccountingDatum.calc_premium(hash.values.first) },
+        :earned_premium => { label: "le label", value: AccountingDatum.calc_earned_premium(hash.values.first) },
+        :claim_paid => { label: "le label", value: AccountingDatum.calc_claim_paid(hash.values.first) },
+        :claim_paid_and_reserves_change => { label: "le label", value: AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first) },
+        :premium_and_reserves_change => { label: "le label", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
+        :reinsurance_comm => { label: "le label", value: AccountingDatum.calc_reinsurance_comm(hash.values.first) },
+        :broker_comm => { label: "le label", value: AccountingDatum.calc_broker_comm(hash.values.first) },
+        :profit_sharing => { label: "le label", value: AccountingDatum.calc_profit_sharing(hash.values.first) },
+        :taxes => { label: "le label", value: AccountingDatum.calc_taxes(hash.values.first) },
+        :interests => { label: "le label", value: AccountingDatum.calc_interests(hash.values.first) },
+        :balance => { label: "le label", value: AccountingDatum.calc_balance(hash.values.first) }
     }
 
 end
@@ -152,22 +152,22 @@ end
 
     # ref 7: create a hash to be able to group by, eg 2017, does calculation for all data for that year which will be fed to subgroup_data
       {
-        :commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
-        :balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
-        :claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
-        :broker_comm_ratio => AccountingDatum.broker_ratio_commissions(hash.values.first),
-        :reins_comm_ratio => AccountingDatum.reins_comm_ratio(hash.values.first),
-        :premium => AccountingDatum.calc_premium(hash.values.first),
-        :earned_premium => AccountingDatum.calc_earned_premium(hash.values.first),
-        :claim_paid => AccountingDatum.calc_claim_paid(hash.values.first),
-        :claim_paid_and_reserves_change => AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first),
-        :premium_and_reserves_change => AccountingDatum.calc_premium_and_reserves_change(hash.values.first),
-        :reinsurance_comm => AccountingDatum.calc_reinsurance_comm(hash.values.first),
-        :broker_comm => AccountingDatum.calc_broker_comm(hash.values.first),
-        :profit_sharing => AccountingDatum.calc_profit_sharing(hash.values.first),
-        :taxes => AccountingDatum.calc_taxes(hash.values.first),
-        :interests => AccountingDatum.calc_interests(hash.values.first),
-        :balance => AccountingDatum.calc_balance(hash.values.first)
+        :commission_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_commissions(hash.values.first) },
+        :balance_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_tech_bal(hash.values.first) },
+        :claim_ratio => { label: "le label", value: AccountingDatum.kpi_ratio_claims(hash.values.first) },
+        :broker_comm_ratio => { label: "le label", value: AccountingDatum.broker_ratio_commissions(hash.values.first) },
+        :reins_comm_ratio => { label: "le label", value: AccountingDatum.reins_comm_ratio(hash.values.first) },
+        :premium => { label: "le label", value: AccountingDatum.calc_premium(hash.values.first) },
+        :earned_premium => { label: "le label", value: AccountingDatum.calc_earned_premium(hash.values.first) },
+        :claim_paid => { label: "le label", value: AccountingDatum.calc_claim_paid(hash.values.first) },
+        :claim_paid_and_reserves_change => { label: "le label", value: AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first) },
+        :premium_and_reserves_change => { label: "le label", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
+        :reinsurance_comm => { label: "le label", value: AccountingDatum.calc_reinsurance_comm(hash.values.first) },
+        :broker_comm => { label: "le label", value: AccountingDatum.calc_broker_comm(hash.values.first) },
+        :profit_sharing => { label: "le label", value: AccountingDatum.calc_profit_sharing(hash.values.first) },
+        :taxes => { label: "le label", value: AccountingDatum.calc_taxes(hash.values.first) },
+        :interests => { label: "le label", value: AccountingDatum.calc_interests(hash.values.first) },
+        :balance => { label: "le label", value: AccountingDatum.calc_balance(hash.values.first) }
     }
 
 end
