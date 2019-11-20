@@ -12,7 +12,8 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi1.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
@@ -38,7 +39,8 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi2.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
@@ -62,7 +64,8 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi3.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
