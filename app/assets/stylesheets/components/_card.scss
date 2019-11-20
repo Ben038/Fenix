@@ -6,7 +6,7 @@
   padding: 10px;
   text-align: center;
   position: relative;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
   height: 221px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ font-size: 20px;
   min-width: 500px;
   padding: 20px;
   margin: 0 20px 20px 20px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
   flex-grow: 1;
 }
 
@@ -74,14 +74,18 @@ font-size: 20px;
   padding-right: 15px;
 }
 
-.rating.card-kpi .score .fa .fa-star .checked {
+.fa-star.checked {
   color: $yellow;
+}
+
+.fa-star {
+  color: $lightblue;
 }
 
 .card-table {
   position: relative;
   background: white;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
   padding: 10px 10px 10px 15px;
   min-height: 300px;
   margin-bottom: 20px;
@@ -94,7 +98,7 @@ font-size: 20px;
 .card-news {
   background: white;
   padding: 20px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
 }
 
 .card-news:hover {
@@ -145,7 +149,7 @@ font-size: 20px;
  width: 300px;
  background: $white;
  margin: 20px;
- box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
+ box-shadow: 0, 0, 0px rgba(18, 23, 43,0.2);
  // display: flex;
 }
 
@@ -163,7 +167,7 @@ font-size: 20px;
 .card-service-infos {
   position: relative;
   background: $white;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
   margin: 20px;
   padding-top: 60px;
   padding-left: 20px;
@@ -176,7 +180,7 @@ font-size: 20px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 3px rgba(18, 23, 43,0.2);
   border: $yellow 3px solid;
   object-fit: cover;
 }
@@ -222,7 +226,7 @@ font-size: 20px;
   // overflow: hidden;
   width: 200px;
   height: 200px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(18, 23, 43,0.2);
   margin: 20px;
   background: $white;
   position: relative;
@@ -276,9 +280,9 @@ h1 {
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(18, 23, 43,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(18, 23, 43,0.2);
 }
 
 

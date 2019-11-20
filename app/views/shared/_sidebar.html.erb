@@ -7,28 +7,28 @@
     </a>
 
     <form>
-      <p>Balance Year</p>
-        <% @select_years.each do |year| %>
+      <p class="filter">Balance Year</p>
+        <% @select_years.sort.each do |year| %>
           <% checked = @checked_values[:balance_year].include?(year.to_s)  %>
-          <li><%= check_box_tag "balance_year[#{year}]", year, checked %>
+          <li class="filter"><%= check_box_tag "balance_year[#{year}]", year, checked, class:"custom-checkbox" %>
           <%= label_tag year %></li>
         <% end %>
 
-      <p>Countries</p>
-      <% @select_countries.each do |country| %>
+      <p class="filter">Countries</p>
+      <% @select_countries.sort.each do |country| %>
         <% checked = @checked_values[:country].include?(country)  %>
-          <li><%= check_box_tag "country[#{country}]", country, checked %>
+          <li class="filter"><%= check_box_tag "country[#{country}]", country, checked %>
           <%= label_tag country %></li>
          <% end %>
 
-      <p>Networks</p>
-        <% @select_networks.each do |network| %>
+      <p class="filter">Networks</p>
+        <% @select_networks.sort.each do |network| %>
           <% checked = @checked_values[:reinsurance_network].include?(network)  %>
-          <li><%= check_box_tag "network[#{network}]", network, checked %>
+          <li class="filter"><%= check_box_tag "network[#{network}]", network, checked %>
           <%= label_tag network %></li>
         <% end %>
 
-      <p><input type="submit" value="Filter" class="btn btn-blue"></p>
+      <p><input type="submit" value="Filter" class="btn btn-blue filter"></p>
     </form>
 
   <li class="nav-item dropdown">
