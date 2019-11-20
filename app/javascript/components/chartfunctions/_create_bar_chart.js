@@ -17,16 +17,8 @@ if (ctx){
           datasets: [{
               label: 'Premium',
               data: JSON.parse(ctx.dataset.processJson),
-              backgroundColor: [
-                  'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-              ],
-              borderColor: [
-                   'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-              ],
+              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
+              borderColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
               borderWidth: 1
           }]
       },
@@ -52,16 +44,8 @@ if (ctx){
           datasets: [{
               label: 'Balance',
               data: JSON.parse(balance.dataset.processJson),
-              backgroundColor: [
-                   'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-              ],
-              borderColor: [
-                   'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-                  'rgba(41, 52, 98, 1)',
-              ],
+              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
+              borderColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
               borderWidth: 1
           }]
       },
