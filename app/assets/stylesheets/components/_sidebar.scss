@@ -15,17 +15,26 @@
   overflow-x: hidden;
   padding: 15px;
   z-index: 1;
-  color: $darkblue;
+  color: #293462;
 }
+
 
 .sidebar-item {
   display: inline-block;
 }
+
 .sidebar-item li {
   display: inline-block;
+  list-style-type: none;
+  font-size: 16px;
 }
+
 .sidebar-item {
   color: $white;
+}
+
+.checkbox {
+  background-color: $blue;
 }
 
 .nav-link.dropdown-toggle.btn.btn-yellow.mail-to-dropdown{
@@ -34,6 +43,24 @@
   &::after {
     display: none;
   }
+}
+
+li.filter {
+  font-size: 16px;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+p.filter {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input.custom-checkbox {
+  background: red;
 }
 
 p {
@@ -47,10 +74,4 @@ li {
   list-style-type: none;
 }
 
-.fa-star.checked {
-  color: $yellow;
-}
 
-.fa-star {
-  color: $lightblue;
-}
