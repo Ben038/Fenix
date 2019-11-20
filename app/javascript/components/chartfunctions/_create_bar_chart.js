@@ -37,6 +37,9 @@ if (ctx){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
@@ -69,6 +72,9 @@ if (ctx){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });

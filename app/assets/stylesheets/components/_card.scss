@@ -6,6 +6,8 @@
   padding: 10px;
   text-align: center;
   position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  height: 221px;
 }
 
 .card-kpi h3 {
@@ -30,6 +32,7 @@ font-size: 20px;
   min-width: 500px;
   padding: 20px;
   margin: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .card-chart:first-child {
@@ -53,6 +56,14 @@ font-size: 20px;
   text-align: center;
   margin-bottom: 15px;
 }
+
+// .chartjs-size-monitor-expand {
+//   height: 135px;
+// }
+
+// .chartjs-size-monitor-shrink {
+//   height: 135px;
+// }
 
 .card-table {
   position: relative;

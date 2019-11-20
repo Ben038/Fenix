@@ -2,7 +2,8 @@
 
 header {
   position: relative;
-  background-color: $blue;
+  // background-color: $blue;
+  background-image: url("http://drive.google.com/uc?export=view&id=1HhCKGroWUod3m-AOsvJ5qtsjuPmfj25A");
   height: 75vh;
   min-height: 25rem;
   width: 100%;
@@ -51,12 +52,12 @@ header .overlay {
 
 header .btn-yellow {
 margin-top: 50px;
+margin-left: 30%;
 padding: 20px;
 font-size: 1.2rem;
 }
 
 .display-3 {
-font-size: 3rem;
 color: $white;
 }
 
@@ -65,26 +66,29 @@ color: $white;
 
 header .verticalFlip{
   display: inline;
-  text-indent: 8px;
+  text-indent: 12px;
 }
+
 header .verticalFlip span{
-  animation: vertical 3.0s linear infinite 0s;
-  -ms-animation: vertical 3.0s linear infinite 0s;
-  -webkit-animation: vertical 3.0s linear infinite 0s;
-  color: $darkblue;
+  animation: vertical 9.0s linear infinite 0s;
+  -ms-animation: vertical 9.0s linear infinite 0s;
+  -webkit-animation: vertical 9.0s linear infinite 0s;
+  color: $yellow;
   opacity: 0;
   overflow: hidden;
   position: absolute;
 }
+
 header .verticalFlip span:nth-child(2){
-  animation-delay: 1.0s;
-  -ms-animation-delay: 1.0s;
-  -webkit-animation-delay: 1.0s;
+  animation-delay: 3.0s;
+  -ms-animation-delay: 3.0s;
+  -webkit-animation-delay: 3.0s;
 }
+
 header .verticalFlip span:nth-child(3){
-  animation-delay: 2.0s;
-  -ms-animation-delay: 2.0s;
-  -webkit-animation-delay: 2.0s;
+  animation-delay: 6.0s;
+  -ms-animation-delay: 6.0s;
+  -webkit-animation-delay: 6.0s;
 }
 
 @-moz-keyframes vertical{
@@ -117,9 +121,6 @@ header .verticalFlip span:nth-child(3){
 
 
 
-
-
-.about-area
 
 .container-about {
   display: flex;
@@ -211,48 +212,117 @@ margin-bottom: 10px;
   padding: 50px 10px;
 }
 
-.how-image img {
-height: 100px;
-margin-bottom: 10px;
+.container-how {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
-
-.how-timeline img {
+.how-area img {
   height: 1400px;
 }
 
 .how-area h2 {
   color: #12172b;
-    font-size: 44px;
-    line-height: 55px;
-    margin-bottom: 50px;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 50px;
 }
 
 
-// FEEDBACK
+// COUNTER
 
-.feedback-area {
+.counter-area {
+  background: $mediumblue;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.container-counter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.client-logo-area {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.counter-area h2{
+  color: $white;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+
+.counter-area h3{
+  color: $white;
+  font-size: 50px;
+  }
+
+  .counter-area p{
+  color: $white;
+  font-size: 24px;
+  }
+
+
+// TESTIMONIAL
+
+.testimonial-area {
   background: white;
   padding: 50px 10px;
 }
 
-.container-feedback {
+.container-testimonial {
   display: flex;
   align-items: space-around;
   justify-content: space-around;
 }
 
-.single-feedback {
-  padding: 30px;
-  margin: 10px;
-background: $white;
+.single-testimonial {
+  width: 500px;
+  padding: 40px;
+  background: $white;
 }
 
-.single-feedback p {
+.single-testimonial p {
   font-style: italic;
   }
 
-  .single-feedback .light {
+  .single-testimonial .light {
   font-style: normal;
   opacity: 0.8;
+}
+
+// CLIENTS
+
+.client-logo-area {
+  background: $backgroundblue;
+}
+
+.container-clients {
+  display: flex;
+  justify-content: space-around;
+}
+
+.client-logo-area {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.single-client img {
+  height: 50px;
+  margin: 30px;
+  opacity: 1;
+}
+
+.single-client img:hover {
+  height: 50px;
+  margin: 30px;
+  opacity: 0.8;
+}
+
+.client-logo-area h2{
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
 }

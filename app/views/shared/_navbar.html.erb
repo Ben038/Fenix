@@ -16,11 +16,20 @@
 <!-- BE CAREFULL the url.gsub is a quick fix to move to other pages! make sure this is correct to always redirect to pages! -->
 
 
+        <li class="nav-item d-flex align-items-center">
+          <%= link_to "Overview", pages_path, class: "nav-link"  %>
+        </li>
         <li class="nav-item active d-flex align-items-center">
           <%= link_to "Claims", url.gsub("pages", "claims"), class: "nav-link"  %>
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link"  %>
+        </li>
+        <li class="nav-item active d-flex align-items-center">
+          <%= link_to "Renewals", pages_path, class: "nav-link"  %>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <%= link_to "Reserves", pages_path, class: "nav-link"  %>
         </li>
           <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
