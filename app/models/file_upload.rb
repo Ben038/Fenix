@@ -9,5 +9,4 @@ class FileUpload < ApplicationRecord
   validates :reinsurance_network, presence: true, inclusion: { in: NETWORKS }
   validates :balance_year, presence: true, inclusion: { in: YEARS }
   validates :quarter, presence: true, inclusion: { in: QUARTERS }
-  validates :file_name, presence: true, uniqueness: true
 end

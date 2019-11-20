@@ -4,7 +4,7 @@ th {
   height: 15px;
 }
 
-th.by {
+th .by {
   text-align: right;
   padding-right: 10px;
 }
@@ -17,9 +17,15 @@ table {
   width: 100%;
 }
 
-tr td{
+tr td {
   text-align: right;
   padding-right: 10px;
+}
+
+.align-left tr td {
+  text-align: left;
+  padding-right: 5px;
+  padding-left: 50px;
 }
 
 // td.last-row {
