@@ -8,19 +8,19 @@
       <div class="card-kpi">
         <p class="kpi-title">Commissions Ratio:  <%= number_to_percentage(@commission_ratio, precision: 2) %></p>
         <div class="chart-container">
-          <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] }.to_json %>"></canvas>
+          <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Claims Ratio:  <%= number_to_percentage(@claim_ratio , precision: 2) %></p>
         <div class="chart-container">
-          <canvas id="kpiClaims" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_ratio] }.to_json %>"></canvas>
+          <canvas id="kpiClaims" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Balance Ratio:  <%= number_to_percentage(@balance_ratio, precision: 2) %></p>
         <div class="chart-container">
-          <canvas id="kpiBalance" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance_ratio] }.to_json %>"></canvas>
+          <canvas id="kpiBalance" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
 
               <% AccountingDatum.attributes_keys.each do |key| %>
                 <tr>
-                  <th scope="row"> <%= @data_process.first[0][key][:label].to_s %></th>
+                  <th scope="row"> <%= @data_process.first[1][key][:label].to_s %></th>
                    <% @data_process.each do |k, v| %>
                        <td> <%= number_with_precision(v[key][:value], precision: 2, separator: '.', delimiter: ',') %> </th>
                   <% end %>
@@ -55,7 +55,7 @@
             </div>
             <div class="card-chart-text">
               Premium
-              <canvas id="premiumChart"  data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:premium] }.to_json %>">    </canvas>
+              <canvas id="premiumChart"  data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:premium][:value] }.to_json %>">    </canvas>
             </div>
           </div>
           <div class="card-chart">
@@ -63,7 +63,7 @@
             </div>
             <div class="card-chart-text">
               Balance
-              <canvas id="balanceChart" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance] }.to_json %>"></canvas>
+              <canvas id="balanceChart" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance][:value] }.to_json %>"></canvas>
             </div>
           </div>
         </div>
