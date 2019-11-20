@@ -4,6 +4,7 @@ ruby '2.6.3'
 gem 'bootsnap', require: false
 gem 'bootstrap-modal-rails', '~> 2.2', '>= 2.2.5'
 gem 'chart-js-rails'
+gem 'cloudinary', '~> 1.9.1'
 gem 'data-confirm-modal', '~> 1.6', '>= 1.6.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
