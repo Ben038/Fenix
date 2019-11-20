@@ -1,4 +1,5 @@
 
+Chart.defaults.global.elements.line.fill = false;
 
 var kpi1 = document.getElementById('kpiCommissions');
 if (kpi1){
@@ -11,7 +12,8 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi1.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
@@ -22,6 +24,9 @@ if (kpi1){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
@@ -34,7 +39,8 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi2.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
@@ -44,10 +50,12 @@ if (kpi1){
                       beginAtZero: true
                   }
               }]
+          },
+          legend: {
+            display: false,
           }
       }
   });
-
   var kpi3 = document.getElementById('kpiBalance');
   var kpiBalance = new Chart(kpi3, {
       type: 'line',
@@ -56,17 +64,24 @@ if (kpi1){
           datasets: [{
               label: '',
               data: JSON.parse(kpi3.dataset.processJson),
-              showLines: true
+              showLines: true,
+              borderColor: "#00818a"
           }]
       },
       options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true
-                  }
-              }]
-          }
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        legend: {
+          display: false,
+        }
       }
   });
+
+
 }
+

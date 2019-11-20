@@ -32,38 +32,46 @@ var polarArea1= document.getElementById('reinsComm');
 
 
 if (polarArea1) {
-var reinsComm = new Chart(polarArea1, {
-type: 'polarArea',
-data : {
-    labels: JSON.parse(polarArea1.dataset.countries),
-    datasets: [{
+  var reinsComm = new Chart(polarArea1, {
+    type: 'polarArea',
+    data : {
+      labels: JSON.parse(polarArea1.dataset.countries),
+      datasets: [{
         data: JSON.parse(polarArea1.dataset.processJson),
         backgroundColor: [
-                  'rgba(41, 52, 98, 0.6)',
-                  'rgba(41, 52, 98, 0.8)',
-                  'rgba(41, 52, 98, 1)',
-              ]
-    }],
+          'rgba(41, 52, 98, 0.6)',
+          'rgba(41, 52, 98, 0.8)',
+          'rgba(41, 52, 98, 1)',
+        ]
+      }],
+    },
+    options: {
+      legend: {
+        display: false,
+      }
+    }
+  });
 
-  },
-});
 
+  var polarArea2= document.getElementById('brokerComm');
 
-var polarArea2= document.getElementById('brokerComm');
-
-var brokerComm = new Chart(polarArea2, {
-type: 'polarArea',
-data : {
-    labels: JSON.parse(polarArea2.dataset.countries),
-    datasets: [{
+  var brokerComm = new Chart(polarArea2, {
+    type: 'polarArea',
+    data : {
+      labels: JSON.parse(polarArea2.dataset.countries),
+      datasets: [{
         data: JSON.parse(polarArea2.dataset.processJson),
-        backgroundColor: [
-                  'rgba(41, 52, 98, 0.6)',
-                  'rgba(41, 52, 98, 0.8)',
-                  'rgba(41, 52, 98, 1)',
-              ]
-    }],
-
-  },
-});
+          backgroundColor: [
+            'rgba(41, 52, 98, 0.6)',
+            'rgba(41, 52, 98, 0.8)',
+            'rgba(41, 52, 98, 1)',
+          ]
+      }],
+    },
+    options: {
+      legend: {
+        display: false,
+      }
+    }
+  });
 }
