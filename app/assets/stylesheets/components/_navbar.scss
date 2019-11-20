@@ -5,23 +5,10 @@
 
 // }
 
-.other-pages .navbar-fenix {
-  position: fixed;
-  background-color: &white;
-  top: 0;
-  width: 100%;
-  justify-content: space-between;
-  color: $darkblue;
-  padding: 10px 50px;
-  display: flex;
-  align-items: center;
-  z-index: 100;
-}
 
-
-.landing .navbar-fenix {
+.navbar-fenix {
   position: fixed;
-  background-color: transparant;
+  background-color: transparent;
   top: 0;
   width: 100%;
  // background-color: &white;
@@ -36,10 +23,10 @@
 
 
 
-.landing .navbar-fenix.solid {
+.navbar-fenix.solid {
   background-color: $white;
-  transition: background-color 1s ease 0s;
-  box-shadow: 0 0 4px grey;
+  // transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px $darkblue;
 }
 
 
