@@ -38,7 +38,7 @@ if (polarArea1) {
       labels: JSON.parse(polarArea1.dataset.countries),
       datasets: [{
         data: JSON.parse(polarArea1.dataset.processJson),
-        backgroundColor: [ "#00818a", "#f7be16", "#293462", "#f9ce4f", "#216583", "#929ed1", "#00cad8", "#e5e8f4", "#216583", "#929ed1"],
+        backgroundColor: [ "#00818a", "#f7be16", "#293462", "#fad875", "#005c63", "#4659a7", "#cb9907", "#e5e8f4", "#216583", "#929ed1"],
       }],
     },
     options: {
@@ -57,7 +57,7 @@ if (polarArea1) {
       labels: JSON.parse(polarArea2.dataset.countries),
       datasets: [{
         data: JSON.parse(polarArea2.dataset.processJson),
-          backgroundColor: [ "#00818a", "#f7be16", "#293462", "#f9ce4f", "#216583", "#929ed1", "#00cad8", "#e5e8f4", "#216583", "#929ed1"],
+          backgroundColor: [ "#00818a", "#f7be16", "#293462", "#fad875", "#005c63", "#4659a7", "#cb9907", "#e5e8f4", "#216583", "#929ed1"],
       }],
     },
     options: {
