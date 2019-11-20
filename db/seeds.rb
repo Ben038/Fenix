@@ -25,28 +25,28 @@ international_client2 = InternationalClient.create!(name: "ChaiTea International
 puts "creating users"
 
 
-user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "Liz@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283151/l5bbvkciodm64uqieven.jpg", international_client: InternationalClient.all.sample)
+user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "Liz@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283151/l5bbvkciodm64uqieven.jpg", international_client: InternationalClient.first)
 # user1.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283151/l5bbvkciodm64uqieven.jpg"
 # user1.save
-user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', email: "John@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/oxfnbmemwrvmg3qlsyjv.jpg", international_client: InternationalClient.all.sample)
+user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', email: "John@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/oxfnbmemwrvmg3qlsyjv.jpg", international_client: InternationalClient.last)
 # user2.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/oxfnbmemwrvmg3qlsyjv.jpg"
 # user2.save
-user3 = User.create!(first_name: "Steve", last_name: "McMaony", password: '123456', email: "stevefromfenix@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/tn4nxfuwsuth4utr5w3v.jpg", international_client: InternationalClient.all.sample)
+user3 = User.create!(first_name: "Steve", last_name: "McMaony", password: '123456', email: "stevefromfenix@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/tn4nxfuwsuth4utr5w3v.jpg", international_client: InternationalClient.first)
 # user3.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1573283152/tn4nxfuwsuth4utr5w3v.jpg"
 # user3.save
-user4 = User.create!(first_name: "Liza", last_name: "Lacroix", password: '123456', email: "Liza@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/bouffe_liza-frulla_photo_hqbfsk.jpg", international_client: InternationalClient.all.sample)
+user4 = User.create!(first_name: "Liza", last_name: "Lacroix", password: '123456', email: "Liza@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/bouffe_liza-frulla_photo_hqbfsk.jpg", international_client: InternationalClient.last)
 # user4.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/bouffe_liza-frulla_photo_hqbfsk.jpg"
 # user4.save
-user5 = User.create!(first_name: "Bill", last_name: "Clinton", password: '123456', email: "Bill@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/i_zlFpOX_400x400_in4wba.jpg", international_client: InternationalClient.all.sample)
+user5 = User.create!(first_name: "Bill", last_name: "Clinton", password: '123456', email: "Bill@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/i_zlFpOX_400x400_in4wba.jpg", international_client: InternationalClient.first)
 # user5.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/i_zlFpOX_400x400_in4wba.jpg"
 # user5.save
-user6 = User.create!(first_name: "Samantha", last_name: "Fischer", password: '123456', email: "Samantha@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/Samantha-Sudre-Roux-1-e1477573439274-300x300_wvkbdr.jpg", international_client: InternationalClient.all.sample)
+user6 = User.create!(first_name: "Samantha", last_name: "Fischer", password: '123456', email: "Samantha@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/Samantha-Sudre-Roux-1-e1477573439274-300x300_wvkbdr.jpg", international_client: InternationalClient.first)
 # user6.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262451/Samantha-Sudre-Roux-1-e1477573439274-300x300_wvkbdr.jpg"
 # user6.save
-user7 = User.create!(first_name: "Alex", last_name: "Alabama", password: '123456', email: "Alex@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/wong_alex_l13932_gks1ae.jpg", international_client: InternationalClient.all.sample)
+user7 = User.create!(first_name: "Alex", last_name: "Alabama", password: '123456', email: "Alex@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/wong_alex_l13932_gks1ae.jpg", international_client: InternationalClient.first)
 # user7.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/wong_alex_l13932_gks1ae.jpg"
 # user7.save
-user8 = User.create!(first_name: "Camilla", last_name: "Williams", password: '123456', email: "Camilla@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/GettyImages-500466702_t3q7sx.jpg", international_client: InternationalClient.all.sample)
+user8 = User.create!(first_name: "Camilla", last_name: "Williams", password: '123456', email: "Camilla@gmail.com", profile_picture: "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/GettyImages-500466702_t3q7sx.jpg", international_client: InternationalClient.last)
 # user8.profile_picture = "https://res.cloudinary.com/dmwpalbj8/image/upload/v1574262452/GettyImages-500466702_t3q7sx.jpg"
 # user7.save
 

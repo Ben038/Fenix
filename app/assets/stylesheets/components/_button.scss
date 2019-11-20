@@ -15,7 +15,6 @@
   }
 }
 
-
 .sidebar .btn-yellow {
   height: 36px;
   width: 130px;
@@ -24,7 +23,6 @@
     opacity: 0.8;
   }
 }
-
 
 .btn.btn-blue {
   color: $white;
@@ -44,4 +42,29 @@
   margin-bottom: 5px;
   margin-top: 20px;
 
+}
+
+.btn-turquoise {
+  color: $white;
+  text-align: center;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $turquoise;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 5px;
+  transition: background 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+    color: $white;
+  }
+}
+
+.sidebar .btn-turquoise {
+  height: 36px;
+  width: 130px;
+  box-shadow: none;
+  &:hover {
+    opacity: 0.8;
+  }
 }
