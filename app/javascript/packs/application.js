@@ -33,9 +33,9 @@ if(window.sortableKpi){
 
 window.addEventListener("scroll", (event) => {
   if (window.scrollY > 200) {
-    document.querySelector(".landing .navbar-fenix").classList.add("solid");
+    document.querySelector(".navbar-fenix").classList.add("solid");
   }
   else {
-    document.querySelector(".landing .navbar-fenix").classList.remove("solid");
+    document.querySelector(".navbar-fenix").classList.remove("solid");
   }
 });

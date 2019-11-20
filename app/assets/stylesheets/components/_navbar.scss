@@ -1,13 +1,8 @@
 
 
-
-// .navbar {
-
-// }
-
 .other-pages .navbar-fenix {
   position: fixed;
-  background-color: &white;
+  background-color: $white;
   top: 0;
   width: 100%;
   justify-content: space-between;
@@ -21,7 +16,7 @@
 
 .landing .navbar-fenix {
   position: fixed;
-  background-color: transparant;
+  background-color: transparent;
   top: 0;
   width: 100%;
  // background-color: &white;
