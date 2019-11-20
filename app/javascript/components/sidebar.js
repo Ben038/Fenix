@@ -41,6 +41,9 @@ const handleSidebarClick = (e) => {
 // }
 
 const sidebarclosebtn = document.getElementById("close-sidebar-btn-js")
-sidebarclosebtn.addEventListener("click", handleSidebarClick);
+if(sidebarclosebtn){
+  sidebarclosebtn.addEventListener("click", handleSidebarClick);
+
+}
 
 

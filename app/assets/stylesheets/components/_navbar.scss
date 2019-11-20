@@ -1,29 +1,48 @@
 
 
 
-.navbar {
- position: fixed;
- top: 0;
- width: 100%;
- background-color: $white;
-}
+// .navbar {
 
-.navbar .solid {
-  background-color: $blue;
-  transition: background-color 1s ease 0s;
-  box-shadow: 0 0 4px grey;
-    }
+// }
 
-.navbar-fenix {
+.other-pages .navbar-fenix {
+  position: fixed;
+  background-color: &white;
+  top: 0;
+  width: 100%;
+ // background-color: &white;
   justify-content: space-between;
-  // background: rgba(255,255,255,0.1);
   color: $darkblue;
   padding: 10px 50px;
   display: flex;
   align-items: center;
-  z-index: 3;
-  transition: all 0.2s ease;
+  z-index: 100;
 }
+
+
+.landing .navbar-fenix {
+  position: fixed;
+  background-color: transparant;
+  top: 0;
+  width: 100%;
+ // background-color: &white;
+  justify-content: space-between;
+  color: $darkblue;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+}
+
+
+
+.landing .navbar-fenix.solid {
+  background-color: $white;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+
 
 .navbar-fenix p {
   margin: 0 0 0 0;
@@ -38,7 +57,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover  {
-    color: $blue;
+  color: $blue;
 }
 
 .navbar-fenix .navbar-collapse {
@@ -63,7 +82,7 @@
 }
 
 header {
-  height: 98px;
+  height: 100px;
 }
 
 #close-sidebar-btn-js {
