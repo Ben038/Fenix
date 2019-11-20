@@ -32,22 +32,9 @@
               <tr>
                 <th scope="col" >  Accounting Item</th>
                 <% @data_process.sort.each do |k, v| %>
-<<<<<<< Updated upstream
-                  <th class="by"> <%= k %> </th>
-=======
 
                 <th class="by"> <%= k %> </th>
-                <% end %>
-              </tr>
 
-                <% AccountingDatum.attributes_keys.each do |key| %>
-
-              <tr>
-                <th scope="row" class="first-column"> <%= key.to_s %></th>
-                 <% @data_process.each do |k, v| %>
-
-                     <td> <%= number_with_precision(v[key], precision: 2, separator: '.', delimiter: ',') %> </th>
->>>>>>> Stashed changes
                 <% end %>
               </tr>
 
