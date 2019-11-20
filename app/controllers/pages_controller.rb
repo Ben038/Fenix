@@ -28,7 +28,7 @@ class PagesController < ApplicationController
 
 
   def commissions #method applicable to the commissions visualization
-
+    checked_data
     filter_data
     ungrouped_set
     subgroup_data
@@ -43,6 +43,10 @@ class PagesController < ApplicationController
 
         @data_process[country] = create_grouped_hash_by_country({country => values})
       end
+  end
+
+  def claims #method applicable to the commissions visualization
+    checked_data
   end
 
   def share_page_with_options
