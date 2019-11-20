@@ -17,7 +17,7 @@ if (kpi1){
           }]
       },
       options: {
-
+          maintainAspectRatio: false,
           scales: {
               yAxes: [{
                   ticks: {
@@ -44,6 +44,7 @@ if (kpi1){
           }]
       },
       options: {
+          maintainAspectRatio: false,
           scales: {
               yAxes: [{
                   ticks: {
@@ -69,6 +70,7 @@ if (kpi1){
           }]
       },
       options: {
+        maintainAspectRatio: false,
         scales: {
             yAxes: [{
                 ticks: {

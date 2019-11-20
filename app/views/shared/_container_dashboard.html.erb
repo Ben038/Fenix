@@ -8,7 +8,9 @@
     <div id="sortableKpi" class="container-left">
       <div class="card-kpi">
         <p class="kpi-title">Commissions Ratio:  <%= number_to_percentage(@commission_ratio, precision: 2) %></p>
-        <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] }.to_json %>"></canvas>
+        <div class="chart-container">
+          <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] }.to_json %>"></canvas>
+        </div>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Claims Ratio:  <%= number_to_percentage(@claim_ratio , precision: 2) %></p>
