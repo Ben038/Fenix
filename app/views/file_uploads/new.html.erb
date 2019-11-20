@@ -2,12 +2,12 @@
 <h1>Data Uploader</h1>
 
   <%= simple_form_for @file_upload, remote: true do |f| %>
-    <%= f.input :reinsurance_network, collection: FileUpload::NETWORKS %>
-    <%= f.input :balance_year, collection: FileUpload::YEARS %>
-    <%= f.input :quarter, collection: FileUpload::QUARTERS %>
-    <%= f.input :file_name, placeholder: "" %>
+    <%= f.input :reinsurance_network, collection: FileUpload::NETWORKS, :label => "Select the Reinsurance Network where the data come from" %>
+    <%= f.input :balance_year, collection: FileUpload::YEARS, :label => "Select the Balance Year" %>
+    <%= f.input :quarter, collection: FileUpload::QUARTERS, :label => "Select the Quarter" %>
+    <%= f.input :file_name, :label => "Any additional comment ?" %>
     <div data-toggle="modal" data-target="#exampleModal">
-      <%= f.button :submit, class: "btn-yellow" %>
+      <%= f.button :submit, :value => "Choose file", class: "btn-yellow" %>
     </div>
   <% end %>
 
@@ -42,11 +42,16 @@
  -->
   <h2>Latest uploads</h2>
   <table>
-    <tbody>
+    <tbody class="align-left">
       <% FileUpload.last(5).reverse.each do |file_upload| %>
         <tr>
           <td><%= file_upload.created_at %></td>
-          <td><%= file_upload.balance_year %> - Q<%= file_upload.quarter %> - <%= file_upload.reinsurance_network %> - by <%= file_upload.user.first_name %></td>
+          <td>|</td>
+          <td><%= file_upload.reinsurance_network %></td>
+          <td><%= file_upload.balance_year %></td>
+          <td>Q<%= file_upload.quarter %></td>
+          <td>by <%= file_upload.user.first_name %></td>
+          <td></td>
           <td><% if current_user.id == file_upload.user_id %>
                   <%= link_to file_upload_path(file_upload.id), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fa fa-trash"></i>
