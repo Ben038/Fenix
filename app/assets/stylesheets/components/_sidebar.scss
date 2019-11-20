@@ -27,6 +27,15 @@
 .sidebar-item {
   color: $white;
 }
+
+.nav-link.dropdown-toggle.btn.btn-yellow.mail-to-dropdown{
+  color: white;
+  text-align: center;
+  &::after {
+    display: none;
+  }
+}
+
 p {
   display: inline-block;
   list-style-type: none;
