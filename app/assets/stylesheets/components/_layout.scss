@@ -1,12 +1,6 @@
 
-
 .container-login {
   padding-top: 50px;
-}
-
-.container-dashboard {
-  margin-top: 130px;
-  margin-left: 15vw;
 }
 
 .container-upload h1 {
@@ -19,6 +13,11 @@
 
 .container-upload h2 {
   margin-top: 50px;
+}
+
+.container-dashboard {
+  margin-top: 130px;
+  margin-left: 15vw;
 }
 
 // GRID
@@ -38,41 +37,35 @@
 
 .container-top {
   height: 100vh;
-  width: 100%;
+  width: 95%;
   // border: 3px solid orange;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
 }
 
 .container-right {
-  padding-right: 20px;
+  // padding-right: 40px;
+    flex-grow: 1;
 }
 
 .container-chart {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   // border: 3px solid pink;
   // flex-wrap: wrap;
 }
 
-// .container-bottom {
-//   // border: 3px solid purple;
-//   padding: 20px;
-// }
+.container-bottom {
+  // border: 3px solid purple;
+  width: 95%;
+}
 
-// .container-left {
-//   background: $white;
-  // padding: 20px;
+.container-left {
+  background: $white;
+  min-width: 400px;
+  flex-grow: 1;
   // border: 3px solid green;
-// }
-
-// html {
-//   width: 100%;
-//   min-height: 100vh;
-//   margin: 0;
-//   padding: 0;
-//   overflow-y: auto;
-// }
+}
 
 html body {
   background: $white;
@@ -82,7 +75,6 @@ html body {
   padding: 0;
   // overflow-x: hidden;
 }
-
 
 main {
  min-height: calc(100vh - 98px - 100px);
