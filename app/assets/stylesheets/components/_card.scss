@@ -17,7 +17,7 @@ font-size: 20px;
 }
 
 .card-kpi + .card-kpi {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #kpiCommissions{
@@ -33,7 +33,7 @@ font-size: 20px;
   min-height: 300px;
   min-width: 500px;
   padding: 20px;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   flex-grow: 1;
 }
@@ -65,12 +65,24 @@ font-size: 20px;
   flex-grow: 1;
 }
 
+.rating.card-kpi .score {
+  color: $blue;
+}
+
+.rating p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.rating.card-kpi .score .fa .fa-star .checked {
+  color: $yellow;
+}
 
 .card-table {
   position: relative;
   background: white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  padding: 10px;
+  padding: 10px 10px 10px 15px;
   min-height: 300px;
   margin-bottom: 20px;
 }
@@ -82,6 +94,7 @@ font-size: 20px;
 .card-news {
   background: white;
   padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .card-news:hover {
@@ -101,19 +114,10 @@ font-size: 20px;
 
 .card-survey {
   background: white;
-  height: 500px;
-  min-width: 420px;
+  // height: 500px;
+  // min-width: 420px;
   padding: 20px;
-  margin: 20px;
-}
-
-
-.card-survey {
-  background: white;
-  height: 900px;
-  min-width: 420px;
-  padding: 20px;
-  margin: 20px;
+  // margin: 20px;
 }
 
 .card-survey h3 {
