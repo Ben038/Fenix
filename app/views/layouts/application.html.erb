@@ -11,8 +11,9 @@
   </head>
   <body>
 
-
-    <main style="margin-top: 130px">
+    <div class="landing"> <%= render 'shared/navbar' %> </div>
+    <div class="other-pages"> <%= render 'shared/navbar' %> </div>
+    <main>
       <%= yield %>
     </main>
     <footer>
