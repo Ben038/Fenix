@@ -29,7 +29,7 @@ if(window.sortableKpi){
 }
 
 
-
+// TRANSPARANT TO SOLID NAVBAR
 
 window.addEventListener("scroll", (event) => {
   if (window.scrollY > 200) {
