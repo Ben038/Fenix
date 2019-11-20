@@ -18,7 +18,7 @@
           <%= label_tag country %></li>
         <% end %>
       <p>Networks</p>
-      <% @select_networks.each do |network| %>
+      <% @select_networks.sort.each do |network| %>
         <li><%= check_box_tag "network[#{network}]", network %>
         <%= label_tag network %></li>
         <% end %>

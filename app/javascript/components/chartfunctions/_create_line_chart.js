@@ -1,4 +1,5 @@
 
+Chart.defaults.global.elements.line.fill = false;
 
 var kpi1 = document.getElementById('kpiCommissions');
 if (kpi1){
@@ -53,7 +54,6 @@ if (kpi1){
           }
       }
   });
-
   var kpi3 = document.getElementById('kpiBalance');
   var kpiBalance = new Chart(kpi3, {
       type: 'line',
@@ -66,16 +66,19 @@ if (kpi1){
           }]
       },
       options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true
-                  }
-              }]
-          },
-          legend: {
-            display: false,
-          }
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        legend: {
+          display: false,
+        }
       }
   });
+
+
 }
+
