@@ -231,6 +231,41 @@ margin-bottom: 10px;
 }
 
 
+// COUNTER
+
+.counter-area {
+  background: $mediumblue;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.container-counter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.client-logo-area {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.counter-area h2{
+  color: $white;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+
+.counter-area h3{
+  color: $white;
+  font-size: 50px;
+  }
+
+  .counter-area p{
+  color: $white;
+  font-size: 24px;
+  }
+
+
 // TESTIMONIAL
 
 .testimonial-area {
@@ -257,4 +292,37 @@ margin-bottom: 10px;
   .single-testimonial .light {
   font-style: normal;
   opacity: 0.8;
+}
+
+// CLIENTS
+
+.client-logo-area {
+  background: $backgroundblue;
+}
+
+.container-clients {
+  display: flex;
+  justify-content: space-around;
+}
+
+.client-logo-area {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.single-client img {
+  height: 50px;
+  margin: 30px;
+  opacity: 1;
+}
+
+.single-client img:hover {
+  height: 50px;
+  margin: 30px;
+  opacity: 0.8;
+}
+
+.client-logo-area h2{
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 20px;
 }
