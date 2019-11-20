@@ -10,7 +10,7 @@
       <p class="filter">Balance Year</p>
         <% @select_years.sort.each do |year| %>
           <% checked = @checked_values[:balance_year].include?(year.to_s)  %>
-          <li class="filter"><%= check_box_tag "balance_year[#{year}]", year, checked, class:"custom-checkbox" %>
+          <li class="filter"><%= check_box_tag "balance_year[#{year}]", year, checked %>
           <%= label_tag year %></li>
         <% end %>
 
