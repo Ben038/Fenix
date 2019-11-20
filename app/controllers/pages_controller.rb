@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :authenticate_user!, except: [:home]
 
   def index
+    checked_data #to keep the checkboxes checked after submit
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)
     filter_data
     # step 2: when filter_data is done, it goes to ungrouped_set (does computations for full set)
@@ -61,6 +62,17 @@ class PagesController < ApplicationController
     @data_rows_grouped_network = @data_rows.group_by(&:reinsurance_network)
     @data_rows_grouped_country = @data_rows.group_by(&:country)
 
+  end
+
+  def checked_data
+    @checked_years = params[:balance_year].present? ? parse_array_params(params[:balance_year]) : ""
+    @checked_countries = params[:country].present? ? parse_array_params(params[:country]) : ""
+    @checked_networks = params[:reinsurance_network].present? ? parse_array_params(params[:reinsurance_network]) : ""
+    @checked_values = {
+      balance_year: @checked_years,
+      country: @checked_countries,
+      reinsurance_network: @checked_networks
+    }
   end
 
   def filter_data
