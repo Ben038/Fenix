@@ -52,8 +52,8 @@ class PagesController < ApplicationController
       end
   end
 
-  def claims #method applicable to the commissions visualization
-    checked_data
+  def claims #method applicable to the claims visualization
+    commissions
   end
 
   def share_page_with_options

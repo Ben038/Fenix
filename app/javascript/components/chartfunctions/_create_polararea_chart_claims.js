@@ -23,7 +23,7 @@
 //     }
 //   });
 
-var polarArea1= document.getElementById('reinsComm');
+var polarArea1= document.getElementById('claimsPaid');
 
 // 1. parse the data-country
 
@@ -32,7 +32,7 @@ var polarArea1= document.getElementById('reinsComm');
 
 
 if (polarArea1) {
-  var reinsComm = new Chart(polarArea1, {
+  var claimsPaid = new Chart(polarArea1, {
     type: 'polarArea',
     data : {
       labels: JSON.parse(polarArea1.dataset.countries),
@@ -49,9 +49,9 @@ if (polarArea1) {
   });
 
 
-  var polarArea2= document.getElementById('brokerComm');
+  var polarArea2= document.getElementById('claimsRes');
 
-  var brokerComm = new Chart(polarArea2, {
+  var claimsRes = new Chart(polarArea2, {
     type: 'polarArea',
     data : {
       labels: JSON.parse(polarArea2.dataset.countries),
