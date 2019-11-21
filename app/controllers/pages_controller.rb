@@ -73,17 +73,19 @@ class PagesController < ApplicationController
     @data_rows_grouped_year = @data_rows.group_by(&:balance_year)
     @data_rows_grouped_network = @data_rows.group_by(&:reinsurance_network)
     @data_rows_grouped_country = @data_rows.group_by(&:country)
-
+    @data_rows_grouped_risk = @data_rows.group_by(&:risk)
   end
 
   def checked_data
     @checked_years = params[:balance_year].present? ? parse_array_params(params[:balance_year]) : ""
     @checked_countries = params[:country].present? ? parse_array_params(params[:country]) : ""
     @checked_networks = params[:reinsurance_network].present? ? parse_array_params(params[:reinsurance_network]) : ""
+    @checked_risks = params[:risk].present? ? parse_array_params(params[:risk]) : ""
     @checked_values = {
       balance_year: @checked_years,
       country: @checked_countries,
-      reinsurance_network: @checked_networks
+      reinsurance_network: @checked_networks,
+      risk: @checked_risks
     }
   end
 
@@ -152,7 +154,6 @@ class PagesController < ApplicationController
         :interests => { label: "Interests", value: AccountingDatum.calc_interests(hash.values.first) },
         :balance => { label: "Balance", value: AccountingDatum.calc_balance(hash.values.first) }
     }
-
 end
 
 
@@ -177,8 +178,8 @@ end
         :interests => AccountingDatum.calc_interests(hash.values.first),
         :balance => AccountingDatum.calc_balance(hash.values.first)
     }
-
 end
+
 def parse_array_params(concerned_params)
       #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
     returning_array = []
