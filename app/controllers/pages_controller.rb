@@ -144,7 +144,7 @@ class PagesController < ApplicationController
         :reins_comm_ratio => { label: "Reinsurance Comm Ratio", value: AccountingDatum.reins_comm_ratio(hash.values.first) },
         :premium => { label: "Premium", value: AccountingDatum.calc_premium(hash.values.first) },
         :earned_premium => { label: "Earned Premium", value: AccountingDatum.calc_earned_premium(hash.values.first) },
-        :premium_and_reserves_change => { label: "Premim & Res Change", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
+        :premium_and_reserves_change => { label: "Premium & Res Change", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
         :claim_paid => { label: "Claims Paid", value: AccountingDatum.calc_claim_paid(hash.values.first) },
         :claim_paid_and_reserves_change => { label: "Claims & Res Change", value: AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first) },
         :reinsurance_comm => { label: "Reinsurance Comm", value: AccountingDatum.calc_reinsurance_comm(hash.values.first) },
