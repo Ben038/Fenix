@@ -1,43 +1,34 @@
 <div class="container-dashboard" id="dashboard-area">
   <div class="container-top">
     <div class="container-left">
-      <div class="rating card-kpi">
+      <div class="card-survey">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
           <div class="card-chart-text">
           Satisfaction Survey
           </div>
-          <div class="rating d-flex justify-content-between">
-            <p>Australia</p>
-            <div class="score">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="rating d-flex justify-content-between">
-            <p>Italy</p>
-            <div class="score">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-          <div class="rating d-flex justify-content-between">
-            <p>Pakistan</p>
-            <div class="score">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-            </div>
-          </div>
+          <% @select_countries.sort.each do |country| %>
+            <% if @checked_values[:country].include?(country)  %>
+              <div class="rating d-flex justify-content-between">
+                <p><%= country %></p>
+                <div class="score">
+                  <% multiple = [1, 2, 3, 4, 5].sample %>
+                  <% serieA = [1, 1, 1, 1, 1].sample(multiple) %>
+                  <% serieA.each do |star| %>
+                    <span class="fa fa-star checked"></span>
+                    <% end %>
+                  <% multiple_unstarred = 5 - multiple %>
+                  <% serieB = [1, 1, 1, 1, 1].sample(multiple_unstarred) %>
+                    <% serieB.each do |nostar| %>
+                      <span class="fa fa-star"></span>
+                    <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
       </div>
     </div>
+
     <div class="container-right  d-flex">
       <div class="card-chart">
         <div class="card-chart-text">
