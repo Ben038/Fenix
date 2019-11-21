@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
 }
+
 .sidebar-main {
   width: 200px;
-  height: 100%;
-  position: fixed;
-  bottom: 100px;
+  // height: 100%;
+  position: absolute;
+  // bottom: 100px;
   // height: calc(100vh - 106px - 100px);
-  height: 100vh;
-  top: 98px;
+  top: 0;
   left: 0;
   background-color: white;
   overflow-x: hidden;

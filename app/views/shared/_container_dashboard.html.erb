@@ -1,5 +1,4 @@
 
-<!-- <div class="container-all"> -->
 <div class="container-dashboard" id="dashboard-area">
 
   <div class="container-top">
@@ -9,7 +8,7 @@
         <a href="<%= commissions_path %>">
           <p class="kpi-title">Commissions Ratio:  <%= number_to_percentage(@commission_ratio, precision: 2) %></p>
         </a>
-        <div class="chart-container">
+        <div class="container-kpi">
           <canvas id="kpiCommissions" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
@@ -17,13 +16,13 @@
         <a href="<%= claims_path %>">
           <p class="kpi-title">Claims Ratio:  <%= number_to_percentage(@claim_ratio , precision: 2) %></p>
         </a>
-        <div class="chart-container">
+        <div class="container-kpi">
           <canvas id="kpiClaims" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
       <div class="card-kpi">
         <p class="kpi-title">Balance Ratio:  <%= number_to_percentage(@balance_ratio, precision: 2) %></p>
-        <div class="chart-container">
+        <div class="container-kpi">
           <canvas id="kpiBalance" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance_ratio][:value] }.to_json %>"></canvas>
         </div>
       </div>
@@ -88,5 +87,3 @@
     </div>
 
 </div>
-<!--
-</div> -->
