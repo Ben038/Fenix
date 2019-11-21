@@ -20,11 +20,11 @@
           <%= label_tag country %></li>
          <% end %>
 
-      <p class="filter">Networks</p>
-        <% @select_networks.sort.each do |network| %>
-          <% checked = @checked_values[:reinsurance_network].include?(network)  %>
-          <li class="filter"><%= check_box_tag "network[#{network}]", network, checked %>
-          <%= label_tag network %></li>
+        <p class="filter">Risks</p>
+        <% @select_risks.sort.each do |risk| %>
+          <% checked = @checked_values[:risk].include?(risk)  %>
+          <li class="filter"><%= check_box_tag "risk[#{risk}]", risk, checked %>
+          <%= label_tag risk %></li>
         <% end %>
 
       <p><input type="submit" value="Filter" class="btn btn-blue filter"></p>
@@ -42,12 +42,13 @@
   </li>
 
 
-<!--         <ul>Risks
-      <% @select_risks.each do |risk| %>
-        <li><%= check_box_tag "risk[#{risk}]", risk %>
-          <%= label_tag risk %></li>
-      <% end %>
-    </ul>
+<!--
+   <p class="filter">Networks</p>
+        <% @select_networks.sort.each do |network| %>
+          <% checked = @checked_values[:reinsurance_network].include?(network)  %>
+          <li class="filter"><%= check_box_tag "network[#{network}]", network, checked %>
+          <%= label_tag network %></li>
+        <% end %>
     <ul>Local Insurers
       <% @select_local_insurers.each do |li| %>
         <li><%= check_box_tag "li[#{li}]", li %>
