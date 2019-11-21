@@ -18,7 +18,9 @@
 .container-dashboard {
   margin-top: 130px;
   margin-left: 15vw;
-  height: 100vh;
+  // height: 90vh;
+  // border: 3px solid red;
+  justify-content: center;
 }
 
 // GRID
@@ -41,12 +43,18 @@
   width: 95%;
   // border: 3px solid orange;
   display: flex;
-  // justify-content: space-around;
+  // justify-content: space-between;
+  // margin-top: 0px;
+  justify-content: space-around;
 }
 
 .container-right {
   // padding-right: 40px;
   flex-grow: 1;
+  // border: 3px solid blue;
+
+  justify-content: between;
+  // margin-left: 20px;
 }
 
 .container-chart {
@@ -54,12 +62,15 @@
   justify-content: space-around;
   flex-grow: 1;
   // border: 3px solid pink;
+  // padding: 10px;
   // flex-wrap: wrap;
 }
 
 .container-bottom {
   // border: 3px solid purple;
   width: 95%;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .container-form{
@@ -73,11 +84,28 @@
 
 .container-left {
   background: $white;
-  min-width: 400px;
+  width: 400px;
   flex-grow: 1;
-  // flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: between;
+  // align-items: stretch;
+  // padding: 10px;
+  flex-grow: 1;
+  // margin-top:0px;
   // border: 3px solid green;
+  // margin-right: 20px;
 }
+
+// .container-table {
+//   // display: flex;
+//   // justify-content: space-around;
+//   flex-grow: 1;
+//   // height: 90%;
+//   // border: 3px solid brown;
+//   // padding: 10px;
+//   // flex-wrap: wrap;
+// }
 
 html body {
   background: $white;
@@ -92,3 +120,9 @@ main {
  min-height: calc(100vh - 98px - 100px);
 }
 
+// padding:10px 5px 15px 20px;
+
+//     top padding is 10px
+//     right padding is 5px
+//     bottom padding is 15px
+//     left padding is 20px
