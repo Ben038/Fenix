@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :create_select_options
 
   def default_url_options
-   { host: ENV[“DOMAIN”] || "localhost:3000" }
+   { host: ENV["DOMAIN"] || "localhost:3000" }
   end
 
   private
