@@ -16,7 +16,7 @@ function closeNav(query) {
   query.classList.remove('open')
   const icon = document.getElementById("icon")
   icon.classList.add('fa-rotate-180')
-  document.getElementById("dashboard-area").style.marginLeft = "5vw";
+  document.getElementById("dashboard-area").style.marginLeft = "10vw";
 }
 
 const handleSidebarClick = (e) => {
