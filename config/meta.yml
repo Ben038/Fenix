@@ -1,0 +1,5 @@
+meta_product_name: “Fenix”
+meta_title: “Fenix - Transform data complexity into business decisions”
+meta_description: “Relevant description”
+meta_image: “cover.png” # should exist in app/assets/images/
+twitter_account: “”   # required for Twitter Cards
