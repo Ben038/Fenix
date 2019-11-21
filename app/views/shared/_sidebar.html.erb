@@ -36,7 +36,7 @@
         <% all_team = User.all.where("id != ?", current_user.id) %>
         <% team = all_team.where("international_client_id = #{current_user.international_client_id}") %>
         <% team.each do |member| %>
-          <%= button_to "#{member.first_name}", share_page_with_options_pages_path(user_id: member.id, shared_url: request.original_url, remote: true, method: :post), class: "btn-turquoise" %>
+          <%= button_to "#{member.first_name}", share_page_with_options_pages_path(user_id: member.id, shared_url: request.original_url, remote: true, method: :post), class: "btn-turquoise", 'data-toggle' => 'modal', 'data-target' => '#exampleModalCenter' %>
         <% end %>
       </div>
   </li>
@@ -79,5 +79,23 @@
       <% end %> -->
  <!--    </ul> -->
 
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Success!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Email successfully sent !
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
   </div>
 </div>
