@@ -21,7 +21,9 @@
         </div>
       </div>
       <div class="card-kpi">
-        <p class="kpi-title">Balance Ratio:  <%= number_to_percentage(@balance_ratio, precision: 2) %></p>
+        <a href="#">
+          <p class="kpi-title">Balance Ratio:  <%= number_to_percentage(@balance_ratio, precision: 2) %></p>
+        </a>
         <div class="container-kpi">
           <canvas id="kpiBalance" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:balance_ratio][:value] }.to_json %>"></canvas>
         </div>
