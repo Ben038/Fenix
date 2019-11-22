@@ -18,21 +18,32 @@
         <li class="nav-item d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link" %>
-          <% else %>
+          <% elsif url.include?("claims") %>
             <%= link_to "Commissions", url.gsub("claims", "commissions"), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Commissions", url.gsub("renewals", "commissions"), class: "nav-link" %>
           <% end %>
         </li>
 
         <li class="nav-item active d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Claims", url.gsub("pages", "claims"), class: "nav-link" %>
-          <% else %>
+          <% elsif url.include?("commissions")%>
             <%= link_to "Claims", url.gsub("commissions", "claims"), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Claims", url.gsub("renewals", "claims"), class: "nav-link" %>
           <% end %>
         </li>
 
         <li class="nav-item active d-flex align-items-center">
-          <%= link_to "Renewals", pages_path, class: "nav-link" %>
+          <% if url.include?("pages") %>
+            <%= link_to "Renewals", url.gsub("pages", "renewals"), class: "nav-link" %>
+          <% elsif url.include?("commissions")%>
+            <%= link_to "Renewals", url.gsub("commissions", "renewals"), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Renewals", url.gsub("claims", "renewals"), class: "nav-link" %>
+          <% end %>
+
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Reserves", pages_path, class: "nav-link" %>

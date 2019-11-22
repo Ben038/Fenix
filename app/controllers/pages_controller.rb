@@ -56,6 +56,16 @@ class PagesController < ApplicationController
     commissions
   end
 
+  def renewals
+    commissions
+    if country = "Australia" || country = "Italy" || country = "Pakistan"
+      renewal = rand(75..100)
+    else
+      country = "Bulgaria" || country = "Vietnam" || country = "France"
+      renewal = rand(0..74)
+    end
+  end
+
   def share_page_with_options
     shared_url = params[:shared_url]
     receiver = User.find(params[:user_id])

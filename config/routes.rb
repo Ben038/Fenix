@@ -8,6 +8,7 @@ devise_for :users
 
   get "commissions", to: "pages#commissions"
   get "claims", to: "pages#claims"
+  get "renewals", to: "pages#renewals"
 
   resources :pages, only: [:index, :show, :home] do
     collection do
