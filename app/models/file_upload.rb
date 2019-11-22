@@ -1,5 +1,5 @@
 class FileUpload < ApplicationRecord
-  NETWORKS = ["Network 1", "Network 2", "Network 3", "Network 4"]
+  NETWORKS = ["Lianz", "Nerali", "Swissy", "AG & Co"]
   YEARS = [Time.now.year - 3, Time.now.year - 2, Time.now.year - 1, Time.now.year]
   QUARTERS = [1, 2, 3, 4]
 
