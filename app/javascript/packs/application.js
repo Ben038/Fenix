@@ -2,6 +2,7 @@ import "bootstrap";
 import "../components/chartfunctions";
 import "../components/sidebar";
 import "../components/navbar";
+
 import Sortable from 'sortablejs';
 
 // $(document).ready(function() {

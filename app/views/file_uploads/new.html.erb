@@ -51,6 +51,7 @@
               <td><%= file_upload.reinsurance_network %></td>
               <td><%= file_upload.balance_year %></td>
               <td>Q<%= file_upload.quarter %></td>
+              <td><%= file_upload.file_name %></td>
               <td>by <%= file_upload.user.first_name %></td>
               <td></td>
               <td><% if current_user.id == file_upload.user_id %>

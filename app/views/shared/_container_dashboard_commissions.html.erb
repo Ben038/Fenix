@@ -33,14 +33,14 @@
       <div class="card-chart">
         <div class="card-chart-text">
           Reinsurance Commissions
-          <canvas id="reinsComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] * -1 }.to_json %>"></canvas>
         </div>
+          <canvas id="reinsComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:reins_comm_ratio] * -1 }.to_json %>"></canvas>
       </div>
       <div class="card-chart">
         <div class="card-chart-text">
           Broker Commissions
-          <canvas id="brokerComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:broker_comm_ratio] * -1  }.to_json %>"></canvas>
         </div>
+          <canvas id="brokerComm" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:broker_comm_ratio] * -1  }.to_json %>"></canvas>
       </div>
     </div>
   </div>      <!-- Create an element where the map will take place -->

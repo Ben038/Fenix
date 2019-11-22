@@ -6,7 +6,7 @@ function openNav(query) {
   query.classList.add('open')
   const icon = document.getElementById("icon")
   icon.classList.remove('fa-rotate-180')
-  document.getElementById("dashboard-area").style.marginLeft = "15vw";
+  // document.getElementById("dashboard-area").style.marginLeft = "15vw";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
@@ -16,8 +16,9 @@ function closeNav(query) {
   query.classList.remove('open')
   const icon = document.getElementById("icon")
   icon.classList.add('fa-rotate-180')
-  document.getElementById("dashboard-area").style.marginLeft = "10vw";
+  // document.getElementById("dashboard-area").style.marginLeft = "10vw";
 }
+
 
 const handleSidebarClick = (e) => {
   const query = document.querySelector(".sidebar-main")

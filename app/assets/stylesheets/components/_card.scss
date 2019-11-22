@@ -20,8 +20,8 @@
 font-size: 20px;
 }
 
-.card-kpi a {
-  color: $mediumblue;
+p.kpi-title {
+ color: $mediumblue;
 }
 
 .card-kpi + .card-kpi {
@@ -44,18 +44,20 @@ font-size: 20px;
   // min-width: 50%;
   // margin: 0, 20px, 0px, 20px;
   box-shadow: 0 1px 2px rgba(18, 23, 43,0.2);
-  flex-grow: 1;
+  flex: 1;
+  max-width: 48%;
+  overflow-y: overlay;
 }
 
-.card-chart:first-child {
-  margin-left: 0;
-  margin-right: 10px;
-}
+// .card-chart:first-child {
+//   margin-left: 0;
+//   margin-right: 10px;
+// }
 
-.card-chart:last-child {
-  margin-right: 0;
-  margin-left: 10px;
-}
+// .card-chart:last-child {
+//   margin-right: 0;
+//   margin-left: 10px;
+// }
 
 
 .card-chart-image {
@@ -69,7 +71,7 @@ font-size: 20px;
 .card-chart-text {
   font-size: 24px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .rating.card-kpi .score {
@@ -112,20 +114,11 @@ font-size: 20px;
   opacity: 0.8;
 }
 
-.icon {
-  color: $mediumblue;
-  font-size: 20px;
-}
-
-.icon:hover {
-  font-size: 22px;
-  color: $mediumbluehover;
-
-
 .card-survey {
-  background: white;
+  background: $mediumblue;
   padding: 10px;
   margin-right: 50px;
+  color: $white;
 }
 
 .card-survey h3 {

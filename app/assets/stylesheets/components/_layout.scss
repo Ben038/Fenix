@@ -27,11 +27,14 @@ main {
 
 .container-all {
   position: relative;
+  display: flex;
+  margin-top: 130px;
 }
 
 .container-dashboard {
-  margin-top: 130px;
-  margin-left: 15vw;
+  margin-left: 50px;
+  width: 100%;
+  // margin-top: 130px;
   // height: 90vh;
   // border: 3px solid red;
   // justify-content: center;
@@ -74,14 +77,14 @@ main {
   flex-grow: 1;
   // border: 3px solid blue;
 
-  justify-content: between;
+  justify-content: space-between;
   // margin-left: 20px;
 }
 
 .container-chart {
   display: flex;
-  justify-content: space-around;
-  flex-grow: 1;
+  justify-content: space-between;
+  flex: 1;
   // border: 3px solid pink;
   // padding: 10px;
   // flex-wrap: wrap;

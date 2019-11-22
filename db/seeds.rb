@@ -53,12 +53,12 @@ user8 = User.create!(first_name: "Camilla", last_name: "Williams", password: '12
 # sample of file upload list:
 puts "creating files"
 
-file_upload1 = FileUpload.create!(reinsurance_network: "Network 1" , balance_year: 2018, quarter: 1, file_name: "Q1_2018", user: User.all.sample)
-file_upload2 = FileUpload.create!(reinsurance_network: "Network 1" , balance_year: 2018, quarter: 2, file_name: "Q2_2018", user: User.all.sample)
-file_upload3 = FileUpload.create!(reinsurance_network: "Network 2" , balance_year: 2016, quarter: 3, file_name: "Q3_2016", user: User.all.sample)
-file_upload4 = FileUpload.create!(reinsurance_network: "Network 2" , balance_year: 2016, quarter: 4, file_name: "Q4_2016", user: User.all.sample)
-file_upload5 = FileUpload.create!(reinsurance_network: "Network 3" , balance_year: 2017, quarter: 1, file_name: "Q1_2017", user: User.all.sample)
-file_upload6 = FileUpload.create!(reinsurance_network: "Network 4" , balance_year: 2017, quarter: 2, file_name: "Q2_2017", user: User.all.sample)
+file_upload1 = FileUpload.create!(reinsurance_network: "Lianz" , balance_year: 2018, quarter: 1, file_name: "Update", user: User.all.sample)
+file_upload2 = FileUpload.create!(reinsurance_network: "Lianz" , balance_year: 2018, quarter: 2, file_name: "Approved", user: User.all.sample)
+file_upload3 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2016, quarter: 3, file_name: "Need review", user: User.all.sample)
+file_upload4 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2016, quarter: 4, file_name: "Approved", user: User.all.sample)
+file_upload5 = FileUpload.create!(reinsurance_network: "Swissy" , balance_year: 2017, quarter: 1, file_name: "Update", user: User.all.sample)
+file_upload6 = FileUpload.create!(reinsurance_network: "AG & Co" , balance_year: 2017, quarter: 2, file_name: "Need review", user: User.all.sample)
 
 # sample of xls database:
 puts "creating data_inputs"
