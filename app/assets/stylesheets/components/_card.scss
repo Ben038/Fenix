@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+.card-kpi a {
+  color: $mediumblue;
+}
+
 .card-kpi h3 {
 font-size: 20px;
 }
@@ -109,7 +113,6 @@ p.kpi-title {
 .card-news:hover {
   opacity: 0.8;
 }
-
 
 .card-survey {
   background: $mediumblue;
