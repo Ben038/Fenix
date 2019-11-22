@@ -16,6 +16,10 @@
 font-size: 20px;
 }
 
+.card-kpi a {
+  color: $mediumblue;
+}
+
 .card-kpi + .card-kpi {
   margin-top: 20px;
 }
