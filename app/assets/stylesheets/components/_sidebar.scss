@@ -39,16 +39,19 @@
   text-align: right;
   display: inline-block;
   width: 100%;
-
 }
 
-#close-sidebar-btn-js:last-child {
-    margin-top: 30px;
+#close-sidebar-btn-js-bottom {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
 }
 
-.sidebar-main .icon {
+.icon {
   color: $mediumblue;
   font-size: 20px;
+  margin-top: 30px;
 }
 
 .icon:hover {

@@ -19,6 +19,7 @@ function closeNav(query) {
   // document.getElementById("dashboard-area").style.marginLeft = "10vw";
 }
 
+
 const handleSidebarClick = (e) => {
   const query = document.querySelector(".sidebar-main")
   console.log(query.classList.contains('open'))
