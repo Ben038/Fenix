@@ -6,7 +6,7 @@
 .sidebar-main {
   width: 200px;
   // height: 100%;
-  position: absolute;
+  // position: absolute;
   // bottom: 100px;
   // height: calc(100vh - 106px - 100px);
   top: 0;
@@ -16,6 +16,7 @@
   padding: 15px;
   z-index: 1;
   color: #293462;
+  transition: width ease 0.5s;
 }
 
 
