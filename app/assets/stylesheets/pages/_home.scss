@@ -163,7 +163,6 @@ margin-left: 30px;
 .container-why {
   display:flex;
   justify-content: space-between;
-  padding-bottom: 50px;
 }
 
 .why-area h2 {
@@ -175,7 +174,7 @@ margin-left: 30px;
 
 .why-area h3 {
   color: #12172b;
-  font-size: 26px;
+  font-size: 32px;
   line-height: 55px;
   text-align: center;
 }
@@ -218,7 +217,7 @@ margin-bottom: 10px;
 
 .how-area {
   background: $backgroundbluelight;
-  padding: 50px 10px;
+  padding: 50px 10px 80px 10px;
 }
 
 .container-how {
@@ -279,7 +278,7 @@ margin-bottom: 10px;
 
 .testimonial-area {
   background: white;
-  padding: 50px 10px;
+  padding: 50px 10px 80px 10px;
 }
 
 .container-testimonial {
