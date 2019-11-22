@@ -17,8 +17,8 @@ if (ctx){
           datasets: [{
               label: 'Premium',
               data: JSON.parse(ctx.dataset.processJson),
-              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
-              borderColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
+              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#929ed1", "#f9ce4f", "#216583"],
+              borderColor: [ "#00818a", "#293462", "#f7be16", "#929ed1", "#f9ce4f", "#216583"],
               borderWidth: 1
           }]
       },
@@ -44,8 +44,8 @@ if (ctx){
           datasets: [{
               label: 'Balance',
               data: JSON.parse(balance.dataset.processJson),
-              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
-              borderColor: [ "#00818a", "#293462", "#f7be16", "#f9ce4f", "#216583", "#929ed1"],
+              backgroundColor: [ "#00818a", "#293462", "#f7be16", "#929ed1", "#f9ce4f", "#216583"],
+              borderColor: [ "#00818a", "#293462", "#f7be16", "#929ed1", "#f9ce4f", "#216583"],
               borderWidth: 1
           }]
       },
