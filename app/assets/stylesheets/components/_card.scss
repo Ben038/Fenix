@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+.card-kpi a {
+  color: $mediumblue;
+}
+
 .card-kpi h3 {
 font-size: 20px;
 }
@@ -116,7 +120,6 @@ font-size: 20px;
 .icon:hover {
   font-size: 22px;
   color: $mediumbluehover;
-}
 
 
 .card-survey {
