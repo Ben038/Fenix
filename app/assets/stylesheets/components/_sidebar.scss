@@ -34,6 +34,27 @@
   color: $white;
 }
 
+#close-sidebar-btn-js {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+
+}
+
+#close-sidebar-btn-js:last-child {
+    margin-top: 30px;
+}
+
+.sidebar-main .icon {
+  color: $mediumblue;
+  font-size: 20px;
+}
+
+.icon:hover {
+  font-size: 22px;
+  color: $mediumbluehover;
+}
+
 .checkbox {
   background-color: $blue;
 }
@@ -60,9 +81,6 @@ p.filter {
   font-weight: bold;
 }
 
-input.custom-checkbox {
-  background: red;
-}
 
 p {
   display: inline-block;
