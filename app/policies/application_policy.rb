@@ -1,3 +1,4 @@
+# this is the same code for Dashboard and consulting hub
 class ApplicationPolicy
   attr_reader :user, :record
 

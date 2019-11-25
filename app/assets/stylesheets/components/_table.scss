@@ -10,9 +10,13 @@ th {
   padding-right: 10px;
 }
 
-tr:nth-child(odd) {background-color: $backgroundblue;}
+tr:nth-child(odd) {
+  background-color: $backgroundblue;
+}
 
-tr:hover {background-color: $lightblue;}
+tr:hover {
+  background-color: $lightblue;
+}
 
 table {
   width: 100%;
@@ -28,10 +32,6 @@ tr td {
   padding-right: 5px;
   padding-left: 50px;
 }
-
-// td.last-row {
-//   font-weight: bold;
-// }
 
 tr th {
   padding: 3px 0px 3px 15px;

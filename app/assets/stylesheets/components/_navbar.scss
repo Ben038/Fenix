@@ -1,9 +1,10 @@
+
+// NAVBAR from DASHBOARD
 .navbar-fenix {
   position: fixed;
   background-color: transparent;
   top: 0;
   width: 100%;
- // background-color: $white;
   justify-content: space-between;
   color: $darkblue;
   padding: 10px 50px;
@@ -13,14 +14,10 @@
   transition: background-color 1s ease 0s;
 }
 
-
-
 .navbar-fenix.solid {
   background-color: $white;
-  // transition: background-color 1s ease 0s;
   box-shadow: 0 0 4px $darkblue;
 }
-
 
 .navbar-fenix p {
   margin: 0 0 0 0;
@@ -59,13 +56,47 @@
   text-size: 12px;
 }
 
-header {
-  height: 100px;
-}
-
 #close-sidebar-btn-js {
   text-align: right;
   display: inline-block;
   width: 100%;
 }
 
+// shall we move this section to the layout part?
+
+header {
+  height: 100px;
+}
+// ---------------
+
+
+// NAVBAR from CONSULTING HUB
+
+// .navbar-finconsult {
+//   justify-content: space-between;
+//   background: $turquoised;
+//   color: $white;
+//   padding: 10px 50px;
+//   display: flex;
+// }
+
+// .navbar-light .navbar-nav .nav-link  {
+//   align-items: center;
+//   color: $white;
+//   }
+
+// .navbar-finconsult .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-finconsult .navbar-brand img {
+//   width: 60px;
+//   object-fit: cover;
+// }
+
+// .nav-item {
+//   display: inline-block;
+// }
+// .nav-item li {
+//   display: inline-block;
+// }

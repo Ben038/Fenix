@@ -7,7 +7,6 @@ class PagesController < ApplicationController
     end
   end
 
-
   def index
     checked_data #to keep the checkboxes checked after submit
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)
@@ -17,42 +16,42 @@ class PagesController < ApplicationController
     # step 3: when more than one selection, it calculates the subset
     subgroup_data
     # step 4: check if more than one selection
-      # step 5: it takes all data
-        ungrouped_set
-        # step 6: split by group_by will feed array, and add keys
-        @data_process = {}
-        # step 7: iterate over filtered data, eg 2017, 2018
-        @data_rows_grouped_year.each do |year, values|
-        # step 7: for each eg year, create a hash and push it in data_process array
-        @data_process[year] = create_grouped_hash_by_year({year => values})
-
-      end
+    # step 5: it takes all data
+      ungrouped_set
+      # step 6: split by group_by will feed array, and add keys
+      @data_process = {}
+      # step 7: iterate over filtered data, eg 2017, 2018
+      @data_rows_grouped_year.each do |year, values|
+      # step 7: for each eg year, create a hash and push it in data_process array
+      @data_process[year] = create_grouped_hash_by_year({year => values})
+    end
   end
 
   def order_by_balance_year
     @params = params[:balance_year].values.sort
   end
 
-
-  def commissions #method applicable to the commissions visualization
+  def commissions
+    #method applicable to the commissions visualization
     checked_data
     filter_data
     ungrouped_set
     subgroup_data
     # step 4: check if more than one selection
-      # step 5: it takes all data
-        ungrouped_set
-        # step 6: split by group_by will feed array, and add keys
-        @data_process = {}
-        # step 7: iterate over filtered data, eg 2017, 2018
-        @data_rows_grouped_country.each do |country, values|
-        # step 7: for each eg year, create a hash and push it in data_process array
+    # step 5: it takes all data
+      ungrouped_set
+      # step 6: split by group_by will feed array, and add keys
+      @data_process = {}
+      # step 7: iterate over filtered data, eg 2017, 2018
+      @data_rows_grouped_country.each do |country, values|
+      # step 7: for each eg year, create a hash and push it in data_process array
 
-        @data_process[country] = create_grouped_hash_by_country({country => values})
-      end
+      @data_process[country] = create_grouped_hash_by_country({country => values})
+    end
   end
 
-  def claims #method applicable to the claims visualization
+  def claims
+    #method applicable to the claims visualization
     commissions
   end
 
@@ -134,66 +133,85 @@ class PagesController < ApplicationController
   end
 
   def create_grouped_hash_by_year(hash)
-
     # ref 7: create a hash to be able to group by, eg 2017, does calculation for all data for that year which will be fed to subgroup_data
-      {
-        :commission_ratio => { label: "Commission Ratio", value: AccountingDatum.kpi_ratio_commissions(hash.values.first) },
-        :balance_ratio => { label: "Balance Ratio", value: AccountingDatum.kpi_ratio_tech_bal(hash.values.first) },
-        :claim_ratio => { label: "Claims Ratio", value: AccountingDatum.kpi_ratio_claims(hash.values.first) },
-        :broker_comm_ratio => { label: "Broker Comm Ratio", value: AccountingDatum.broker_ratio_commissions(hash.values.first) },
-        :reins_comm_ratio => { label: "Reinsurance Comm Ratio", value: AccountingDatum.reins_comm_ratio(hash.values.first) },
-        :premium => { label: "Premium", value: AccountingDatum.calc_premium(hash.values.first) },
-        :earned_premium => { label: "Earned Premium", value: AccountingDatum.calc_earned_premium(hash.values.first) },
-        :premium_and_reserves_change => { label: "Premium & Res Change", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
-        :claim_paid => { label: "Claims Paid", value: AccountingDatum.calc_claim_paid(hash.values.first) },
-        :claim_paid_and_reserves_change => { label: "Claims & Res Change", value: AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first) },
-        :reinsurance_comm => { label: "Reinsurance Comm", value: AccountingDatum.calc_reinsurance_comm(hash.values.first) },
-        :broker_comm => { label: "Broker Comm", value: AccountingDatum.calc_broker_comm(hash.values.first) },
-        :profit_sharing => { label: "Profit Sharing", value: AccountingDatum.calc_profit_sharing(hash.values.first) },
-        :taxes => { label: "Taxes", value: AccountingDatum.calc_taxes(hash.values.first) },
-        :interests => { label: "Interests", value: AccountingDatum.calc_interests(hash.values.first) },
-        :balance => { label: "Balance", value: AccountingDatum.calc_balance(hash.values.first) }
+    {
+      :commission_ratio => { label: "Commission Ratio", value: AccountingDatum.kpi_ratio_commissions(hash.values.first) },
+      :balance_ratio => { label: "Balance Ratio", value: AccountingDatum.kpi_ratio_tech_bal(hash.values.first) },
+      :claim_ratio => { label: "Claims Ratio", value: AccountingDatum.kpi_ratio_claims(hash.values.first) },
+      :broker_comm_ratio => { label: "Broker Comm Ratio", value: AccountingDatum.broker_ratio_commissions(hash.values.first) },
+      :reins_comm_ratio => { label: "Reinsurance Comm Ratio", value: AccountingDatum.reins_comm_ratio(hash.values.first) },
+      :premium => { label: "Premium", value: AccountingDatum.calc_premium(hash.values.first) },
+      :earned_premium => { label: "Earned Premium", value: AccountingDatum.calc_earned_premium(hash.values.first) },
+      :premium_and_reserves_change => { label: "Premium & Res Change", value: AccountingDatum.calc_premium_and_reserves_change(hash.values.first) },
+      :claim_paid => { label: "Claims Paid", value: AccountingDatum.calc_claim_paid(hash.values.first) },
+      :claim_paid_and_reserves_change => { label: "Claims & Res Change", value: AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first) },
+      :reinsurance_comm => { label: "Reinsurance Comm", value: AccountingDatum.calc_reinsurance_comm(hash.values.first) },
+      :broker_comm => { label: "Broker Comm", value: AccountingDatum.calc_broker_comm(hash.values.first) },
+      :profit_sharing => { label: "Profit Sharing", value: AccountingDatum.calc_profit_sharing(hash.values.first) },
+      :taxes => { label: "Taxes", value: AccountingDatum.calc_taxes(hash.values.first) },
+      :interests => { label: "Interests", value: AccountingDatum.calc_interests(hash.values.first) },
+      :balance => { label: "Balance", value: AccountingDatum.calc_balance(hash.values.first) }
     }
-end
-
+  end
 
   def create_grouped_hash_by_country(hash)
-
     # ref 7: create a hash to be able to group by, eg 2017, does calculation for all data for that year which will be fed to subgroup_data
-      {
-        :commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
-        :balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
-        :claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
-        :broker_comm_ratio => AccountingDatum.broker_ratio_commissions(hash.values.first),
-        :reins_comm_ratio => AccountingDatum.reins_comm_ratio(hash.values.first),
-        :premium => AccountingDatum.calc_premium(hash.values.first),
-        :earned_premium => AccountingDatum.calc_earned_premium(hash.values.first),
-        :claim_paid => AccountingDatum.calc_claim_paid(hash.values.first),
-        :claim_paid_and_reserves_change => AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first),
-        :premium_and_reserves_change => AccountingDatum.calc_premium_and_reserves_change(hash.values.first),
-        :reinsurance_comm => AccountingDatum.calc_reinsurance_comm(hash.values.first),
-        :broker_comm => AccountingDatum.calc_broker_comm(hash.values.first),
-        :profit_sharing => AccountingDatum.calc_profit_sharing(hash.values.first),
-        :taxes => AccountingDatum.calc_taxes(hash.values.first),
-        :interests => AccountingDatum.calc_interests(hash.values.first),
-        :balance => AccountingDatum.calc_balance(hash.values.first)
+    {
+      :commission_ratio => AccountingDatum.kpi_ratio_commissions(hash.values.first),
+      :balance_ratio => AccountingDatum.kpi_ratio_tech_bal(hash.values.first),
+      :claim_ratio => AccountingDatum.kpi_ratio_claims(hash.values.first),
+      :broker_comm_ratio => AccountingDatum.broker_ratio_commissions(hash.values.first),
+      :reins_comm_ratio => AccountingDatum.reins_comm_ratio(hash.values.first),
+      :premium => AccountingDatum.calc_premium(hash.values.first),
+      :earned_premium => AccountingDatum.calc_earned_premium(hash.values.first),
+      :claim_paid => AccountingDatum.calc_claim_paid(hash.values.first),
+      :claim_paid_and_reserves_change => AccountingDatum.calc_claim_paid_and_reserves_change(hash.values.first),
+      :premium_and_reserves_change => AccountingDatum.calc_premium_and_reserves_change(hash.values.first),
+      :reinsurance_comm => AccountingDatum.calc_reinsurance_comm(hash.values.first),
+      :broker_comm => AccountingDatum.calc_broker_comm(hash.values.first),
+      :profit_sharing => AccountingDatum.calc_profit_sharing(hash.values.first),
+      :taxes => AccountingDatum.calc_taxes(hash.values.first),
+      :interests => AccountingDatum.calc_interests(hash.values.first),
+      :balance => AccountingDatum.calc_balance(hash.values.first)
     }
-end
+  end
 
-def parse_array_params(concerned_params)
-      #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
+  def parse_array_params(concerned_params)
+    #  "country" =>> [ { "Italy"  =>>  "1"}, {"Greece" => "0"}]
     returning_array = []
     concerned_params.each do |element|
       returning_array << element.first
     end
-    # [" Italy"]
-    returning_array
+    returning_array # [" Italy"]
   end
-
-  # def premium_bar_chart
-  #   filter_data
-  #   @premium
-  #   AccountingDatum.balance_year
-  #   @data_rows = @data_rows.where balance_year: params[:balance_year] if params[:balance_year].present?
-  # end
 end
+
+# pages controller for CONSULTING HUB *** COMMENTED OUT BFR INTEGRATION
+
+# class PagesController < ApplicationController
+#   skip_before_action :authenticate_user!, only: :home
+
+#   def profile
+#     current_user
+#   end
+
+#   def sent_requests
+#     @service_requests = current_user.sent_requests
+#   end
+
+#   def received_requests
+#     @service_requests = current_user.service_requests
+#   end
+
+#   def services
+#     @services = current_user.services
+#   end
+
+#   def service
+#     @service = current_user.services
+#   end
+
+#   def home
+#     @services = Service.all
+#   end
+# end

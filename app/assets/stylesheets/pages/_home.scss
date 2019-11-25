@@ -2,7 +2,6 @@
 
 header {
   position: relative;
-  // background-color: $blue;
   background-image: url("http://drive.google.com/uc?export=view&id=1HhCKGroWUod3m-AOsvJ5qtsjuPmfj25A");
   height: 75vh;
   min-height: 25rem;
@@ -100,6 +99,7 @@ header .verticalFlip span:nth-child(3){
   80% { opacity: 0; }
   100% { opacity: 0;}
 }
+
 @-webkit-keyframes vertical{
   0% { opacity: 0; }
   5% { opacity: 0; -webkit-transform: rotateX(180deg); }
@@ -109,6 +109,7 @@ header .verticalFlip span:nth-child(3){
   80% { opacity: 0; }
   100% { opacity: 0; }
 }
+
 @-ms-keyframes vertical{
   0% { opacity: 0; }
   5% { opacity: 0; -ms-transform: rotateX(180deg); }
@@ -119,15 +120,11 @@ header .verticalFlip span:nth-child(3){
   100% { opacity: 0; }
 }
 
-
-
-
 .container-about {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .about-text p {
   font-style: italic;
@@ -146,19 +143,11 @@ margin-left: 30px;
 }
 
 
-
 // WHY
-
 .why-area {
   background: white;
   padding: 50px 10px;
 }
-
-// .container-why {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-// }
 
 .container-why {
   display:flex;
@@ -205,16 +194,8 @@ margin-bottom: 10px;
 
 }
 
-// .container-why-wrapper:first-child > * {
-//   margin-left: 0;
-//   margin-right: a
-// }
-
-
-
 
 // HOW
-
 .how-area {
   background: $backgroundbluelight;
   padding: 50px 10px 80px 10px;
@@ -240,7 +221,6 @@ margin-bottom: 10px;
 
 
 // COUNTER
-
 .counter-area {
   background: $mediumblue;
   padding-top: 50px;
@@ -254,7 +234,8 @@ margin-bottom: 10px;
 
 .client-logo-area {
   padding-top: 50px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+}
 
 .counter-area h2{
   color: $white;
@@ -266,16 +247,15 @@ margin-bottom: 10px;
 .counter-area h3{
   color: $white;
   font-size: 50px;
-  }
+}
 
   .counter-area p{
   color: $white;
   font-size: 24px;
-  }
+}
 
 
 // TESTIMONIAL
-
 .testimonial-area {
   background: white;
   padding: 50px 10px 80px 10px;
@@ -295,15 +275,15 @@ margin-bottom: 10px;
 
 .single-testimonial p {
   font-style: italic;
-  }
+}
 
   .single-testimonial .light {
   font-style: normal;
   opacity: 0.8;
 }
 
-// CLIENTS
 
+// CLIENTS
 .client-logo-area {
   background: $backgroundblue;
 }
@@ -315,7 +295,8 @@ margin-bottom: 10px;
 
 .client-logo-area {
   padding-top: 50px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+}
 
 .single-client img {
   height: 50px;
@@ -329,7 +310,7 @@ margin-bottom: 10px;
   opacity: 0.8;
 }
 
-.client-logo-area h2{
+.client-logo-area h2 {
   font-size: 44px;
   line-height: 55px;
   margin-bottom: 20px;

@@ -1,3 +1,4 @@
+// footer for the DASHBOARD --------------------------
 .footer {
   background: $darkblue;
   display: flex;
@@ -30,7 +31,39 @@
 .footer-links a:hover {
   opacity: 1;
 }
+
 .footer .fa-chart-line {
   margin-left: 20px;
   color: $yellow;
 }
+
+// // footer for the CONSULTING HUB --------------------------
+// // -- TO REACTIVATE UPON INTEGRATION OF THE CONSULTING HUB PROJECT
+// .footer {
+//   background: $turquoised;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   min-height: 100px;
+//   padding: 0px 50px;
+//   color: rgba(0,0,0,0.3);
+// }
+// .footer-links {
+//   display: flex;
+//   align-items: center;
+// }
+// .footer-links a {
+//   color: $yellow;
+//   opacity: 0.5;
+//   text-decoration: none;
+//   font-size: 24px;
+//   padding: 0px 10px;
+// }
+// .footer-links a:hover {
+//   opacity: 1;
+// }
+// .footer .fa-handshake {
+//   margin-left: 20px;
+//   color: $yellow;
+// }
+// // -- TO REACTIVATE UPON INTEGRATION OF THE CONSULTING HUB PROJECT
