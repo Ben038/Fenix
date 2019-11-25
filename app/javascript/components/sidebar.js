@@ -6,7 +6,6 @@ function openNav(query) {
   query.classList.add('open')
   const icon = document.getElementById("icon")
   icon.classList.remove('fa-rotate-180')
-  // document.getElementById("dashboard-area").style.marginLeft = "15vw";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
@@ -16,14 +15,11 @@ function closeNav(query) {
   query.classList.remove('open')
   const icon = document.getElementById("icon")
   icon.classList.add('fa-rotate-180')
-  // document.getElementById("dashboard-area").style.marginLeft = "10vw";
 }
-
 
 const handleSidebarClick = (e) => {
   const query = document.querySelector(".sidebar-main")
   console.log(query.classList.contains('open'))
-
   if (query.classList.contains('open')) {
     closeNav(query)
   } else {
@@ -31,20 +27,9 @@ const handleSidebarClick = (e) => {
   }
 };
 
-// const rotate = () => {
-//   $( "" ).click(function() {
-//     if (  $( this ).css( "transform" ) == 'none' ){
-//         $(this).css("transform","rotate(180deg)");
-//     } else {
-//         $(this).css("transform","" );
-//     }
-//   });
-// }
-
 const sidebarclosebtn = document.getElementById("close-sidebar-btn-js")
 if(sidebarclosebtn){
   sidebarclosebtn.addEventListener("click", handleSidebarClick);
-
 }
 
 

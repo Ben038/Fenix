@@ -1,4 +1,4 @@
-
+// Charts used in the Overview - KPIs
 Chart.defaults.global.elements.line.fill = false;
 
 var kpi1 = document.getElementById('kpiCommissions');

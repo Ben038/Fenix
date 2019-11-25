@@ -1,36 +1,9 @@
-
-// var polarArea1 = document.getElementById('ReinsComm');
-
-// var RCChart = new Chart(polarArea1, {
-//     data = {
-//     datasets: [{
-//         data: [10, 20, 30]
-//     }],
-
-//     // These labels appear in the legend and in the tooltips when hovering different arcs
-//     labels: [
-//         'Red',
-//         'Yellow',
-//         'Blue'
-//     ]
-//     };
-//     type: 'polarArea',
-//     options: options {
-//       backgroundColor:
-//         'rgba(41, 52, 98, 1)',
-//         'rgba(41, 52, 98, 0.8)',
-//         'rgba(41, 52, 98, 0.6)',
-//     }
-//   });
-
+// // Charts used in the Commissions
 var polarArea1= document.getElementById('reinsComm');
 
 // 1. parse the data-country
-
 //2. parse the data-process
 //3. transform into abs the values in data-process
-
-
 if (polarArea1) {
   var reinsComm = new Chart(polarArea1, {
     type: 'polarArea',

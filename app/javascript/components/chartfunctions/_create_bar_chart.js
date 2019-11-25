@@ -1,10 +1,4 @@
-// const kpi = document.querySelector(".card-kpi");
-// console.log(kpi);
-
-
-// var ctx = document.getElementById('premiumChart').getContext('2d');
-// var premiumChart = new Chart(ctx)
-
+// Charts used in the Overview
 var ctx = document.getElementById('premiumChart');
 
 if (ctx){

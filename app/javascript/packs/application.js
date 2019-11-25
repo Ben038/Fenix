@@ -3,20 +3,8 @@ import "../components/chartfunctions";
 import "../components/sidebar";
 import "../components/navbar";
 
+// to move cards on the pages of the dashboard
 import Sortable from 'sortablejs';
-
-// $(document).ready(function() {
-        // Transition effect for navbar
-        // $(window).scroll(function() {
-        //   // checks if window is scrolled more than 500px, adds/removes solid class
-        //   if($(this).scrollTop() > 500) {
-        //       $('.navbar').addClass('solid');
-        //   } else {
-        //       $('.navbar').removeClass('solid');
-        //   }
-        // });
-// });
-
 
 if(window.sortableKpi){
   Sortable.create(sortableKpi, {
@@ -29,9 +17,15 @@ if(window.sortableKpi){
   });
 }
 
+// to move cards on the pages of the consulting HUB
+// Sortable.create(listReceivedRequests, {
+//   handle: '.card-service-hidden',
+//   animation: 150
+// });
+
+
 
 // TRANSPARANT TO SOLID NAVBAR
-
 window.addEventListener("scroll", (event) => {
   if (window.scrollY > 200) {
     document.querySelector(".navbar-fenix").classList.add("solid");
