@@ -5,10 +5,6 @@
 
 .sidebar-main {
   width: 200px;
-  // height: 100%;
-  // position: absolute;
-  // bottom: 100px;
-  // height: calc(100vh - 106px - 100px);
   top: 0;
   left: 0;
   background-color: white;
@@ -19,7 +15,6 @@
   color: #293462;
   transition: width ease 0.5s;
 }
-
 
 .sidebar-item {
   display: inline-block;
@@ -85,7 +80,8 @@ p.filter {
   font-weight: bold;
 }
 
-
+// is this the right environment to store these design code?
+// to be moved to layout?
 p {
   display: inline-block;
   list-style-type: none;
@@ -97,4 +93,4 @@ li {
   list-style-type: none;
 }
 
-
+// -----------------------------------------------
