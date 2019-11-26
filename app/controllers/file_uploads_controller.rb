@@ -2,7 +2,7 @@ class FileUploadsController < ApplicationController
   def create
     @file_upload = FileUpload.new(file_upload_params)
     @file_upload.user = current_user
-
+    # authorize @file_upload
     if @file_upload.save
       respond_to do |format|
         format.html { redirect_to new_file_upload_path }
@@ -22,6 +22,8 @@ class FileUploadsController < ApplicationController
   end
 
   def destroy
+    # @user = current_user
+    # authorize @user
     @file_upload = FileUpload.find(params[:id])
     @file_upload.destroy
     redirect_to new_file_upload_path

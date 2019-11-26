@@ -6,12 +6,27 @@ class UsersController < ApplicationController
   # make sure the access will be granted only to the dedicated environment
   # for the multinational company
 
+  def create
+  end
+
   def new
     @user = User.new
   end
 
   def index
     @users = User.all
+  end
+
+  def destroy
+  end
+
+  def show
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   private
