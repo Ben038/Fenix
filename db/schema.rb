@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_155611) do
+ActiveRecord::Schema.define(version: 2019_11_26_101926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 2019_11_12_155611) do
     t.index ["file_upload_id"], name: "index_accounting_data_on_file_upload_id"
   end
 
+  create_table "consultants", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "password"
+    t.string "profile_picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "file_uploads", force: :cascade do |t|
     t.string "reinsurance_network"
     t.string "file_name"
@@ -64,6 +73,34 @@ ActiveRecord::Schema.define(version: 2019_11_12_155611) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "service_requests", force: :cascade do |t|
+    t.string "description"
+    t.string "by_when"
+    t.string "status"
+    t.bigint "user_id"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_service_requests_on_service_id"
+    t.index ["user_id"], name: "index_service_requests_on_user_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "picture_url"
+    t.string "name"
+    t.string "description"
+    t.integer "rate_per_day"
+    t.string "category"
+    t.string "address"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "consultant"
+    t.bigint "consultant_id"
+    t.index ["consultant_id"], name: "index_services_on_consultant_id"
+    t.index ["user_id"], name: "index_services_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -87,5 +124,9 @@ ActiveRecord::Schema.define(version: 2019_11_12_155611) do
   add_foreign_key "accounting_data", "international_clients"
   add_foreign_key "accounting_data", "users"
   add_foreign_key "file_uploads", "users"
+  add_foreign_key "service_requests", "services"
+  add_foreign_key "service_requests", "users"
+  add_foreign_key "services", "consultants"
+  add_foreign_key "services", "users"
   add_foreign_key "users", "international_clients"
 end
