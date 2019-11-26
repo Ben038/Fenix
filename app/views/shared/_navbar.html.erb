@@ -22,7 +22,6 @@
             <%= link_to "Commissions", url.gsub("claims", "commissions"), class: "nav-link" %>
           <% end %>
         </li>
-
         <li class="nav-item active d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Claims", url.gsub("pages", "claims"), class: "nav-link" %>
@@ -30,25 +29,36 @@
             <%= link_to "Claims", url.gsub("commissions", "claims"), class: "nav-link" %>
           <% end %>
         </li>
-
         <li class="nav-item active d-flex align-items-center">
           <%= link_to "Renewals", pages_path, class: "nav-link" %>
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Reserves", pages_path, class: "nav-link" %>
         </li>
-          <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
+        <li class="nav-item active d-flex align-items-center">
+          <%= link_to "Upload Data", new_file_upload_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active d-flex align-items-center">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+        <p class="d-flex align-items-center">Hi, <%= current_user.first_name %></p>
         <li class="nav-item dropdown">
           <% if !current_user.profile_picture %>
             <%= image_tag "placeholder.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
             <%= cl_image_tag current_user.profile_picture, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
+<!--
+!!!!!!! IT USED TO BE A DROPDOWN LIST LINKED TO THE AVATAR OF THE USER. HOWEVER THIS HAS BEEN BROKEN AND DOESN4T WORK ANYMORE.
+AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Upload Data", new_file_upload_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+          </div> -->
         </li>
+        <!--
+
+         </li>-->
       <% else %>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Learn More", "#", class: "nav-link"  %>
