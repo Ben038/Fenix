@@ -33,13 +33,13 @@
       <div class="card-chart">
         <div class="card-chart-text">
           Claims Paid
-          <canvas id="claimsPaid" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_paid] * -1 }.to_json %>"></canvas>
+          <canvas id="claimsPaid" width="400" height="400" data-years="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_paid] }.to_json %>"></canvas>
         </div>
       </div>
       <div class="card-chart">
         <div class="card-chart-text">
           Claims & Reserves Change
-          <canvas id="claimsRes" width="400" height="400" data-countries="<%= @data_process.map { |k, v| k  }.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_paid_and_reserves_change] * -1  }.to_json %>"></canvas>
+          <canvas id="claimsAndRes" width="400" height="400" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_paid_and_reserves_change][:value] * -1 }.to_json %>"></canvas>
         </div>
       </div>
     </div>
