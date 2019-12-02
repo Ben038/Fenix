@@ -3,6 +3,7 @@
 Chart.defaults.global.elements.line.fill = false;
 
 var totalCostClaim = document.getElementById('claimsAndRes');
+var totalClaimPaid = document.getElementById('claimsPaid2');
 if (totalCostClaim){
 
 
@@ -11,7 +12,7 @@ if (totalCostClaim){
       data: {
           labels: JSON.parse(totalCostClaim.dataset.years),
           datasets: [{
-              label: '',
+              label: 'Claims Paid & Res',
               data: JSON.parse(totalCostClaim.dataset.processJson),
               showLines: true,
               borderColor: "#00818a",
@@ -28,8 +29,11 @@ if (totalCostClaim){
               }]
           },
           legend: {
-            display: false,
+            display: true,
           }
       }
   });
+
+
+
 };
