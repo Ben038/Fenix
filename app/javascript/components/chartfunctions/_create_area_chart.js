@@ -3,7 +3,7 @@
 Chart.defaults.global.elements.line.fill = false;
 
 var totalCostClaim = document.getElementById('claimsAndRes');
-var totalClaimPaid = document.getElementById('claimsPaid2');
+// var totalClaimPaid = document.getElementById('claimsPaid2');
 if (totalCostClaim){
 
 
@@ -17,7 +17,13 @@ if (totalCostClaim){
               showLines: true,
               borderColor: "#00818a",
               fill: 'origin',
-          }]
+          // }, {
+          //     label: 'Claims Paid',
+          //     data: JSON.parse(totalClaimPaid.dataset.processJson),
+          //     showLines: true,
+          //     borderColor: "#00818a",
+          //     fill: 'origin'
+        }],
       },
       options: {
           maintainAspectRatio: false,

@@ -67,6 +67,24 @@ class PagesController < ApplicationController
     end
   end
 
+  # def claims_by_risk
+  #   #method applicable to the claims visualization
+  #   checked_data
+  #   filter_data
+  #   ungrouped_set
+  #   subgroup_data
+  #   # step 4: check if more than one selection
+  #   # step 5: it takes all data
+  #     ungrouped_set
+  #     # step 6: split by group_by will feed array, and add keys
+  #     @data_process = {}
+  #     # step 7: iterate over filtered data, eg 2017, 2018
+  #     @data_rows_grouped_risk.each do |risk, values|
+  #     # step 7: for each eg year, create a hash and push it in data_process array
+  #     @data_process[risk] = create_grouped_hash_by_risk({risk => values})
+  #   end
+  # end
+
   def share_page_with_options
     shared_url = params[:shared_url]
     receiver = User.find(params[:user_id])
