@@ -5,27 +5,24 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
           <div class="card-chart-text">
-          Satisfaction Survey
+          Notes
           </div>
-          <% @select_countries.sort.each do |country| %>
-            <% if @checked_values[:country].include?(country)  %>
-              <div class="rating d-flex justify-content-between">
-                <p><%= country %></p>
-                <div class="score">
-                  <% multiple = [1, 2, 3, 4, 5].sample %>
-                  <% serieA = [1, 1, 1, 1, 1].sample(multiple) %>
-                  <% serieA.each do |star| %>
-                    <span class="fa fa-star checked"></span>
-                    <% end %>
-                  <% multiple_unstarred = 5 - multiple %>
-                  <% serieB = [1, 1, 1, 1, 1].sample(multiple_unstarred) %>
-                    <% serieB.each do |nostar| %>
-                      <span class="fa fa-star"></span>
-                    <% end %>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
+            <form>
+              Comments:<br>
+               <textarea name="message" rows="10" cols="30" maxlength="700"></textarea>
+              Priority:<br>
+              <input type="radio" name="priority" value="high"> High<br>
+              <input type="radio" name="priority" value="medium"> Medium<br>
+              <input type="radio" name="priority" value="low" checked> Low<br>
+              Status:<br>
+              <input type="radio" name="status" value="closed"> Closed<br>
+              <input type="radio" name="status" value="in progress"> In Progress<br>
+              <input type="radio" name="status" value="pending" checked> Pending<br>
+              <!-- <input type="url" name="homepage"> -->
+              Due by:
+              <input type="date" name="deadline">
+              <input type="submit" value="Submit">
+            </form>
       </div>
     </div>
 
@@ -33,7 +30,7 @@
       <div class="card-chart">
         <div class="card-chart-text">
           Claims Paid
-          <canvas id="myChart" width="400" height="400" ></canvas>
+          <canvas id="ClaimPaid" width="400" height="400" data-years="<%= @data_process.map { |k, v| k  }.sort.to_json %>" data-process-json="<%= @data_process.map{ |k, v| v[:claim_paid][:value] * -1 }.to_json %>" ></canvas>
         </div>
       </div>
       <div class="card-chart">
