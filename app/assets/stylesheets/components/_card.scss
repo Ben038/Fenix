@@ -109,7 +109,31 @@ p.kpi-title {
   opacity: 0.8;
 }
 
+.card-notes-structure {
+  display: flex;
+  flex-direction: column;
+}
 
+.comments-area {
+  margin-bottom: 30px;
+}
+
+.text-area {
+  width: 90%;
+}
+
+.radio-btn {
+  margin-bottom: 30px;
+}
+
+.deadline-and-submission {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 80px;
+}
 // cards for the CONSULTING HUB --------------------------
 
 // -- TO REACTIVATE UPON INTEGRATION OF THE CONSULTING HUB PROJECT

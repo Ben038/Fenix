@@ -44,6 +44,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    apexcharts (0.1.8)
+      smart_kv (= 0.2.7)
     arel (9.0.0)
     autoprefixer-rails (9.7.1)
       execjs
@@ -185,6 +187,7 @@ GEM
     simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    smart_kv (0.2.7)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -225,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  apexcharts
   autoprefixer-rails
   bootsnap
   bootstrap-modal-rails (~> 2.2, >= 2.2.5)
