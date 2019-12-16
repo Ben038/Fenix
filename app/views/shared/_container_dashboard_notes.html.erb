@@ -1,0 +1,72 @@
+<div class="container-dashboard" id="dashboard-area">
+  <div class="container-top">
+    <div class="container-left">
+      <div class="card-survey">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <div class="card-chart-text">
+          <strong>Add A Note</strong>
+          </div>
+            <form>
+              <div class="card-notes-structure">
+                <div class='comments-area d-flex justify-content-around w-100'>
+                  <textarea class="text-area" name="message" rows="10" cols="30" maxlength="700" width="90%"></textarea>
+                </div>
+                <div class="radio-btn d-flex justify-content-around">
+                  <div>
+                    <strong>Priority:</strong><br>
+                    <input type="radio" name="priority" value="high"> High<br>
+                    <input type="radio" name="priority" value="medium"> Medium<br>
+                    <input type="radio" name="priority" value="low" checked> Low<br>
+                  </div>
+                  <div>
+                    <strong>Status:</strong><br>
+                    <input type="radio" name="status" value="closed"> Closed<br>
+                    <input type="radio" name="status" value="in progress"> In Progress<br>
+                    <input type="radio" name="status" value="pending" checked> Pending<br>
+                    <!-- <input type="url" name="homepage"> -->
+                  </div>
+                </div>
+                <div class="deadline-and-submission">
+                  <div>
+                    <strong>Due by:</strong>
+                    <input type="date" name="deadline">
+                  </div>
+                  <input type="submit" value="Submit">
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
+
+    <div class="container-right  d-flex">
+      <div class="container-table">
+        <div class="card-table">
+          <table style="width:100%">
+            <tr>
+              <th>Due Date</th>
+              <th>Note</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <!--EVENTUALLY TO INTEGRATE LATER ON
+<th>User</th>
+<th>Assigned to</th> -->
+            </tr>
+            <tr>
+              <td>20/01/2020</td>
+              <td>Bellis incursare per et si rege ordinatus versabili ordinatus inligato aliquotiens hostiliter a sollicite nostra si a locum bellis bellis rege ordinatus sollicite nos Nohodares in numero sollicite rege explorabat adducta Mesopotamiam adducta conlimitiis Persarum copia Mesopotamiam aliquotiens bellis eum usquam perrupturus quae adducta gentes moventem e finitimis dederit Mesopotamiam dederit nomine si quae conlimitiis nos saepe iuvant vi per iuvant nostra sollicite quadam arma nos et perrupturus quotiens re usquam quae incessunt locum Mesopotamiam repellenteque Mesopotamiam saepe quae bellis nomine in aliquotiens Persarum mente repellenteque quadam incessunt numero incessunt sollicite adducta mente arma et perrupturus perrupturus si sollicite sollicite.</td>
+              <td>High</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>07/02/2020</td>
+              <td>Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina; cuius socrus cum misceri sibi generum, flagrans eius amore, non impetraret, ut ferebatur, per palatii pseudothyrum introducta, oblato pretioso reginae monili id adsecuta est, ut ad Honoratum tum comitem orientis formula missa letali omnino scelere nullo contactus idem Clematius nec hiscere nec loqui permissus occideretur. Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare ab iis, quidquid velimus, perfecta quidem sapientia si simus, nihil habeat res vitii; sed loquimur de iis amicis qui ante oculos sunt, quos vidimus aut de quibus memoriam accepimus, quos novit vita communis. Ex hoc numero nobis exempla sumenda sunt, et eorum quidem maxime qui ad sapientiam proxime accedunt. Proinde die funestis interrogationibus praestituto imaginarius iudex equitum resedit magister adhibitis aliis iam quae essent agenda praedoctis, et adsistebant hinc inde notarii, quid quaesitum esset, quidve responsum, cursim ad Caesarem perferentes, cuius imperio truci, stimulis reginae exsertantis aurem subinde per aulaeum, nec diluere obiecta permissi nec defensi periere conplures.</td>
+              <td>Medium</td>
+              <td>In Progress</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>      <!-- Create an element where the map will take place -->
+</div>
