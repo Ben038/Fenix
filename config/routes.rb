@@ -29,4 +29,7 @@ devise_for :users
   #international client section
   resources :international_clients, only: [:new, :create, :destroy]
 
+  # integrating routes to notes
+  resources :notes, only [:store, :new, :create, :destroy, :update]
+
 end
