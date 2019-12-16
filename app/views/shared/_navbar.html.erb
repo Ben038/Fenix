@@ -18,6 +18,8 @@
         <li class="nav-item d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link" %>
+          <% elsif url.include?("notes") %>
+            <%= link_to "Commissions", url.gsub("notes", "commissions"), class: "nav-link" %>
           <% else %>
             <%= link_to "Commissions", url.gsub("claims", "commissions"), class: "nav-link" %>
           <% end %>
@@ -25,6 +27,8 @@
         <li class="nav-item active d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Claims", url.gsub("pages", "claims"), class: "nav-link" %>
+          <% elsif url.include?("notes") %>
+            <%= link_to "Claims", url.gsub("notes", "claims"), class: "nav-link" %>
           <% else %>
             <%= link_to "Claims", url.gsub("commissions", "claims"), class: "nav-link" %>
           <% end %>
@@ -34,6 +38,15 @@
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Reserves", pages_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <% if url.include?("pages") %>
+            <%= link_to "Notes", url.gsub("pages", "notes"), class: "nav-link" %>
+          <% elsif url.include?("commissions") %>
+            <%= link_to "Notes", url.gsub("commissions", "notes"), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Notes", url.gsub("claims", "notes"), class: "nav-link" %>
+          <% end %>
         </li>
         <li class="nav-item active d-flex align-items-center">
           <%= link_to "Upload Data", new_file_upload_path, class: "nav-link" %>
