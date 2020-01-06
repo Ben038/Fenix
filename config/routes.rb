@@ -10,6 +10,9 @@ devise_for :users
   get "commissions", to: "pages#commissions"
   # page for the commissions-view
   get "claims", to: "pages#claims"
+  # integrating routes to notes
+  get "notes", to: "pages#notes"
+  post 'notes', to: "notes#index"
 
   # website landing page (home), dashboard (index) [and not yet active (show)]
   resources :pages, only: [:index, :show, :home] do
@@ -28,5 +31,8 @@ devise_for :users
 
   #international client section
   resources :international_clients, only: [:new, :create, :destroy]
+
+  # integrating routes to notes
+  # resources :notes, only [:store, :new, :create, :destroy, :update]
 
 end

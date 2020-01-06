@@ -67,6 +67,10 @@ class PagesController < ApplicationController
     end
   end
 
+  # def notes
+  #   @notes = Note.all
+  # end
+
   # def claims_by_risk
   #   #method applicable to the claims visualization
   #   checked_data

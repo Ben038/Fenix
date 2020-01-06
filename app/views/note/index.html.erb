@@ -1,0 +1,21 @@
+
+<h1 style="text-align:center">Real-time Notes!</h1>
+<div class="wrapper">
+    <img src="https://image4.owler.com/logo/pusher_owler_20160228_200254_large.png" height="150"alt="Pusher" />
+    <div class="top">
+        <%= form_with scope: :note, url: '/note/store', local: true do |form| %>
+        <div class="form-group">
+            <%= form.label :note %>
+            <%= form.text_field :comment %>
+            <%= form.submit %>
+        </div>
+
+        <% end %>
+    </div>
+    <div class="bottom" id="comment_section">
+        <h2>Notes</h2>
+        <% @notes.each do |note| %>
+            <p><%= note.note %></p>
+        <% end %>
+    </div>
+</div>

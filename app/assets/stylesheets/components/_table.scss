@@ -36,3 +36,29 @@ tr td {
 tr th {
   padding: 3px 0px 3px 15px;
 }
+
+.col-name {
+  text-align: center;
+  font-size: 18px;
+  font-style: bold;
+}
+
+.note-content {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.note-due-date {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.note-priority {
+  text-align: justify;
+  font-size: 16px;
+}
+
+tr td i {
+  font-size: 20px;
+  text-align: justify;
+}
