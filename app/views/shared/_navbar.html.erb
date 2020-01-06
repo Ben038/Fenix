@@ -73,7 +73,7 @@ AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
 
          </li>-->
       <% else %>
-        <li class="nav-item d-flex align-items-center">
+<!--         <li class="nav-item d-flex align-items-center">
           <%= link_to "Consultant Hub", "#", class: "nav-link"  %>
         </li>
         <li class="nav-item d-flex align-items-center">
@@ -81,8 +81,17 @@ AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Book a Demo", "#", class: "nav-link"  %>
+        </li>-->
+        <li class="nav-item d-flex align-items-center">
+          <%= link_to "About Fenix", href="about-fenix", class: "nav-link"  %>
         </li>
-          <li> <%= link_to "Login", new_user_session_path, class: "btn btn-blue" %>  </li>
+        <li class="nav-item d-flex align-items-center">
+          <%= link_to "Our Services", "#", class: "nav-link"  %>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <%= link_to "Contact", "#", class: "nav-link"  %>
+        </li>
+        <li> <%= link_to "Login", new_user_session_path, class: "btn btn-blue" %>  </li>
         </ul>
       <% end %>
     </ul>
