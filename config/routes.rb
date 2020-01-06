@@ -35,4 +35,6 @@ devise_for :users
   # integrating routes to notes
   # resources :notes, only [:store, :new, :create, :destroy, :update]
 
+  resources :contacts
+
 end

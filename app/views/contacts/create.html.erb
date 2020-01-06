@@ -1,0 +1,10 @@
+<%= form_for(@contact) do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.label :last_name %>
+    <%= f.label :email %>
+    <%= f.label :phone %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
