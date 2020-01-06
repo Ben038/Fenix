@@ -4,39 +4,8 @@
       <div class="card-survey">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-          <div class="card-chart-text">
-          <strong>Add A Note</strong>
-          </div>
-            <form>
-              <div class="card-notes-structure">
-                <div class='comments-area d-flex justify-content-around w-100'>
-                  <textarea class="text-area" name="message" rows="10" cols="30" maxlength="700" width="90%"></textarea>
-                </div>
-                <div class="radio-btn d-flex justify-content-around">
-                  <div>
-                    <strong>Priority:</strong><br>
-                    <input type="radio" name="priority" value="high"> High<br>
-                    <input type="radio" name="priority" value="medium"> Medium<br>
-                    <input type="radio" name="priority" value="low" checked> Low<br>
-                  </div>
-                  <div>
-                    <strong>Status:</strong><br>
-                    <input type="radio" name="status" value="closed"> Closed<br>
-                    <input type="radio" name="status" value="in progress"> In Progress<br>
-                    <input type="radio" name="status" value="pending" checked> Pending<br>
-                    <!-- <input type="url" name="homepage"> -->
-                  </div>
-                </div>
-                <div class="deadline-and-submission">
-                  <div>
-                    <strong>Due by:</strong>
-                    <input type="date" name="deadline">
-                  </div>
-                  <input type="submit" value="Submit">
-                </div>
-              </div>
-            </form>
-      </div>
+        <div class="card-chart-text">
+          <%= render 'shared/note' %>
     </div>
 
     <div class="container-right  d-flex">

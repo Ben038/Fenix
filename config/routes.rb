@@ -12,7 +12,7 @@ devise_for :users
   get "claims", to: "pages#claims"
   # integrating routes to notes
   get "notes", to: "pages#notes"
-  post 'notes/store', to: "notes#index"
+  post 'notes', to: "notes#index"
 
   # website landing page (home), dashboard (index) [and not yet active (show)]
   resources :pages, only: [:index, :show, :home] do
