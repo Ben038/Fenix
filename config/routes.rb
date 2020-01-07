@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+resources :contacts, only: [:index, :new, :create, :destroy]
 devise_for :users
 
   root to: 'pages#home'
@@ -34,7 +34,4 @@ devise_for :users
 
   # integrating routes to notes
   # resources :notes, only [:store, :new, :create, :destroy, :update]
-
-  resources :contacts
-
 end
