@@ -89,7 +89,7 @@ AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
           <%= link_to "Our Services", "#", class: "nav-link"  %>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <%= link_to "Contact", "#", class: "nav-link"  %>
+          <%= link_to "Contact", contacts_path, method: :create, class: "nav-link"  %>
         </li>
         <li> <%= link_to "Login", new_user_session_path, class: "btn btn-blue" %>  </li>
         </ul>

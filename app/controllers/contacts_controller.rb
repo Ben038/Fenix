@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
   def create        # POST /contacts
     @contact = Contact.new(contact_params)
     @contact.save
-    redirect_to root
+    redirect_to root_path
   end
 
   # def edit          # GET /contacts/:id/edit
