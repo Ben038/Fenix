@@ -1,5 +1,6 @@
 class ContactMailer < ApplicationMailer
-  default from: 'info@fenix.com'
+  default from: 'info@fenix.com',
+          bcc: 'g.vanderkelen@gmail.com'
 
   def contact_email
       @contact = params[:contact]

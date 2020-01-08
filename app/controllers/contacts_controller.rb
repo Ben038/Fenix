@@ -12,7 +12,18 @@ class ContactsController < ApplicationController
 
   def create        # POST /contacts
     @contact = Contact.new(contact_params)
-    @contact.save
+    respond_to do |format|
+      if @contact.save
+      # Tell the ContactMailer to send a "thank you" email after save - only if the contact form is correctly filled in
+        UserMailer.with(contact: @contact).thank_you_email.deliver_now
+
+        format.html { redirect_to(@contact, notice: 'Request correctly submitted.') }
+        format.json { render json: @cnotact, status: :created, location: @contact }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
+    end
     redirect_to root_path
   end
 
