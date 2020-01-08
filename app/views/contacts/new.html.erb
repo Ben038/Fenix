@@ -1,1 +1,31 @@
-<p>THIS IS A NEW CONTACT</p>
+<!-- <div class="container container-login">
+  <h1>Edit</h1>
+  <%= simple_form_for @contact do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.button :submit, "Submit", class:"btn-flat"%>
+  <% end %>
+</div>
+ -->
+<div class='container container-login'>
+  <div class="container-form">
+    <%= simple_form_for(Contact.new) do |f| %>
+    <div class="form-inputs">
+      <h2 class='logintext text-left'>Contact Info</h2>
+        <%= f.input :first_name%>
+        <%= f.input :last_name%>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :phone%>
+    </div>
+
+    <div >
+      <%= f.button :submit, "Submit Request", class: "btn btn-yellow"%>
+    </div>
+      <% end %>
+  </div>
+</div>

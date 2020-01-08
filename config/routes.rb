@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-resources :contacts, only: [:index, :new, :create, :destroy]
+# resources :contacts, only: [:index, :new, :create, :destroy]
 devise_for :users
 
   root to: 'pages#home'
@@ -13,6 +13,10 @@ devise_for :users
   # integrating routes to notes
   get "notes", to: "pages#notes"
   post 'notes', to: "notes#index"
+  # integrating contacts
+  # get 'contacts', to: 'contacts#create'
+  get 'contacts', to: 'contacts#new'
+  post 'contacts', to: 'contacts#create'
 
   # website landing page (home), dashboard (index) [and not yet active (show)]
   resources :pages, only: [:index, :show, :home] do

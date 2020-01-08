@@ -126,6 +126,17 @@ header .verticalFlip span:nth-child(3){
   justify-content: center;
 }
 
+.about-area {
+  padding: 50px 30px;
+}
+
+.about-area h2 {
+  color: #12172b;
+  font-size: 44px;
+  line-height: 100px;
+  margin-bottom: 40px;
+}
+
 .about-text p {
   font-style: italic;
   font-size: 21px;
@@ -158,8 +169,8 @@ margin-left: 30px;
 .why-area h2 {
   color: #12172b;
   font-size: 44px;
-  line-height: 55px;
-  margin-bottom: 100px;
+  line-height: 100px;
+  margin-bottom: 40px;
 }
 
 .why-area h3 {
@@ -216,8 +227,8 @@ margin-bottom: 10px;
 .how-area h2 {
   color: #12172b;
   font-size: 44px;
-  line-height: 55px;
-  margin-bottom: 50px;
+  line-height: 100px;
+  margin-bottom: 40px;
 }
 
 
