@@ -15,6 +15,7 @@ devise_for :users
   post 'notes', to: "notes#index"
   # integrating contacts
   # get 'contacts', to: 'contacts#create'
+  get 'contacts', to: 'contacts#new'
   post 'contacts', to: 'contacts#create'
 
   # website landing page (home), dashboard (index) [and not yet active (show)]
