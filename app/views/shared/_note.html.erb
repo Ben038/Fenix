@@ -1,3 +1,25 @@
+<strong>Add A Note</strong>
+<div>
+  <div class="card-notes-structure">
+    <%= simple_form_for(Note.new) do |f| %>
+      <div class='comments-area d-flex justify-content-around w-100'>
+        <%= f.input :comment %>
+      </div>
+      <div class="radio-btn d-flex justify-content-around">
+        <div>
+          <%= f.input :priority, as: :radio_buttons, collection: ['High', 'Medium', 'Low'] %>
+        </div>
+        <div>
+          <%= f.input :status, as: :radio_buttons, collection: ['Closed', 'In Progress', 'Pending']  %>
+        </div>
+      </div>
+      <div>
+        <%= f.input :due_date %>
+      </div>
+      <%= f.button :submit, "Save Note", class: "btn btn-yellow", data: { confirm: 'Your note has been saved' }%>
+    <% end %>
+  </div>
+</div>
 
 <!-- THE ONE WORKING PROPERLY BUT NOT STORING INFO -->
 <!-- <strong>Add A Note</strong>
@@ -34,64 +56,4 @@
 
 
  -->
-<!-- ----------------------------------------------------------------------
-TEST TO FIX WITH NORMAL FORM
-<strong>Add A Note</strong>
-</div>
-  <form action="/notes" method="post">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <div class="card-notes-structure">
-      <div class='comments-area d-flex justify-content-around w-100'>
-        <textarea type="text-area" name="note[comment]" id="comment" rows="10" cols="30" maxlength="700" width="90%"></textarea>
-      </div>
-      <div class="radio-btn d-flex justify-content-around">
-        <div>
-          <strong>Priority:</strong><br>
-          <input type="radio" name="note[priority]" id="priority" value="high"> High<br>
-          <input type="radio" name="note[priority]" id="priority" value="medium"> Medium<br>
-          <input type="radio" name="note[priority]" id="priority" value="low" checked> Low<br>
-        </div>
-        <div>
-          <strong>Status:</strong><br>
-          <input type="radio" name="note[status]" id="status" value="closed"> Closed<br>
-          <input type="radio" name="note[status]" id="status" value="in_progress"> In Progress<br>
-          <input type="radio" name="note[status]" id="status" value="pending" checked> Pending<br>
-        </div>
-      </div>
-      <div class="deadline-and-submission">
-        <div>
-          <strong>Due by:</strong>
-          <input type="date" name="note[due_date]" id="due_date">
-        </div>
-        <input type="submit" value="Save">
-      </div>
-    </div>
-  </form>
-</div> -->
 
-
-<!-- ----------------------------------------------------------------------
-TEST TO FIX WITH SIMPLE FORM
- -->
-<strong>Add A Note</strong>
-<div>
-  <div class="card-notes-structure">
-    <%= simple_form_for(Note.new) do |f| %>
-      <div class='comments-area d-flex justify-content-around w-100'>
-        <%= f.input :comment %>
-      </div>
-      <div class="radio-btn d-flex justify-content-around">
-        <div>
-          <%= f.input :priority, as: :radio_buttons, collection: ['High', 'Medium', 'Low'] %>
-        </div>
-        <div>
-          <%= f.input :status, as: :radio_buttons, collection: ['Closed', 'In Progress', 'Pending']  %>
-        </div>
-      </div>
-      <div>
-        <%= f.input :due_date %>
-      </div>
-      <%= f.button :submit, "Save Note", class: "btn btn-yellow", data: { confirm: 'Your note has been saved' }%>
-    <% end %>
-  </div>
-</div>
