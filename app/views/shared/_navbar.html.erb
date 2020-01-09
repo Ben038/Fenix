@@ -15,6 +15,7 @@
 
 <!-- BE CAREFULL the url.gsub is a quick fix to move to other pages! make sure this is correct to always redirect to pages! -->
 
+
         <li class="nav-item d-flex align-items-center">
           <% if url.include?("pages") %>
             <%= link_to "Commissions", url.gsub("pages", "commissions"), class: "nav-link" %>
@@ -91,6 +92,9 @@ AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Our Product", "#product", class: "nav-link"  %>
         </li>
+<!--         <li class="nav-item d-flex align-items-center">
+          <%= link_to "Consultant Hub", "#", class: "nav-link"  %>
+        </li> -->
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Contact", contacts_path, class: "nav-link"  %>
         </li>

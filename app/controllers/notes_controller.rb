@@ -1,17 +1,17 @@
-class NoteController < ApplicationController
-  def new
-    @note = Note.new(note_params)
-    @note.save
-    # redirect_to '/'
-  end
-
+class NotesController < ApplicationController
   def index
     @notes = Note.all
+  end
+
+  def new
+    @note = Note.new
+    # redirect_to '/'
   end
 
   def create
     @note = Note.new(note_params)
     @note.save
+    redirect_to notes_path
   end
 
   def destroy
@@ -31,6 +31,6 @@ class NoteController < ApplicationController
   private
 
   def note_params
-    params.require(:note).permit(:note)
+    params.require(:note).permit(:comment, :priority, :status, :due_date)
   end
 end

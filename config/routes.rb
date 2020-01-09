@@ -12,7 +12,7 @@ devise_for :users
   get "claims", to: "pages#claims"
   # integrating routes to notes
   get "notes", to: "pages#notes"
-  post 'notes', to: "notes#index"
+  post 'notes', to: "notes#create"
   # integrating contacts
   # get 'contacts', to: 'contacts#create'
   get 'contacts', to: 'contacts#new'
