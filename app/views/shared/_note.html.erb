@@ -1,5 +1,29 @@
 <strong>Add A Note</strong>
+<div>
+  <div class="card-notes-structure">
+    <%= simple_form_for(Note.new) do |f| %>
+      <div class='comments-area d-flex justify-content-around w-100'>
+        <%= f.input :comment %>
+      </div>
+      <div class="radio-btn d-flex justify-content-around">
+        <div>
+          <%= f.input :priority, as: :radio_buttons, collection: ['High', 'Medium', 'Low'] %>
+        </div>
+        <div>
+          <%= f.input :status, as: :radio_buttons, collection: ['Closed', 'In Progress', 'Pending']  %>
+        </div>
+      </div>
+      <div>
+        <%= f.input :due_date %>
+      </div>
+      <%= f.button :submit, "Save Note", class: "btn btn-yellow", data: { confirm: 'Your note has been saved' }%>
+    <% end %>
+  </div>
 </div>
+
+<!-- THE ONE WORKING PROPERLY BUT NOT STORING INFO -->
+<!-- <strong>Add A Note</strong>
+< div>
   <form>
     <div class="card-notes-structure">
       <div class='comments-area d-flex justify-content-around w-100'>
@@ -15,9 +39,8 @@
         <div>
           <strong>Status:</strong><br>
           <input type="radio" name="status" value="closed"> Closed<br>
-          <input type="radio" name="status" value="in progress"> In Progress<br>
+          <input type="radio" name="status" value="in_progress"> In Progress<br>
           <input type="radio" name="status" value="pending" checked> Pending<br>
-          <!-- <input type="url" name="homepage"> -->
         </div>
       </div>
       <div class="deadline-and-submission">
@@ -25,9 +48,12 @@
           <strong>Due by:</strong>
           <input type="date" name="deadline">
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Save">
       </div>
     </div>
   </form>
 </div>
+
+
+ -->
 
