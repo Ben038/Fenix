@@ -100,10 +100,14 @@ main {
 .container-why-usp {
   width: 350px;
   height: 650px;
+  border: 3px solid orange;
     &:hover {
     box-shadow: 0 4px 8px rgba(229, 232, 244, 1);
   }
 }
+
+
+
 // GRID - to be reintegrated in case we wish to have a viz that
 // adapts to the size of the screen.
 
