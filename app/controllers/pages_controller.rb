@@ -7,6 +7,18 @@ class PagesController < ApplicationController
     end
   end
 
+  # def service_audit
+  #   redirect_to audit_path
+  # end
+
+  # def integration
+  #   redirect_to integration_path
+  # end
+
+  # def analytics
+  #   redirect_to analytics_path
+  # end
+
   def index
     checked_data #to keep the checkboxes checked after submit
     # step 1: when arriving on dashboard, call filter_data (takes only data for specific user + looks if there is a selection done)

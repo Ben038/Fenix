@@ -22,7 +22,7 @@
 
 .service-text h2{
   color: $darkblue;
-  font-size: 44px;
+  // font-size: calc(44px + 0.5vw);
   line-height: 55px;
   margin-bottom: 20px;
 }

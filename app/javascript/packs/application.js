@@ -2,6 +2,7 @@ import "bootstrap";
 import "../components/chartfunctions";
 import "../components/sidebar";
 import "../components/navbar";
+import "../components/card";
 
 // to move cards on the pages of the dashboard
 import Sortable from 'sortablejs';

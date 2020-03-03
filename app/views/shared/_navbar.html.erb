@@ -1,7 +1,7 @@
 
   <div class="navbar navbar-expand-sm navbar-light navbar-fenix" data-spy="scroll" data-target=".navbar-fenix" data-offset="50">
   <%= link_to pages_path, class: "navbar-brand" do %>
-    <h2> fenix <%= image_tag "logo.png" %> </h2>
+    <h2><%= image_tag "logo_navbar.png" %> </h2>
     <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,15 @@
           <% end %>
         </li>
         <li class="nav-item active d-flex align-items-center">
-          <%= link_to "Renewals", pages_path, class: "nav-link" %>
+          <% if url.include?("pages") %>
+            <%= link_to "Renewals", url.gsub("pages", "renewals"), class: "nav-link" %>
+          <% elsif url.include?("commissions") %>
+            <%= link_to "Renewals", url.gsub("commissions", "renewals"), class: "nav-link" %>
+          <% elsif url.include?("commissions") %>
+            <%= link_to "Renewals", url.gsub("claims", "renewals"), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Renewals", url.gsub("notes", "renewals"), class: "nav-link" %>
+          <% end %>
         </li>
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Reserves", pages_path, class: "nav-link" %>

@@ -24,7 +24,7 @@
   color: $yellow;
   opacity: 0.5;
   text-decoration: none;
-  font-size: 24px;
+  font-size: calc(24px + 0.5vw);
   padding: 0px 10px;
 }
 
