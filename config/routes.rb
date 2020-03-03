@@ -8,6 +8,8 @@ devise_for :users
 
   # page for the commissions-view
   get "commissions", to: "pages#commissions"
+    # page for the commissions-view
+  get "renewals", to: "pages#renewals"
   # page for the commissions-view
   get "claims", to: "pages#claims"
   # integrating routes to notes
@@ -17,6 +19,11 @@ devise_for :users
   # get 'contacts', to: 'contacts#create'
   get 'contacts', to: 'contacts#new'
   post 'contacts', to: 'contacts#create'
+
+  # integrating routes to services
+  get 'service_analytics', to: "pages#service_data_analytics", as: :analytics
+  get 'service_audit', to: "pages#service_audit", as: :audit
+  get 'service_integration', to: "pages#service_data_integration", as: :integration
 
   # website landing page (home), dashboard (index) [and not yet active (show)]
   resources :pages, only: [:index, :show, :home] do

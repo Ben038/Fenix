@@ -1,4 +1,4 @@
 //= require rails-ujs
 //= require Chart.min
-// = requure 'apexcharts'
+// = require 'apexcharts'
 //= require_tree .

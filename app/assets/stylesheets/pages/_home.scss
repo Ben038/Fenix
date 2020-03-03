@@ -58,8 +58,13 @@ font-size: 1.2rem;
 
 .display-3 {
 color: $white;
+font-size: 4rem;
 }
 
+.slogan {
+  text-align: center;
+  justify-content: center;
+}
 
 /*Vertical Flip Animation*/
 
@@ -132,20 +137,20 @@ header .verticalFlip span:nth-child(3){
 
 .about-area h2 {
   color: #12172b;
-  font-size: 44px;
+  // font-size: calc(44px + 0.5vw);
   line-height: 100px;
   margin-bottom: 40px;
 }
 
 .about-text p {
   font-style: italic;
-  font-size: 21px;
+  // font-size: calc(21px + 0.5vw);
   text-align: justify;
 }
 
 .about-text .light {
   font-style: normal;
-  font-size: 21px;
+  // font-size: calc(21px + 0.5vw);
   opacity: 0.8;
 }
 
@@ -161,39 +166,49 @@ margin-left: 30px;
   padding: 50px 10px;
 }
 
-.container-why {
+.carousel-inner {
   display:flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  // border: 3px solid blue;
+  min-height: 60vh;
+  margin-bottom: 10vh;
+  // padding: 3vh 3vw;
+  // background-color: $blue;
+  border-radius: 10px;
+//   border: 3px solid pink;
 }
 
 .why-area h2 {
   color: #12172b;
-  font-size: 44px;
+  // font-size: calc(44px + 0.5vw);
   line-height: 100px;
   margin-bottom: 40px;
 }
 
 .why-area h3 {
   color: #12172b;
-  font-size: 32px;
+  // font-size: calc(32px + 0.5vw);
   line-height: 55px;
   text-align: center;
 }
 
-.why-area p {
-  margin-top: 20px;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 100px;
-  text-align: center;
-}
+// .why-area p {
+//   margin-top: 20px;
+//   font-size: 20px;
+//   line-height: 30px;
+//   margin-bottom: 20px;
+//   text-align: center;
+// }
 
 .why-image {
-height: 150px;
-margin-bottom: 10px;
+height: 8vh;
+width: 5vw;
+// background-color: darkblue;
+// color: yellow;
+// margin-bottom: 10px;
 }
 
-.container-why-usp {
+.container-why-usp-front {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,9 +218,34 @@ margin-bottom: 10px;
 
 .container-why-wrapper {
   width: 350px;
-
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  // text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  // margin: 10px;
 }
 
+.container-why-wrapper .open {
+  width: 100%;
+  overflow: hidden;
+  // margin: 10px;
+}
+// #service-1:hover {
+//   width: 600px;
+//   background-color: #e5e8f4;
+// }
+
+// #service-2:hover {
+//   transform: translate(-450px);
+//   background-color: #e5e8f4;
+// }
+
+// #service-3:hover {
+//   transform: translate(-800px);
+//   background-color: #e5e8f4;
+// }
 
 // HOW
 .how-area {
@@ -226,7 +266,7 @@ margin-bottom: 10px;
 
 .how-area h2 {
   color: #12172b;
-  font-size: 44px;
+  // font-size: calc(44px + 0.5vw);
   line-height: 100px;
   margin-bottom: 40px;
 }
@@ -251,19 +291,19 @@ margin-bottom: 10px;
 
 .counter-area h2{
   color: $white;
-  font-size: 44px;
+  font-size: calc(44px + 0.5vw);
   line-height: 55px;
   margin-bottom: 20px;
 }
 
 .counter-area h3{
   color: $white;
-  font-size: 50px;
+  font-size: calc(50px + 0.5vw);
 }
 
   .counter-area p{
   color: $white;
-  font-size: 24px;
+  font-size: calc(24px + 0.5vw);
 }
 
 
@@ -323,7 +363,7 @@ margin-bottom: 10px;
 }
 
 .client-logo-area h2 {
-  font-size: 44px;
+  font-size: calc(44px + 0.5vw);
   line-height: 55px;
   margin-bottom: 20px;
 }

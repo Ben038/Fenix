@@ -1,1 +1,3 @@
-notes.js
+function EditNote(query) {
+  document.getElementById("update-icon").
+}

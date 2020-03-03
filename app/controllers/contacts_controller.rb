@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: 'new' }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.json { render json: @contact.errors, notice: 'Contact failed', status: :unprocessable_entity }
       end
     end
     redirect_to root_path

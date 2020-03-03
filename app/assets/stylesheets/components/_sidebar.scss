@@ -23,7 +23,7 @@
 .sidebar-item li {
   display: inline-block;
   list-style-type: none;
-  font-size: 16px;
+  font-size: calc(16px + 0.5vw);
 }
 
 .sidebar-item {
@@ -45,12 +45,12 @@
 
 .icon {
   color: $mediumblue;
-  font-size: 20px;
+  font-size: calc(20px + 0.5vw);
   margin-top: 30px;
 }
 
 .icon:hover {
-  font-size: 22px;
+  font-size: calc(22px + 0.5vw);
   color: $mediumbluehover;
 }
 
@@ -67,7 +67,7 @@
 }
 
 li.filter {
-  font-size: 16px;
+  font-size: calc(16px + 0.5vw);
   list-style-type: none;
   padding-left: 10px;
 }
@@ -76,7 +76,7 @@ p.filter {
   margin-top: 20px;
   margin-bottom: 5px;
   padding-left: 5px;
-  font-size: 20px;
+  font-size: calc(20px + 0.5vw);
   font-weight: bold;
 }
 
@@ -85,11 +85,11 @@ p.filter {
 p {
   display: inline-block;
   list-style-type: none;
-  font-size: 18px;
+  // font-size: calc(18px + 0.5vw);
 }
 
 li {
-  font-size: 14px;
+  font-size: calc(14px + 0.5vw);
   list-style-type: none;
 }
 

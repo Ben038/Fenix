@@ -8,12 +8,12 @@
 .banner h1 {
   color: white;
   text-shadow: 1px 1px 3px rgba(18, 23, 43,0.2);
-  font-size: 42px;
+  // font-size: calc(42px + 0.5vw) ;
   margin-bottom: 10px;
 }
 
 .banner p {
-  font-size: 24px;
+  // font-size: calc(24px + 0.5vw);
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(18, 23, 43,0.2);
