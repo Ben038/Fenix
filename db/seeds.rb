@@ -55,8 +55,8 @@ puts "creating files"
 
 file_upload1 = FileUpload.create!(reinsurance_network: "Lianz" , balance_year: 2018, quarter: 1, file_name: "Update", user: User.all.sample)
 file_upload2 = FileUpload.create!(reinsurance_network: "Lianz" , balance_year: 2018, quarter: 2, file_name: "Approved", user: User.all.sample)
-file_upload3 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2016, quarter: 3, file_name: "Need review", user: User.all.sample)
-file_upload4 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2016, quarter: 4, file_name: "Approved", user: User.all.sample)
+file_upload3 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2017, quarter: 3, file_name: "Need review", user: User.all.sample)
+file_upload4 = FileUpload.create!(reinsurance_network: "Nerali" , balance_year: 2017, quarter: 4, file_name: "Approved", user: User.all.sample)
 file_upload5 = FileUpload.create!(reinsurance_network: "Swissy" , balance_year: 2017, quarter: 1, file_name: "Update", user: User.all.sample)
 file_upload6 = FileUpload.create!(reinsurance_network: "AG & Co" , balance_year: 2017, quarter: 2, file_name: "Need review", user: User.all.sample)
 
