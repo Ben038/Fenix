@@ -11,10 +11,10 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 # gem 'jquery-rails'
 gem 'pg', '~> 0.21'
-gem "puma", ">= 3.12.4"
+gem "puma", ">= 4.3.3"
 gem 'rails', '5.2.3'
 gem 'redis'
-
+gem "nokogiri", ">= 1.10.8"
 gem 'apexcharts'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
