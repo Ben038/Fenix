@@ -250,7 +250,7 @@ DEPENDENCIES
   pg (~> 0.21)
   pry-byebug
   pry-rails
-  puma
+  puma (>= 3.12.4)
   rails (= 5.2.3)
   redis
   sassc-rails

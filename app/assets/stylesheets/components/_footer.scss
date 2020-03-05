@@ -6,7 +6,7 @@
   justify-content: space-between;
   min-height: 100px;
   padding: 0px 50px;
-  color: $white;
+  color: #e9db8d;
   bottom: 0;
   right: 0;
   left: 0;
@@ -21,15 +21,15 @@
 }
 
 .footer-links a {
-  color: $yellow;
-  opacity: 0.5;
+  color: #e9db8d;
+  opacity: 1;
   text-decoration: none;
   font-size: calc(24px + 0.5vw);
   padding: 0px 10px;
 }
 
 .footer-links a:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .footer .fa-chart-line {

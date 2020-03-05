@@ -3,7 +3,8 @@ import "../components/chartfunctions";
 import "../components/sidebar";
 import "../components/navbar";
 import "../components/card";
-
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
 // to move cards on the pages of the dashboard
 import Sortable from 'sortablejs';
 
@@ -39,11 +40,3 @@ if(window.sortableKpi){
 
 
 // TRANSPARANT TO SOLID NAVBAR
-window.addEventListener("scroll", (event) => {
-  if (window.scrollY > 200) {
-    document.querySelector(".navbar-fenix").classList.add("solid");
-  }
-  else {
-    document.querySelector(".navbar-fenix").classList.remove("solid");
-  }
-});

@@ -18,3 +18,19 @@
 //           }
 //         });
 // });
+const initUpdateNavbarOnScroll = () => {
+  const navbar = document.querySelector('.navbar-fenix');
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+       navbar.classList.add("navbar-fenix-solid");
+      } else {
+        navbar.classList.remove("navbar-fenix-solid");
+      }
+    });
+  }
+}
+
+export { initUpdateNavbarOnScroll };
+
+
