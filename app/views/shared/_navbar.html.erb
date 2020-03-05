@@ -1,5 +1,5 @@
 
-  <div class="navbar navbar-expand-sm navbar-light navbar-fenix" data-spy="scroll" data-target=".navbar-fenix" data-offset="50">
+  <div class="navbar navbar-expand-sm navbar-light navbar-fenix" id="navbar" data-spy="scroll" data-target=".navbar-fenix" data-offset="50">
   <%= link_to pages_path, class: "navbar-brand" do %>
     <h2><%= image_tag "logo_navbar.png" %> </h2>
     <% end %>
@@ -97,9 +97,9 @@ AS AN ALTERNATIVE, FOR THE TIME BEING, BTN HAVE BEEN ADDED TO THE NAVBAR
         <li class="nav-item d-flex align-items-center">
           <%= link_to "Our Services", "#services", class: "nav-link"  %>
         </li>
-        <li class="nav-item d-flex align-items-center">
+        <!-- <li class="nav-item d-flex align-items-center">
           <%= link_to "Our Product", "#product", class: "nav-link"  %>
-        </li>
+        </li>-->
 <!--         <li class="nav-item d-flex align-items-center">
           <%= link_to "Consultant Hub", "#", class: "nav-link"  %>
         </li> -->
