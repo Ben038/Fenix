@@ -18,3 +18,21 @@
 //           }
 //         });
 // });
+// const initUpdateNavbarOnScroll = () => {
+//   const navbar = document.getElementById('navbar');
+//   if (navbar) {
+//     window.addEventListener("scroll", () => {
+//       if (window.scrollY > 200) {
+//        navbar.classList.add("navbar-fenix-solid");
+//        navbar.classList.remove("navbar-fenix")
+//       } else {
+//         navbar.classList.add("navbar-fenix");
+//         navbar.classList.remove("navbar-fenix-solid");
+//       }
+//     });
+//   }
+// }
+
+// export { initUpdateNavbarOnScroll };
+
+

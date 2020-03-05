@@ -3,7 +3,8 @@ import "../components/chartfunctions";
 import "../components/sidebar";
 import "../components/navbar";
 import "../components/card";
-
+// import { initUpdateNavbarOnScroll } from '../components/navbar';
+// initUpdateNavbarOnScroll();
 // to move cards on the pages of the dashboard
 import Sortable from 'sortablejs';
 
@@ -18,6 +19,21 @@ import Sortable from 'sortablejs';
         //   }
         // });
 // });
+
+const initUpdateNavbarOnScroll = () => {
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+       navbar.classList.add("navbar-fenix-solid");
+       navbar.classList.remove("navbar-fenix")
+      } else {
+        navbar.classList.add("navbar-fenix");
+        navbar.classList.remove("navbar-fenix-solid");
+      }
+    });
+  }
+}
 
 if(window.sortableKpi){
   Sortable.create(sortableKpi, {
@@ -39,11 +55,3 @@ if(window.sortableKpi){
 
 
 // TRANSPARANT TO SOLID NAVBAR
-window.addEventListener("scroll", (event) => {
-  if (window.scrollY > 200) {
-    document.querySelector(".navbar-fenix").classList.add("solid");
-  }
-  else {
-    document.querySelector(".navbar-fenix").classList.remove("solid");
-  }
-});

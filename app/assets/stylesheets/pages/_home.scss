@@ -64,6 +64,7 @@ font-size: 4rem;
 .slogan {
   text-align: center;
   justify-content: center;
+  text-shadow: $darkblue 1px 0 10px;
 }
 
 /*Vertical Flip Animation*/
@@ -132,6 +133,7 @@ header .verticalFlip span:nth-child(3){
 }
 
 .about-area {
+  background: white;
   padding: 50px 30px;
 }
 
@@ -162,7 +164,7 @@ margin-left: 30px;
 
 // WHY
 .why-area {
-  background: white;
+
   padding: 50px 10px;
 }
 
@@ -320,21 +322,46 @@ width: 5vw;
 }
 
 .single-testimonial {
-  width: 500px;
+  width: 600px;
   padding: 40px;
   background: $white;
+  text-justify: center;
 }
 
+.single-contact {
+  width: 100%;
+  padding: 5px;
+  text-justify: center;
+}
 .single-testimonial p {
   font-style: italic;
 }
 
+.single-contact p {
+  font-style: italic;
+  padding: 10px;
+}
   .single-testimonial .light {
   font-style: normal;
   opacity: 0.8;
 }
 
+ @media only screen and (max-device-width: 700px) {
+      .single-contact {
+        width: 100%;
+        padding: 5px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
 
+      .single-contact p {
+        font-style: italic;
+        padding: 3px 10px;
+        text-align: center;
+      }
+    }
 // CLIENTS
 .client-logo-area {
   background: $backgroundblue;

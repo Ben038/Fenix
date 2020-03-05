@@ -9,11 +9,11 @@
   display: flex;
   align-items: center;
   z-index: 100;
-  transition: background-color 1s ease 0s;
+  transition: 0.5s background-color ease;
 }
 
-.navbar-fenix.solid {
-  background-color: $white;
+.navbar-fenix-solid {
+  background-color: red;
   box-shadow: 0 0 4px $darkblue;
 }
 
